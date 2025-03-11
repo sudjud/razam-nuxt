@@ -1,0 +1,55 @@
+{
+  "name": "razam",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint . --ext .js,.vue"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^9.2.1",
+    "@vueuse/core": "^12.8.2",
+    "animate.css": "^4.1.1",
+    "gsap": "^3.12.7",
+    "nuxt": "latest",
+    "swiper": "^11.1.15",
+    "vue-i18n": "^11.0.0",
+    "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^8.7.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "globals": "^16.0.0",
+    "prettier": "^2.4.1",
+    "sass": "1.77.6",
+    "sass-loader": "^12.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

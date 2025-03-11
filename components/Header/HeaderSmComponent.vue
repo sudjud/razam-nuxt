@@ -1,0 +1,225 @@
+<template>
+  <header class="header" :class="{ open: isOpen }">
+    <div class="container">
+      <!-- Логотип -->
+      <div class="logo" :class="{ open: isOpen }">
+        <NuxtLink :to="localePath('/')">
+          <img src="@/assets/logo.png" alt="Razam" />
+        </NuxtLink>
+      </div>
+      <div class="logo logo-white" :class="{ open: isOpen }">
+        <NuxtLink :to="localePath('/')">
+          <img src="@/assets/logo-white.png" alt="Razam" />
+        </NuxtLink>
+      </div>
+
+      <!-- Кнопка гамбургера -->
+      <button
+        @click="toggleMenu"
+        :class="{ open: isOpen }"
+        class="hamburger"
+        :aria-expanded="isOpen"
+      >
+        <span :class="{ open: isOpen }"></span>
+        <span :class="{ open: isOpen }"></span>
+        <span :class="{ open: isOpen }"></span>
+      </button>
+
+      <!-- Навигационное меню -->
+      <nav @click="closeMenu" class="nav-menu" :class="{ open: isOpen }">
+        <ul>
+          <li>
+            <NuxtLink
+              :to="localePath('/')"
+              :class="{ active: isActive('/') }"
+              @click="closeMenu"
+              >{{ $t("menu.home") }}</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              :to="localePath('/about')"
+              :class="{ active: isActive('/about') }"
+              @click="closeMenu"
+              >{{ $t("menu.about") }}</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              :to="localePath('/services')"
+              :class="{ active: isActive('/services') }"
+              @click="closeMenu"
+              >{{ $t("menu.services") }}</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              :to="localePath('/portfolio')"
+              :class="{ active: isActive('/portfolio') }"
+              @click="closeMenu"
+              >{{ $t("menu.portfolio") }}</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              :to="localePath('/news')"
+              :class="{ active: isActive('/news') }"
+              @click="closeMenu"
+              >{{ $t("menu.news") }}</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              :to="localePath('/contact')"
+              :class="{ active: isActive('/contact') }"
+              @click="closeMenu"
+              >{{ $t("menu.contact") }}</NuxtLink
+            >
+          </li>
+          <li @click.stop class="lang-switch">
+            <LangSwitchComponent />
+          </li>
+          <li>
+            <div class="social-links">
+              <SocialMedias />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</template>
+
+<script setup>
+import { ref } from "vue";
+import { useRoute } from "vue-router";
+import LangSwitchComponent from "../components/Tools/LangSwitchComponent.vue";
+import SocialMedias from "../components/Tools/SocialMedias.vue";
+
+// Определение активного маршрута
+const route = useRoute();
+const localePath = useLocalePath();
+const { locale } = useI18n();
+
+const isActive = (path) => {
+  const localizedPath = localePath(path);
+  return route.path === localizedPath;
+};
+
+// Состояние меню
+const isOpen = ref(false);
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
+const closeMenu = () => {
+  isOpen.value = false;
+};
+</script>
+
+<style scoped lang="sass">
+.header
+  position: fixed
+  width: 100%
+  display: flex
+  height: 70px
+  justify-content: space-between
+  align-items: center
+  padding: 10px 20px 5px 20px
+  z-index: 100
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 0
+  &.open
+    background-color: rgba(black, 0.7)
+
+/* Логотип */
+.logo img
+  height: 50px
+  a
+    height: 0
+
+.logo-white img
+  height: 50px
+  a
+    height: 0
+
+.logo
+  &.open
+    display: none
+
+.logo-white
+  display: none
+  &.open
+    display: block
+
+
+/* Кнопка гамбургера */
+.hamburger
+  display: flex
+  flex-direction: column
+  gap: 5px
+  cursor: pointer
+  border: none
+  background: none
+
+  span
+    width: 25px
+    height: 3px
+    background-color: $font-black
+    transition: transform 0.3s ease
+    &.open
+      background-color: $bgc-main
+
+  &.open span:nth-child(1)
+    transform: rotate(45deg) translate(5.65px, 5.65px)
+
+  &.open span:nth-child(2)
+    opacity: 0
+
+  &.open span:nth-child(3)
+    transform: rotate(-45deg) translate(5.65px, -5.65px)
+
+/* Навигационное меню */
+.nav-menu
+  position: absolute
+  right: 0
+  top: 70px
+  background-color: rgba(0, 0, 0, 0.7)
+  width: 100%
+  height: calc(100vh - 70px)
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 20px
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+
+  &.open
+    display: flex
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    margin-bottom: 120px
+    text-align: center
+    li
+      margin: 10px 0
+      font-size: 18px
+      a
+        text-decoration: none
+        color: $bgc-main
+        font-weight: 500
+        transition: color 0.3s ease
+        &.active
+          color: rgba($font-white, 0.6)
+    .lang-switch
+      margin-top: 40px
+
+.social-links
+  position: absolute
+  right: 5%
+  bottom: 55%
+</style>

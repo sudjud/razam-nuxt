@@ -1,0 +1,53 @@
+@use '@/assets/styles/variables' as *
+
+=center-x-y
+  display: flex
+  justify-content: center
+  align-items: center
+
+=center-x
+  display: flex
+  justify-content: center
+
+=regpad
+  &
+    padding-right: 100px
+    padding-left: 100px
+
+  @media (max-width: 1200px)
+    padding-right: 70px
+    padding-left: 70px
+
+  @media (max-width: 992px)
+    padding-right: 30px
+    padding-left: 30px
+
+  @media (max-width: 768px)
+    padding-right: 20px
+    padding-left: 20px
+
+=responsive($property, $xxl, $xl, $lg, $md, $sm)
+  &
+    #{$property}: $xxl
+
+  @media (max-width: 1200px)
+    #{$property}: $xl
+
+  @media (max-width: 992px)
+    #{$property}: $lg
+
+  @media (max-width: 768px)
+    #{$property}: $md
+
+  @media (max-width: 576px)
+    #{$property}: $sm
+
+=reveal
+  &
+    color: #0000
+    background-size: 0% 100%
+    -webkit-background-clip: padding-box, text
+    background-clip: padding-box, text
+    opacity: 0
+    animation: opacity 0.6s ease-out
+    // animation: t 1.2s .5s both, b 1.2s 1.3s both

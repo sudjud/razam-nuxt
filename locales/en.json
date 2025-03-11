@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "title": "Razam | Accueil",
+    "description": "Expert design and renovation on the French Riviera."
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "news": "News",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "common": {
+    "hide": "Hide",
+    "readMore": "Read More"
+  },
+  "home": {
+    "headline": "Design and Renovation on the French Riviera",
+    "desc": "Expert design and renovation on the French Riviera",
+    "fullDesc1": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes. Our team of experts develops projects that combine aesthetic elegance with functionality, reflecting the atmosphere of the French Riviera and the individuality of our clients.",
+    "fullDesc2": "We offer turnkey services – from the design concept to the completion of the renovation, ensuring comfort and attention to every detail. We consider all aspects including the architectural features of the property, client wishes, and modern design trends.",
+    "readMore": "Our approach includes the use of innovative technologies and careful planning at every stage. We work with trusted contractors and suppliers to guarantee high quality and reliability.",
+    "readMore2": "No matter the scale of the project, whether it is a cozy apartment, a spacious house, or a commercial space, we strive to create an environment that reflects your style, emphasizes your individuality, and delights you for years to come.",
+    "readMore3": "Contact us to begin your project and transform your space.",
+    "valuesH2": "Our<br />values",
+    "valuesP1": "Openness and<br />honesty",
+    "valuesP2": "Timeliness",
+    "valuesP3": "Modern<br />technologies",
+    "valuesP4": "Practicality<br />and comfort",
+    "valuesP5": "Custom<br />solutions",
+    "valuesP6": "Commitment<br />to results",
+    "stats1": "Projects completed",
+    "stats2": "Clients recommend us",
+    "stats3": "Sq m of designed interiors",
+    "stats4": "Create the perfect space",
+    "stats5": "Deadline adherence",
+    "statsGoal": "goal",
+    "service1": "Interior Design",
+    "service2": "Residential Design",
+    "service3": "Commercial Interior Design",
+    "service4": "Home Renovation",
+    "service5": "Commercial Renovation",
+    "servicesH2": "Our Services",
+    "projectsH2": "Our Projects",
+    "project1": "An elegant private house where minimalism meets coziness. Spacious rooms and panoramic windows create a comfortable environment on the Riviera.",
+    "project2": "Luxurious apartments with a sea view. Every detail of the interior is carefully thought out, combining aesthetics and functionality.",
+    "project3": "A modern design for a brand. A bright interior focusing on comfort and style, perfect for a business setting.",
+    "project4": "An elegant private house blending minimalism with coziness. Spacious rooms and panoramic windows ensure comfort on the Riviera.",
+    "reviewsH2P1": "Reviews from our",
+    "reviewsH2P2": "clients",
+    "reviews": {
+      "review1Title": "Impeccable style and attention to detail",
+      "review1Text": "From the first discussion to the project's completion, the team demonstrated professionalism and sensitivity to our wishes...",
+      "review1Name": "Julien, Nice",
+      "review2Title": "A truly quality approach",
+      "review2Text": "From the initial consultation to the final touches, the team showed professionalism and care in addressing our ideas. We loved how they transformed our apartment into a space that is both stylish and incredibly comfortable. Their attention to every detail and the ability to add unique elements made our interior truly special. Highly recommended for those seeking a quality and creative approach.",
+      "review2Name": "Anna, Cannes"
+    },
+    "offer": {
+      "h2P1": "Ready to create",
+      "h2P2": "your perfect",
+      "h2P3": "project",
+      "p": "Contact us or send a request, and we will turn your ideas into reality."
+    },
+    "process": {
+      "h2": "Our Working Process",
+      "title1": "Consultation and Discussion",
+      "text1": "We start by understanding your ideas and wishes. In a meeting, we discuss the project details, style, budget, and deadlines to clarify your expectations.",
+      "title2": "Concept Development",
+      "text2": "We create sketches and visualizations that capture the uniqueness of your future space. Everything is agreed upon to ensure the result meets your requirements.",
+      "title3": "Project Preparation",
+      "text3": "We prepare a complete set of documents: drawings, floor plans, material, and furniture selection. Everything needed for implementation.",
+      "title4": "Project Implementation",
+      "text4": "Our specialists manage every phase: from material procurement to execution. We monitor quality and ensure deadlines are met.",
+      "title5": "Completion and Handover",
+      "text5": "We inspect every element to ensure it matches the project. You receive a finished space, fully ready for living or working."
+    },
+    "FAQ": {
+      "q1": "How long does it take to develop a design project?",
+      "a1": "A design project typically takes 2 to 4 weeks, depending on complexity and scope. We strive to optimize the process so that every stage meets your expectations and delivers a quality outcome. It is important that you feel the project is moving in the right direction at every stage.",
+      "q2": "What materials are used for renovations?",
+      "a2": "We use only proven and high-quality materials, selected individually for each project. Our solutions are eco-friendly, durable, and meet modern safety standards.",
+      "q3": "Is it possible to order design without renovation?",
+      "a3": "Yes, you can order a design project only. We will provide all the necessary documentation and recommendations for its execution by yourself or other contractors.",
+      "q4": "How much does a turnkey project cost?",
+      "a4": "The cost depends on the area, work complexity, and materials used. We offer transparent pricing and a customized estimate for every client.",
+      "q5": "How do you control quality at all stages?",
+      "a5": "We monitor the process at every stage: from material selection to project handover. Regular checks and clear coordination guarantee a high-quality result."
+    },
+    "news": {
+      "H2": "Latest News",
+      "category1": "Design Trends",
+      "title1": "Completed Project: Office with a Sea View",
+      "by1": "Admin",
+      "date1": "November 2, 2024",
+      "category2": "Interiors and Lighting",
+      "title2": "How Lighting Changes the Atmosphere",
+      "by2": "Admin",
+      "date2": "November 2, 2024",
+      "category3": "Renovation and Decor",
+      "title3": "Ideas for a Stylish Renovation",
+      "by3": "Admin",
+      "date3": "November 2, 2024",
+      "category4": "Design Trends",
+      "title4": "Trends in Design: What’s In",
+      "by4": "Admin",
+      "date4": "November 2, 2024"
+    }
+  },
+  "footer": {
+    "linksH": "Quick Links",
+    "documentsH": "Documents",
+    "policy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "contact": "Contact",
+    "tel": "Phone",
+    "location": "Location",
+    "france": "France"
+  },
+  "about": {
+    "h1P1": "Creating a stylish",
+    "h1P2": "space for you",
+    "h4": "About Us",
+    "design": {
+      "h2": "Interior Design and Renovation on the French Riviera",
+      "p": "We create unique and functional spaces in Nice, Cannes, Antibes, and other regional cities. Our team develops projects that reflect your style and make your interior comfortable. We offer a complete range of services – from design concept to turnkey renovation, paying attention to every detail and strictly adhering to deadlines."
+    },
+    "why": {
+      "h2": "Why Choose Us?",
+      "values": {
+        "question1": "Personalized Approach",
+        "answer1": "Every project is designed according to your style, needs, and wishes. We aim to create a unique space that reflects your personality and is fully functional for living or business.",
+        "question2": "Local Expertise",
+        "answer2": "We create projects ideally suited for life and work on the Riviera. Our knowledge of the local specifics of Nice, Cannes, and Antibes allows us to consider every detail and implement the best ideas.",
+        "question3": "On-Time Delivery",
+        "answer3": "We value your time and always deliver projects on schedule. A well-organized process and professional team prevent delays while maintaining a high quality at every stage.",
+        "question4": "Transparency",
+        "answer4": "We make every step of the project clear and accessible to you. Constant feedback, progress reports, and openness ensure that you are confident in the outcome at every stage."
+      }
+    },
+    "rates": {
+      "stat1_value": "83+",
+      "stat1_text": "Projects completed",
+      "stat2_value": "95%",
+      "stat2_text": "Clients recommend us",
+      "stat3_value": "12,500",
+      "stat3_text": "Sq m of designed interiors",
+      "stat4_value": "1 goal",
+      "stat4_text": "Create the perfect space",
+      "stat5_value": "100%",
+      "stat5_text": "Deadline adherence"
+    },
+    "way": {
+      "title": "Our Approach",
+      "step1_title": "Understanding the Client",
+      "step1_text": "Every project begins with dialogue. We thoroughly review your wishes, lifestyle or business specifics to create a space that suits you perfectly.",
+      "step2_title": "Thoughtful Solutions",
+      "step2_text": "We combine aesthetics and functionality to make your interior both comfortable and visually appealing. Our projects are tailored to you and the Riviera atmosphere.",
+      "step3_title": "Team of Experts",
+      "step3_text": "Our team includes architects, designers, and engineers experienced in Nice, Cannes, and Antibes. We guarantee professionalism at every stage.",
+      "step4_title": "Results-Focused",
+      "step4_text": "No unnecessary words or promises. We concentrate on turning your ideas into reality, meeting deadlines, and delivering a high standard.",
+      "step5_title": "Your Comfort is Our Goal",
+      "step5_text": "Whether it’s a small apartment or a large commercial project, we aim to create an inspiring space."
+    },
+    "team": {
+      "title": "Our Team",
+      "member1_name": "Julien Moreau",
+      "member1_role": "Chief Architect",
+      "member2_name": "Camille Lefebvre",
+      "member2_role": "Interior Designer",
+      "member3_name": "Emile Dupont",
+      "member3_role": "Project Manager",
+      "member4_name": "Sophie Laroche",
+      "member4_role": "Client Relations Manager",
+      "member5_name": "Thomas Bertrand",
+      "member5_role": "Structural Engineer",
+      "member6_name": "Clara Giro",
+      "member6_role": "Materials Specialist"
+    }
+  },
+  "contactPlate": {
+    "h1": "Design&nbsp;and&nbsp;Renovation<br />",
+    "span1": "crafted",
+    "span2": "for you",
+    "p": "Get in touch with us and we will create a unique space that reflects your style and needs. Leave a request or call to discuss the details."
+  },
+  "services": {
+    "main": {
+      "design": "Design, style <br />and comfort together",
+      "title": "Create a<br />unique<br /><span class='slash' style='color: #E8E3DF'>/</span> interior",
+      "description": "We are a team of design and renovation experts working on the French Riviera, including Nice, Cannes, and Antibes. Our mission is to create stylish, functional, and unique spaces that reflect the individuality of our clients. We offer a complete range of services: from concept development and design projects to turnkey renovations. Every project is tailored to your preferences, needs, and the property’s specifics.",
+      "readMoreText": "Our experience in Nice, Cannes, and Antibes allows us to appreciate the local architectural specifics and create interiors that perfectly fit the Riviera vibe. Using modern technology, quality materials, and proven methods, we bring your ideas to life, creating comfortable and aesthetically pleasing spaces. Whether it’s a small apartment or a luxurious villa, we strive to exceed our clients' expectations. Contact us to start your project today and make your interior a reflection of your style and personality.",
+      "razamText": "We create projects for your home"
+    }
+  },
+  "portfolio": {
+    "main": {
+      "titleFirst": "Our <br />projects",
+      "titleSecond": "your <br />inspiration",
+      "desc": "Working since 2010",
+      "category1": "Architecture",
+      "category2": "Interiors",
+      "category3": "Turnkey Renovation"
+    },
+    "tabs": {
+      "categories": {
+        "all": "All projects",
+        "livingRooms": "Living Rooms",
+        "architecture": "Architecture",
+        "commercial": "Commercial Spaces",
+        "landscapeDesign": "Landscape Design",
+        "eliteInterios": "Luxury Interiors"
+      },
+      "types": {
+        "designAndRepair": "Design & Renovation"
+      },
+      "rooms": {
+        "kitchen": "Kitchen",
+        "bedroom": "Bedroom",
+        "corridor": "Hallway",
+        "lounge": "Living Room"
+      }
+    },
+    "projects": {
+      "common": {
+        "square": "Total Area",
+        "livingArea": "Living Area",
+        "workingTime": "Project Duration",
+        "cost": "Total Cost",
+        "client": "Client",
+        "location": "Location",
+        "year": "Year"
+      },
+      "urbanGrace": {
+        "workingTime": "74 days",
+        "client": "Louis Chantié",
+        "dislocation": "Cannes, France",
+        "desc": "A project that blends coziness with style. Warm tones, soft textures, and harmonious details create a space where you can relax and enjoy every moment.",
+        "componentData": {
+          "lounge": {
+            "h1": "Living Room",
+            "h2": "A Blend of Comfort, Style, and Modernity",
+            "p": "The sofa in the center of the living room catches the eye with its minimalist design and soft lines. The use of natural fabrics and muted tones creates a cozy atmosphere. Its modular structure allows for easy adaptation to any needs."
+          },
+          "bedroom": {
+            "h1": "The Bedroom, Where",
+            "h2": "The Harmony of the Day Begins",
+            "p": "The bedroom is designed in calm green and neutral tones, creating an atmosphere of comfort and relaxation. Details such as a soft headboard and an accent bench add depth and elegance to the space. Morning light gently filters through thick curtains, setting a harmonious start to the day."
+          },
+          "lights": {
+            "h1": "Lighting,",
+            "h2": "That Sets the Mood",
+            "p": "The interior is illuminated by various light sources that highlight its details. Wall-mounted lamps with soft glow add warmth, while pendant lights create accents in key areas. Modern light strips perfectly complement the overall minimalist style."
+          }
+        }
+      }
+    }
+  },
+  "blog": {
+    "articles": {
+      "categories": {
+        "architecture": "Architecture",
+        "interiorDesign": "Interior Design",
+        "construction": "Construction",
+        "renovation": "Renovation",
+        "landscapeDesign": "Landscape Design"
+      },
+      "tags": {
+        "interiorLights": "Interior Lighting",
+        "lightDesign": "Lighting Design",
+        "homeAtmosphere": "Home Atmosphere",
+        "lightZonation": "Lighting Zones",
+        "lightStyles": "Lighting Types",
+        "lightIdeas": "Lighting Ideas",
+        "lightTrands": "Lighting Trends"
+      },
+      "lights": {
+        "name": "How Lighting Changes the Interior Atmosphere"
+      },
+      "ideas": {
+        "name": "Ideas for a Stylish Renovation"
+      },
+      "trends": {
+        "name": "Design Trends: What’s In"
+      },
+      "materials": {
+        "name": "Modern Materials in Interior Design"
+      },
+      "bedroom": {
+        "name": "Cozy Bedroom: Secrets of Perfect Design"
+      },
+      "minimalism": {
+        "name": "Minimalism in Design: The Key to Harmony"
+      }
+    }
+  },
+  "contact": {
+    "contactUs": "Contact Us",
+    "form": {
+      "description": "We are always ready to discuss your project and answer any questions. Whether you want to update your interior, design a new space, or learn more about our services, get in touch by your preferred method.",
+      "title": "Leave a Request",
+      "nameLabel": "Your Name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone Number",
+      "messageLabel": "Message",
+      "required": "*",
+      "submitButton": "Send"
+    },
+    "info": {
+      "titleFirst": "Contact",
+      "titleSecond": "Information",
+      "locationLabel": "Location",
+      "location": "305 Av. Georges Pompidou, 06220<br />Vallauris, France"
+    }
+  }
+}
