@@ -4,7 +4,7 @@ import ru from "./ru.json";
 
 export default {
   legacy: false,
-  locale: "en",
+  locale: "fr",
   messages: {
     en,
     fr,

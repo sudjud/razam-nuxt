@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       { code: "fr", iso: "fr-FR", name: "Fr" },
       { code: "ru", iso: "ru-RU", name: "Ru" },
     ],
-    defaultLocale: "ru",
+    defaultLocale: "fr",
     vueI18n: "./locales/index.js",
     strategy: "prefix_except_default",
     baseUrl: process.env.BASE_URL || "http://localhost:3000",

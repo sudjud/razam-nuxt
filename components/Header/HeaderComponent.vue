@@ -94,7 +94,7 @@ export default defineComponent({
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < 500) {
+      if (currentScrollY < 100) {
         isHidden.value = false;
       } else {
         isHidden.value = true;
@@ -126,10 +126,10 @@ export default defineComponent({
   align-items: center
   background-color: transparent
   z-index: 100
-  transition: 1s ease-in-out
+  transition: 0.2s ease-in-out
   &.hidden
-    transition: 1s ease-in-out
-    background-color: rgba(white, 0.9)
+    transition: 0.2s ease-in-out
+    background-color: rgba(white, 1)
 
   .container
     display: flex

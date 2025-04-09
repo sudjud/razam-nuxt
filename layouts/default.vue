@@ -4,14 +4,12 @@
     <component :is="currentHeaderComponent" />
 
     <!-- Прелоадер -->
-    <!-- <div v-if="isLoading" class="preloader">
-      <div class="spinner"></div>
-    </div> -->
+    <LoaderComponent />
 
     <!-- Контент страницы (скрываем при загрузке) -->
     <!-- <div v-if="!isLoading && showPage"> -->
     <div>
-      <slot />
+      <slot v-if="!loader" />
     </div>
 
     <FooterComponent />
@@ -29,6 +27,13 @@ import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 import { useRequestURL } from "nuxt/app";
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
+import LoaderComponent from "../components/Loader/LoaderComponent.vue";
+
+const loader = ref(true);
+
+setTimeout(() => {
+  loader.value = false;
+}, 2310);
 
 const url = useRequestURL();
 const baseURL = `${url.protocol}//${url.host}`;

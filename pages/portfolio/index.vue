@@ -14,7 +14,7 @@
         <br />
         <span
           v-reveal
-          class="wow reveal-bb"
+          class="wow reveal-bb reveal-visible"
           v-html="$t('portfolio.main.titleSecond')"
         ></span>
       </div>

@@ -12,7 +12,7 @@
   <section class="form">
     <p>{{ $t("contact.form.description") }}</p>
     <form @submit.prevent="submitForm">
-      <h2>
+      <h2 id="formContactLink">
         <span v-reveal class="wow reveal-bb">{{ $t("contact.form.title") }}</span>
       </h2>
 

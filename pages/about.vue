@@ -116,7 +116,7 @@
       </div>
     </div>
   </section>
-  <section class="team">
+  <section v-if="false" class="team">
     <div class="team-top">
       <div class="team-item">
         <div class="item-img">

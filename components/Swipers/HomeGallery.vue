@@ -29,7 +29,7 @@
           class="button"
           :class="{ active: index === currentIndex }"
           @mouseover="changeImage(index)"
-          @click="moveToServices"
+          @click="moveToServices(item.slug)"
         >
           <div class="button-wrapper">
             <div>{{ $t(item.service) }}</div>
@@ -56,10 +56,14 @@
     </h2>
     <div class="slider-gallery">
       <Swiper
-        :slides-per-view="1.05"
-        navigation
+        :slides-per-view="1"
+        :autoplay="{
+          delay: 10
+        }"
+        :speed="3000"
         loop
         grabCursor
+        space-between="20"
         class="my-swiper"
       >
         <SwiperSlide v-for="(item, index) in items" :key="index">
@@ -78,8 +82,11 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-import photo1 from "/images/home/4.jpg";
-import photo2 from "/images/home/3.jpg";
+import photo1 from "/images/services/interior-design/main.jpg";
+import photo2 from "/images/services/interior-design/1.jpg";
+import photo3 from "/images/services/house-renovation/2.jpg";
+import photo4 from "/images/services/house-renovation/main.jpg";
+import photo5 from "/images/services/commerce-renovation/main.jpg"
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -88,11 +95,31 @@ import SwiperCore from "swiper";
 SwiperCore.use([Navigation, Pagination]);
 
 const items = [
-  { image: photo1, service: "home.service1" },
-  { image: photo2, service: "home.service2" },
-  { image: photo1, service: "home.service3" },
-  { image: photo2, service: "home.service4" },
-  { image: photo1, service: "home.service5" },
+  { 
+    image: photo1, 
+    service: "home.service1", 
+    slug: "interiordesign" 
+  },
+  { 
+    image: photo2, 
+    service: "home.service2", 
+    slug: "interiordesign" 
+  },
+  { 
+    image: photo3, 
+    service: "home.service3", 
+    slug: "interiordesign" 
+  },
+  { 
+    image: photo4, 
+    service: "home.service4", 
+    slug: "houserenovation" 
+  },
+  { 
+    image: photo5, 
+    service: "home.service5", 
+    slug: "commercerenovation" 
+  },
 ];
 
 const currentIndex = ref(0);
@@ -101,8 +128,8 @@ const changeImage = (index) => {
   currentIndex.value = index;
 };
 
-const moveToServices = () => {
-  router.push("/services");
+const moveToServices = (slug) => {
+  router.push(`/services/${slug}`);
 };
 
 const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
@@ -111,13 +138,11 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
 <style lang="sass" scoped>
 
 .gallery-sm
+  +regpad
   display: none
   h2
     color: black
-    padding-left: 50px
     padding-bottom: 30px
-    @media (max-width: 576px)
-      padding-left: 20px
   .slider-gallery
     width: 100%
     display: flex
@@ -146,7 +171,9 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
       border-radius: 10px
       img
         width: 100%
-        height: auto
+        height: 350px
+        object-fit: cover
+        border-radius: 12px
     .description
       font-size: 2rem
       font-weight: 500
@@ -154,9 +181,9 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
       text-align: center
 
 .gallery
+  +regpad
   display: flex
   flex-direction: column
-  padding-left: 6.25rem
   margin-bottom: 12.8rem
 
   .top
@@ -165,7 +192,6 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
     align-items: center
     justify-content: space-between
     h2
-      padding-right: 3rem
       padding-bottom: 3.9rem
       font-size: 5rem
     span
@@ -189,8 +215,9 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
 
     img
       width: 45rem
-      height: auto
-      border-radius: 5px
+      border-radius: 12px
+      max-height: 610px
+      object-fit: cover
 
     .buttons
       display: flex

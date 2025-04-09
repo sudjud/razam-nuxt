@@ -52,11 +52,12 @@
     </div>
     <div class="photo-main">
       <img :src="mainImage.photo" alt="" />
-      <p>{{ $t(mainImage.name) }}</p>
+      <p class="photo-main-desc">{{ $t(mainImage.name) }}</p>
     </div>
   </section>
   <section class="single">
-    <component :is="currentProjectComponent" />
+    <!-- <component :is="currentProjectComponent" /> -->
+    <SingleComponent :nameAcronym="nameAcronym" :nameCamelCase="nameCamelCase" :name="project.name" :slug="project.slug"/>
   </section>
   <section class="offer">
     <h2>
@@ -80,6 +81,7 @@ import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import UrbanGraceComponent from "../components/Projects/UrbanGraceComponent.vue";
 import Breadcrumbs from "../../components/Tools/Breadcrumbs.vue";
+import SingleComponent from "../../components/Projects/SingleComponent.vue";
 
 const route = useRoute();
 
@@ -88,6 +90,21 @@ const { data: projectData } = await useAsyncData("project", () =>
 );
 
 const project = ref(projectData.value || null);
+
+const nameAcronym = computed(() => {
+  const firstLetter = project.value?.slug?.split("-")[0][0];
+  const secondLetter = project.value?.slug?.split("-")[1][0];
+  return `${firstLetter.toUpperCase()} / ${secondLetter.toUpperCase()}`;
+});
+
+const nameCamelCase = computed(() => {
+  return project.value?.slug?.toLowerCase()
+    .split('-')
+    .map((word, index) => {
+      return index === 0 ? word : word[0].toUpperCase() + word.slice(1);
+    })
+    .join('');
+})
 
 const smallImages = computed(() => {
   return project.value?.images?.slice(0, -1) || [];
@@ -190,7 +207,8 @@ const currentProjectComponent = computed(
   margin-top: 15rem
   display: grid
   grid:". . main main" 1fr ". . main main" 1fr / 1fr 1fr 1fr 1fr
-  gap: 3.5rem 1.5rem
+  gap: 3.7rem 1.5rem
+  align-items: center
   @media (max-width: 768px)
     grid-template-areas:". ."". .""main main""main main"
     grid-template-columns: 1fr 1fr
@@ -198,7 +216,7 @@ const currentProjectComponent = computed(
   @media (max-width: 576px)
     margin-top: $mob-col-gap
   p
-    margin: 0
+    margin: 5px 0
     color: $font-grey
   .photo-main
     grid-area: main

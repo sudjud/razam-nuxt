@@ -55,5 +55,13 @@ export default [
     by: "Razam",
     date: "01.05.2023",
     slug: "minimalism",
+  },
+  {
+    previewImg: "/images/blog/previews/minimalism.jpg",
+    category: "blog.articles.categories.interiorDesign",
+    name: "blog.articles.minimalism.name",
+    by: "Razam",
+    date: "01.05.2023",
+    slug: "minimalism",
   }
 ];

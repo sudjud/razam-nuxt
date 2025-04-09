@@ -63,7 +63,7 @@ export const nuxtI18nOptions = {
       "name": "Ru"
     }
   ],
-  "defaultLocale": "ru",
+  "defaultLocale": "fr",
   "defaultDirection": "ltr",
   "routesNameSeparator": "___",
   "trailingSlash": false,
