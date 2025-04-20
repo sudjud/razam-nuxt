@@ -1,1 +1,0 @@
-{"file":"virtual_public-DAfNXu09.js","mappings":";AAAuD,MAAe,aAAA,gBAAgB,+CAA+C;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fcommerce-renovation%2Fmain.jpg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/commerce-renovation/main.jpg\")"],"version":3}

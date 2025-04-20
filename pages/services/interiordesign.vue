@@ -8,7 +8,7 @@
       >
     </h1>
     <div class="image-wrapper">
-      <img src="/images/services/interior-design/main.jpg" alt="" />
+      <img src="/images/services/interior-design/main.webp" alt="" />
     </div>
   </main>
   <section class="text">
@@ -68,6 +68,9 @@
       </div>
     </div>
   </section>
+  <section class="calculate-form">
+    <CostCalculator />
+  </section>
   <section class="why">
     <h3>{{ $t("services.interiorDesign.why.h4") }}</h3>
     <ul>
@@ -78,9 +81,9 @@
       <li>{{ $t("services.interiorDesign.why.li5") }}</li>
     </ul>
     <div class="images">
-      <img src="/images/services/interior-design/1.jpg" alt="" />
-      <img src="/images/services/interior-design/2.jpg" alt="" />
-      <img src="/images/services/interior-design/3.jpg" alt="" />
+      <img src="/images/services/interior-design/1.webp" alt="" />
+      <img src="/images/services/interior-design/2.webp" alt="" />
+      <img src="/images/services/interior-design/3.webp" alt="" />
     </div>
     <div class="quote">
       <div class="image-wrapper">
@@ -96,6 +99,7 @@
 
 <script setup>
 import ContactShield from "../../components/Blocks/ContactShield.vue";
+import CostCalculator from "../../components/Tools/CostCalculator.vue";
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
 </script>
 
@@ -159,6 +163,29 @@ section.text
       color: $font-black
     p
       color: $font-grey
+
+section.calculate-form
+  margin-right: 100px
+  margin-left: 100px
+
+  @media (max-width: 1200px)
+    margin-right: 70px
+    margin-left: 70px
+
+  @media (max-width: 992px)
+    margin-right: 30px
+    margin-left: 30px
+
+  @media (max-width: 768px)
+    margin-right: 20px
+    margin-left: 20px
+  margin-top: 7rem
+  background-image: url('/images/services/interior-design/main.webp')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  border-radius: 12px
+  overflow: hidden
 
 section.why
   padding-top: 9rem

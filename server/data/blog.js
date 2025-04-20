@@ -1,6 +1,6 @@
 export default [
   {
-    previewImg: "/images/blog/previews/lights.jpg",
+    previewImg: "/images/blog/previews/lights.webp",
     category: "blog.articles.categories.architecture",
     name: "blog.articles.lights.name",
     by: "Razam",
@@ -17,7 +17,7 @@ export default [
     ],
   },
   {
-    previewImg: "/images/blog/previews/ideas.jpg",
+    previewImg: "/images/blog/previews/ideas.webp",
     category: "blog.articles.categories.interiorDesign",
     name: "blog.articles.ideas.name",
     by: "Razam",
@@ -25,7 +25,7 @@ export default [
     slug: "ideas",
   },
   {
-    previewImg: "/images/blog/previews/trends.jpg",
+    previewImg: "/images/blog/previews/trends.webp",
     category: "blog.articles.categories.interiorDesign",
     name: "blog.articles.trends.name",
     by: "Razam",
@@ -33,7 +33,7 @@ export default [
     slug: "trends",
   },
   {
-    previewImg: "/images/blog/previews/materials.jpg",
+    previewImg: "/images/blog/previews/materials.webp",
     category: "blog.articles.categories.interiorDesign",
     name: "blog.articles.materials.name",
     by: "Razam",
@@ -41,7 +41,7 @@ export default [
     slug: "materials",
   },
   {
-    previewImg: "/images/blog/previews/bedroom.jpg",
+    previewImg: "/images/blog/previews/bedroom.webp",
     category: "blog.articles.categories.interiorDesign",
     name: "blog.articles.bedroom.name",
     by: "Razam",
@@ -49,7 +49,7 @@ export default [
     slug: "bedroom",
   },
   {
-    previewImg: "/images/blog/previews/minimalism.jpg",
+    previewImg: "/images/blog/previews/minimalism.webp",
     category: "blog.articles.categories.interiorDesign",
     name: "blog.articles.minimalism.name",
     by: "Razam",
@@ -57,7 +57,7 @@ export default [
     slug: "minimalism",
   },
   {
-    previewImg: "/images/blog/previews/minimalism.jpg",
+    previewImg: "/images/blog/previews/minimalism.webp",
     category: "blog.articles.categories.interiorDesign",
     name: "blog.articles.minimalism.name",
     by: "Razam",

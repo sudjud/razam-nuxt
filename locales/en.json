@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Razam | Accueil",
-    "description": "Expert design and renovation on the French Riviera."
+    "title": "Razam | Expert design and renovation on the French Riviera.",
+    "description": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes.",
+    "keywords": "interior design, renovation, architecture, Riviera, France, Côte d'Azur, apartment design, villa renovation, modern interior, house remodeling, design studio"
   },
   "menu": {
     "home": "Home",
@@ -14,7 +15,8 @@
     "article": "Article",
     "interiordesign": "Interior Design",
     "houserenovation": "Repair of houses and apartments",
-    "commercerenovation": "Commercial renovation"
+    "commercerenovation": "Commercial renovation",
+    "search": "Search"
   },
   "common": {
     "hide": "Hide",
@@ -186,7 +188,7 @@
     }
   },
   "contactPlate": {
-    "h1": "Design&nbsp;and&nbsp;Renovation<br />",
+    "h1": "Design&nbsp;and&nbsp;Repair<br />",
     "span1": "crafted",
     "span2": "for you",
     "p": "Get in touch with us and we will create a unique space that reflects your style and needs. Leave a request or call to discuss the details."
@@ -557,5 +559,47 @@
       "locationLabel": "Location",
       "location": "305 Av. Georges Pompidou, 06220<br />Vallauris, France"
     }
+  },
+  "search": {
+    "category": "Category",
+    "projects": "Projects",
+    "nothing": "Nothing found",
+    "articles": "Articles",
+    "loading": "Loading"
+  },
+  "calculator": {
+    "h": "Calculate the cost of the project",
+    "directions": {
+      "design": "Interior design",
+      "renovation": "Renovation"
+    },
+    "objectType": {
+      "apartment": "House / apartment",
+      "public": "Public space (retail, HoReCa, showroom, salon)",
+      "office": "Office / administrative space"
+    },
+    "params": {
+      "area": "Area",
+      "bathrooms": "Number of bathrooms",
+      "kitchen": "Kitchen",
+      "rooms": "Number of rooms / spaces"
+    },
+    "services": {
+      "project": "Design project",
+      "materials": "Material selection",
+      "budgeting": "Budget planning",
+      "supply": "Procurement",
+      "supervision": "Author supervision",
+      "assistance": "Assistance service (purchase control)"
+    },
+    "contact": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message"
+    },
+    "confirmation": "I agree to the processing of personal data",
+    "button": "Get a quote",
+    "success": "Thank you! We will contact you within 24 hours."
   }
 }

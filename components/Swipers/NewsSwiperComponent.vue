@@ -6,7 +6,7 @@
     @swiper="bindSwiperInstance"
   >
     <swiper-slide v-for="(item, index) in news" :key="index">
-      <a href="">
+      <NuxtLink :to="localePath(`/news/${item.slug}`)">
         <article>
           <h5>{{ $t(item.category) }}</h5>
           <h4>{{ $t(item.title) }}</h4>
@@ -18,7 +18,7 @@
             <img :src="item.photo" alt="" />
           </div>
         </article>
-      </a>
+      </NuxtLink>
     </swiper-slide>
     <div class="slider-buttons">
       <button class="nav-button left" @click="prevSlide">
@@ -55,9 +55,11 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import news2 from "/images/news/illumination.jpg";
-import news4 from "/images/news/ideas.jpg";
+import news2 from "/images/news/illumination.webp";
+import news4 from "/images/news/ideas.webp";
 import { ref } from "vue";
+
+const localePath = useLocalePath();
 
 const news = ref([
   {
@@ -66,6 +68,7 @@ const news = ref([
     title: "home.news.title1",
     by: "home.news.by1",
     date: "home.news.date1",
+    slug: "materials"
   },
   {
     photo: news2,
@@ -73,6 +76,7 @@ const news = ref([
     title: "home.news.title2",
     by: "home.news.by2",
     date: "home.news.date2",
+    slug: "lights"
   },
   {
     photo: news4,
@@ -80,6 +84,7 @@ const news = ref([
     title: "home.news.title3",
     by: "home.news.by3",
     date: "home.news.date3",
+    slug: "ideas"
   },
   {
     photo: news2,
@@ -87,6 +92,7 @@ const news = ref([
     title: "home.news.title4",
     by: "home.news.by4",
     date: "home.news.date4",
+    slug: "trends"
   },
 ]);
 

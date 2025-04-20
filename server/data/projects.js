@@ -5,7 +5,7 @@ export default [
     year: 2023,
     category: "portfolio.tabs.categories.livingRooms",
     type: "portfolio.tabs.types.designAndRepair",
-    preview: "/images/projects/previews/chambre-enfant.jpg",
+    preview: "/images/projects/previews/chambre-enfant.webp",
     totalArea: "276.50",
     livingArea: "95.30",
     workingTime: "portfolio.projects.chambreEnfant.workingTime",
@@ -16,24 +16,24 @@ export default [
     images: [
       {
         name: "portfolio.tabs.rooms.playingRoom",
-        photo: "/images/projects/chambre-enfant/playing-room.jpg",
+        photo: "/images/projects/chambre-enfant/playing-room.webp",
 
       },
       {
         name: "portfolio.tabs.rooms.bedroom",
-        photo: "/images/projects/chambre-enfant/bedroom.jpg",
+        photo: "/images/projects/chambre-enfant/bedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.playingRoom",
-        photo: "/images/projects/chambre-enfant/playing-room-2.jpg",
+        photo: "/images/projects/chambre-enfant/playing-room-2.webp",
       },
       {
         name: "portfolio.tabs.rooms.room",
-        photo: "/images/projects/chambre-enfant/room.jpg",
+        photo: "/images/projects/chambre-enfant/room.webp",
       },
       {
         name: "portfolio.tabs.rooms.room",
-        photo: "/images/projects/chambre-enfant/room2.jpg",
+        photo: "/images/projects/chambre-enfant/room2.webp",
       },
     ],
   },
@@ -43,35 +43,35 @@ export default [
     year: 2022,
     category: "portfolio.tabs.categories.livingRooms",
     type: "portfolio.tabs.types.designAndRepair",
-    preview: "/images/projects/previews/elemental-harmony.jpg",
+    preview: "/images/projects/previews/elemental-harmony.webp",
     totalArea: "276.50",
     livingArea: "95.30",
     workingTime: "portfolio.projects.chambreEnfant.workingTime",
     client: "portfolio.projects.chambreEnfant.client",
-    dislocation: "portfolio.projects.chambreEnfant.dislocation",
+    dislocation: "portfolio.projects.elementalHarmony.dislocation",
     desc: "portfolio.projects.chambreEnfant.desc",
     cost: "12.590",
     images: [
       {
         name: "portfolio.tabs.rooms.hall",
-        photo: "/images/projects/elemental-harmony/hall.jpg",
+        photo: "/images/projects/elemental-harmony/hall.webp",
 
       },
       {
         name: "portfolio.tabs.rooms.bedroom",
-        photo: "/images/projects/elemental-harmony/bedroom.jpg",
+        photo: "/images/projects/elemental-harmony/bedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.kitchen",
-        photo: "/images/projects/elemental-harmony/kitchen.jpg",
+        photo: "/images/projects/elemental-harmony/kitchen.webp",
       },
       {
         name: "portfolio.tabs.rooms.corridor",
-        photo: "/images/projects/elemental-harmony/corridor.jpg",
+        photo: "/images/projects/elemental-harmony/corridor.webp",
       },
       {
         name: "portfolio.tabs.rooms.bathroom",
-        photo: "/images/projects/elemental-harmony/bathroom.jpg",
+        photo: "/images/projects/elemental-harmony/bathroom.webp",
       },
     ],
   },
@@ -81,7 +81,7 @@ export default [
     year: 2022,
     category: "portfolio.tabs.categories.livingRooms",
     type: "portfolio.tabs.types.designAndRepair",
-    preview: "/images/projects/previews/modern-vista.jpg",
+    preview: "/images/projects/previews/modern-vista.webp",
     totalArea: "276.50",
     livingArea: "95.30",
     workingTime: "portfolio.projects.modernVista.workingTime",
@@ -92,24 +92,24 @@ export default [
     images: [
       {
         name: "portfolio.tabs.rooms.hall",
-        photo: "/images/projects/modern-vista/hall.jpg",
+        photo: "/images/projects/modern-vista/hall.webp",
 
       },
       {
         name: "portfolio.tabs.rooms.bedroom",
-        photo: "/images/projects/modern-vista/bedroom.jpg",
+        photo: "/images/projects/modern-vista/bedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.childbedroom",
-        photo: "/images/projects/modern-vista/childbedroom.jpg",
+        photo: "/images/projects/modern-vista/childbedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.toilet",
-        photo: "/images/projects/modern-vista/toilet.jpg",
+        photo: "/images/projects/modern-vista/toilet.webp",
       },
       {
         name: "portfolio.tabs.rooms.bathroom",
-        photo: "/images/projects/modern-vista/bathroom.jpg",
+        photo: "/images/projects/modern-vista/bathroom.webp",
       },
     ],
   },
@@ -119,7 +119,7 @@ export default [
     year: 2021,
     category: "portfolio.tabs.categories.livingRooms",
     type: "portfolio.tabs.types.designAndRepair",
-    preview: "/images/projects/previews/natural-essence.jpg",
+    preview: "/images/projects/previews/natural-essence.webp",
     totalArea: "276.50",
     livingArea: "95.30",
     workingTime: "portfolio.projects.naturalEssence.workingTime",
@@ -130,24 +130,24 @@ export default [
     images: [
       {
         name: "portfolio.tabs.rooms.corridor",
-        photo: "/images/projects/natural-essence/corridor.jpg",
+        photo: "/images/projects/natural-essence/corridor.webp",
 
       },
       {
         name: "portfolio.tabs.rooms.bedroom",
-        photo: "/images/projects/natural-essence/bedroom.jpg",
+        photo: "/images/projects/natural-essence/bedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.kitchen",
-        photo: "/images/projects/natural-essence/kitchen.jpg",
+        photo: "/images/projects/natural-essence/kitchen.webp",
       },
       {
         name: "portfolio.tabs.rooms.hall",
-        photo: "/images/projects/natural-essence/hall.jpg",
+        photo: "/images/projects/natural-essence/hall.webp",
       },
       {
         name: "portfolio.tabs.rooms.bathroom",
-        photo: "/images/projects/natural-essence/bathroom.jpg",
+        photo: "/images/projects/natural-essence/bathroom.webp",
       },
     ],
   },
@@ -157,7 +157,7 @@ export default [
     year: 2024,
     category: "portfolio.tabs.categories.livingRooms",
     type: "portfolio.tabs.types.designAndRepair",
-    preview: "/images/projects/previews/serene-lines.jpg",
+    preview: "/images/projects/previews/serene-lines.webp",
     totalArea: "276.50",
     livingArea: "95.30",
     workingTime: "portfolio.projects.sereneLines.workingTime",
@@ -168,23 +168,23 @@ export default [
     images: [
       {
         name: "portfolio.tabs.rooms.hall",
-        photo: "/images/projects/serene-lines/hall.jpg",
+        photo: "/images/projects/serene-lines/hall.webp",
       },
       {
         name: "portfolio.tabs.rooms.bedroom",
-        photo: "/images/projects/serene-lines/bedroom.jpg",
+        photo: "/images/projects/serene-lines/bedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.kitchen",
-        photo: "/images/projects/serene-lines/kitchen.jpg",
+        photo: "/images/projects/serene-lines/kitchen.webp",
       },
       {
         name: "portfolio.tabs.rooms.childroom",
-        photo: "/images/projects/serene-lines/childroom.jpg",
+        photo: "/images/projects/serene-lines/childroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.bathroom",
-        photo: "/images/projects/serene-lines/bathroom.jpg",
+        photo: "/images/projects/serene-lines/bathroom.webp",
       },
     ],
   },
@@ -194,7 +194,7 @@ export default [
     year: 2024,
     category: "portfolio.tabs.categories.livingRooms",
     type: "portfolio.tabs.types.designAndRepair",
-    preview: "/images/projects/previews/urban-grace.jpg",
+    preview: "/images/projects/previews/urban-grace.webp",
     totalArea: "276.50",
     livingArea: "95.30",
     workingTime: "portfolio.projects.urbanGrace.workingTime",
@@ -205,23 +205,23 @@ export default [
     images: [
       {
         name: "portfolio.tabs.rooms.kitchen",
-        photo: "/images/projects/urban-grace/kitchen.jpg",
+        photo: "/images/projects/urban-grace/kitchen.webp",
       },
       {
         name: "portfolio.tabs.rooms.bedroom",
-        photo: "/images/projects/urban-grace/bedroom.jpg",
+        photo: "/images/projects/urban-grace/bedroom.webp",
       },
       {
         name: "portfolio.tabs.rooms.corridor",
-        photo: "/images/projects/urban-grace/corridor.jpg",
+        photo: "/images/projects/urban-grace/corridor.webp",
       },
       {
         name: "portfolio.tabs.rooms.lounge",
-        photo: "/images/projects/urban-grace/lounge2.jpg",
+        photo: "/images/projects/urban-grace/lounge2.webp",
       },
       {
         name: "portfolio.tabs.rooms.lounge",
-        photo: "/images/projects/urban-grace/lounge.jpg",
+        photo: "/images/projects/urban-grace/lounge.webp",
       },
     ],
   },

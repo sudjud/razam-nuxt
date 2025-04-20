@@ -30,9 +30,9 @@
               <img :src="item.preview" alt="" />
             </div>
             <p class="name">
-              <span @click="router.push(`/portfolio/${item.slug}`)">{{
+              <NuxtLink :to="localePath(`/portfolio/${item.slug}`)">{{
                 item.name
-              }}</span>
+              }}</NuxtLink>
             </p>
             <p class="year">{{ item.year }}</p>
             <p class="type">{{ $t(item.type) }}</p>
@@ -49,8 +49,10 @@
 <script setup defer>
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
+import { useLocalePath } from "#imports";
 
 const router = useRouter();
+const localePath = useLocalePath();
 
 const { data: projects } = await useAsyncData("projects", () =>
   $fetch("/api/projects")
@@ -129,6 +131,9 @@ $transition-speed: 0.3s
         padding: 2rem 0
         @media (max-width: 430px)
           grid-template-columns: 1fr 3fr 2fr 2fr 4fr 1fr
+        &:hover
+          .arrow
+            transform: rotate(45deg)
         p
           text-align: center
         .img
@@ -142,6 +147,11 @@ $transition-speed: 0.3s
             height: 100%
             opacity: 1
         .name
+          a
+            text-decoration: none
+            color: black
+            &:hover
+              text-decoration: underline
           span
             cursor: pointer
             &:hover

@@ -4,11 +4,11 @@
     <h1>
       <span v-reveal class="wow reveal-bb reveal-visible"
         >{{ $t("services.commerceRenovation.h1") }}<br />
-        {{$t("services.commerceRenovation.h1p2")}}</span
+        {{ $t("services.commerceRenovation.h1p2") }}</span
       >
     </h1>
     <div class="image-wrapper">
-      <img src="/images/services/commerce-renovation/main.jpg" alt="" />
+      <img src="/images/services/commerce-renovation/main.webp" alt="" />
     </div>
   </main>
   <section class="text">
@@ -34,19 +34,20 @@
       <li>{{ $t("services.commerceRenovation.text.ul2.li4") }}</li>
     </ul>
   </section>
+  <section class="calculate-form">
+    <CostCalculator />
+  </section>
   <section class="why">
     <div class="images">
-      <img src="/images/services/commerce-renovation/1.jpg" alt="" />
-      <img src="/images/services/commerce-renovation/2.jpg" alt="" />
-      <img src="/images/services/commerce-renovation/3.jpg" alt="" />
+      <img src="/images/services/commerce-renovation/1.webp" alt="" />
+      <img src="/images/services/commerce-renovation/2.webp" alt="" />
+      <img src="/images/services/commerce-renovation/3.webp" alt="" />
     </div>
     <div class="quote">
       <div class="image-wrapper">
         <img src="/images/blog/lights/quote.svg" alt="" />
       </div>
-      <h5>
-        "{{ $t("services.commerceRenovation.text.quote") }}"
-      </h5>
+      <h5>"{{ $t("services.commerceRenovation.text.quote") }}"</h5>
     </div>
   </section>
   <ContactShield3 />
@@ -55,6 +56,7 @@
 <script setup>
 import ContactShield3 from "../../components/Blocks/ContactShield3.vue";
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
+import CostCalculator from "../../components/Tools/CostCalculator.vue";
 </script>
 
 <style lang="sass" scoped>
@@ -85,6 +87,29 @@ section.text
     li
       font-size: 1.5rem
       color: $font-grey
+
+section.calculate-form
+  margin-right: 100px
+  margin-left: 100px
+
+  @media (max-width: 1200px)
+    margin-right: 70px
+    margin-left: 70px
+
+  @media (max-width: 992px)
+    margin-right: 30px
+    margin-left: 30px
+
+  @media (max-width: 768px)
+    margin-right: 20px
+    margin-left: 20px
+  margin-top: 7rem
+  background-image: url('/images/services/commerce-renovation/main.webp')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  border-radius: 12px
+  overflow: hidden
 
 section.why
   max-width: 1110px

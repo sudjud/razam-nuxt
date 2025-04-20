@@ -114,6 +114,9 @@ const leave = (el) => {
   .question-item
     border-top: 1px solid $font-grey
     padding: 2rem 0 2rem 0
+    &:hover
+      .arrow-circle
+        transform: rotate(-90deg)
     &.open
       border-top: 3px solid $font-black
     .question-number-wrapper
@@ -156,7 +159,7 @@ const leave = (el) => {
         width: 3rem
         height: 3rem
       &.open
-        transform: rotate(-90deg)
+        transform: rotate(-135deg)
       svg
         @media (max-width: 768px)
           width: 15px

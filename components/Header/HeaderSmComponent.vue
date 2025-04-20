@@ -1,15 +1,15 @@
 <template>
-  <header class="header" :class="{ open: isOpen }">
+  <header class="header" :class="{ open: isOpen, hidden: isHidden && !isOpen }">
     <div class="container">
       <!-- Логотип -->
       <div class="logo" :class="{ open: isOpen }">
         <NuxtLink :to="localePath('/')">
-          <img src="@/assets/logo.png" alt="Razam" />
+          <img src="/logo.webp" alt="Razam" />
         </NuxtLink>
       </div>
       <div class="logo logo-white" :class="{ open: isOpen }">
         <NuxtLink :to="localePath('/')">
-          <img src="@/assets/logo-white.png" alt="Razam" />
+          <img src="/logo-white.webp" alt="Razam" />
         </NuxtLink>
       </div>
 
@@ -101,6 +101,29 @@ const route = useRoute();
 const localePath = useLocalePath();
 const { locale } = useI18n();
 
+const lastScrollY = ref(0);
+const isHidden = ref(false);
+
+const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY < 100) {
+    isHidden.value = false;
+  } else {
+    isHidden.value = true;
+  }
+
+  lastScrollY.value = currentScrollY;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
 const isActive = (path) => {
   const localizedPath = localePath(path);
   return route.path === localizedPath;
@@ -124,7 +147,7 @@ const closeMenu = () => {
   height: 70px
   justify-content: space-between
   align-items: center
-  padding: 10px 20px 5px 20px
+  padding: 5px 20px 5px 20px
   z-index: 100
   .container
     display: flex
@@ -134,6 +157,9 @@ const closeMenu = () => {
     padding: 0
   &.open
     background-color: rgba(black, 0.7)
+  &.hidden
+    transition: 0.2s ease-in-out
+    background-color: rgba(white, 1)
 
 /* Логотип */
 .logo img

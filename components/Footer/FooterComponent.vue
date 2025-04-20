@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="links">
       <div class="logo">
-        <img src="@/assets/logo-white.png" alt="" />
+        <img src="/logo-white.webp" alt="" />
       </div>
       <div class="medias">
         <SocialMedias />

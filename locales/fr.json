@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Razam | Accueil",
-    "description": "Design et rénovation experts sur la Côte d'Azur."
+    "title": "Razam | Design et rénovation experts sur la Côte d'Azur.",
+    "description": "Nous sommes spécialisés dans la création d'intérieurs uniques et élégants pour maisons, appartements et espaces commerciaux à Nice, Cannes et Antibes.",
+    "keywords": "design d'intérieur, rénovation, architecture, Riviera, France, Côte d'Azur, design d'appartement, rénovation de villa, intérieur moderne, rénovation de maison, studio de design"
   },
   "menu": {
     "home": "Accueil",
@@ -14,7 +15,8 @@
     "article": "Article",
     "interiordesign": "Design d'intérieur",
     "houserenovation": "Rénovation de maisons et d'appartements",
-    "commercerenovation": "Rénovation de locaux commerciaux"
+    "commercerenovation": "Rénovation de locaux commerciaux",
+    "search": "Recherche"
   },
   "common": {
     "hide": "Cacher",
@@ -367,17 +369,17 @@
         "dislocation": "Cannes, France",
         "desc": "Un projet alliant convivialité et style. Des teintes chaudes, des textures douces et des détails harmonieux créent un espace propice à la détente et au bien-être.",
         "componentData": {
-          "lounge": {
+          "firstBlock": {
             "h1": "Salon",
             "h2": "Une Alliance de Confort, de Style et de Modernité",
             "p": "Le canapé au centre du salon attire l'attention par son design minimaliste et ses lignes douces. L'utilisation de tissus naturels et de tons apaisants crée une ambiance chaleureuse. Sa structure modulaire permet une adaptation facile à tous les besoins."
           },
-          "bedroom": {
+          "secondBlock": {
             "h1": "La Chambre, Où",
             "h2": "Commence l'Harmonie du Jour",
             "p": "La chambre est conçue dans des tons verts et neutres apaisants, créant une atmosphère de confort et de relaxation. Des détails comme une tête de lit moelleuse et un banc d'accentuation ajoutent de la profondeur et du raffinement à l'espace. La lumière du matin traverse doucement les rideaux épais, offrant un début de journée harmonieux."
           },
-          "lights": {
+          "thirdBlock": {
             "h1": "Lumière,",
             "h2": "Qui Crée l'Ambiance",
             "p": "L'intérieur est éclairé par différentes sources lumineuses qui en soulignent les détails. Les appliques murales à lumière douce apportent une touche de chaleur, tandis que les suspensions mettent en valeur les zones clés. Les lignes lumineuses modernes s'intègrent parfaitement au style minimaliste global."
@@ -557,5 +559,47 @@
       "locationLabel": "Localisation",
       "location": "305 Av. Georges Pompidou, 06220<br />Vallauris, France"
     }
+  },
+  "search": {
+    "category": "Catégories",
+    "projects": "Les projets",
+    "nothing": "Rien n'a été trouvé",
+    "articles": "Les articles",
+    "loading": "Chargement"
+  },
+  "calculator": {
+    "h": "Calculer le coût du projet",
+    "directions": {
+      "design": "Design d’intérieur",
+      "renovation": "Rénovation"
+    },
+    "objectType": {
+      "apartment": "Maison / appartement",
+      "public": "Espace public (retail, HoReCa, showroom, salon)",
+      "office": "Bureau / espace administratif"
+    },
+    "params": {
+      "area": "Superficie",
+      "bathrooms": "Nombre de salles de bain",
+      "kitchen": "Cuisine",
+      "rooms": "Nombre de pièces / espaces"
+    },
+    "services": {
+      "project": "Projet de design",
+      "materials": "Sélection des matériaux",
+      "budgeting": "Établissement du budget",
+      "supply": "Approvisionnement",
+      "supervision": "Suivi architectural",
+      "assistance": "Service d’assistance (contrôle des achats)"
+    },
+    "contact": {
+      "name": "Nom",
+      "phone": "Téléphone",
+      "email": "Email",
+      "message": "Message"
+    },
+    "confirmation": "J’accepte les conditions de traitement des données personnelles",
+    "button": "Obtenir un devis",
+    "success": "Merci ! Nous vous contacterons dans les 24 heures."
   }
 }

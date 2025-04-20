@@ -36,10 +36,10 @@
 
 <script setup>
 import { reactive, nextTick } from "vue";
-import image1 from "/images/about/4.jpg";
-import image2 from "/images/about/4.jpg";
-import image3 from "/images/about/4.jpg";
-import image4 from "/images/about/4.jpg";
+import image1 from "/images/about/4.webp";
+import image2 from "/images/blog/lights/2.webp";
+import image3 from "/images/blog/lights/3.webp";
+import image4 from "/images/blog/lights/4.webp";
 
 const questions = reactive([
   {

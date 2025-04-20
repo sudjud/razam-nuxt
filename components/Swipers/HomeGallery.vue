@@ -36,7 +36,7 @@
             <div class="buttons-idx">{{ padNumber(index + 1) }}</div>
             <div v-if="index === currentIndex" class="arrow-wrapper">
               <div class="arrow">
-                <img src="/images/home/diag-arrow2.png" alt="arrow" />
+                <img src="/public/images/home/diag-arrow2.webp" alt="arrow" />
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@
         <SwiperSlide v-for="(item, index) in items" :key="index">
           <div class="slide-content">
             <img :src="item.image" :alt="item.service" />
-            <div class="description">{{ $t(item.service) }}</div>
+            <div class="description"><NuxtLink :to="localePath(`/services/${item.slug}`)">{{ $t(item.service) }} ↗</NuxtLink></div>
           </div>
         </SwiperSlide>
       </Swiper>
@@ -82,14 +82,15 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
-import photo1 from "/images/services/interior-design/main.jpg";
-import photo2 from "/images/services/interior-design/1.jpg";
-import photo3 from "/images/services/house-renovation/2.jpg";
-import photo4 from "/images/services/house-renovation/main.jpg";
-import photo5 from "/images/services/commerce-renovation/main.jpg"
+import photo1 from "/images/services/interior-design/main.webp";
+import photo2 from "/public/images/services/interior-design/1gallery.webp";
+import photo3 from "/public/images/services/interior-design/2gallery.webp";
+import photo4 from "/images/services/house-renovation/main.webp";
+import photo5 from "/images/services/commerce-renovation/main.webp"
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const localePath = useLocalePath();
 
 import SwiperCore from "swiper";
 SwiperCore.use([Navigation, Pagination]);
@@ -129,7 +130,7 @@ const changeImage = (index) => {
 };
 
 const moveToServices = (slug) => {
-  router.push(`/services/${slug}`);
+  router.push(localePath(`/services/${slug}`));
 };
 
 const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
@@ -179,6 +180,11 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
       font-weight: 500
       color: $font-black
       text-align: center
+      a
+        color: black
+        display: flex
+        img
+          height: 0.6em
 
 .gallery
   +regpad

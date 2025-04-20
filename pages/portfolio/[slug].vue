@@ -45,9 +45,18 @@
       </div>
     </section>
   </main>
+  <FullWidthImage
+    v-if="false"
+    @close-event="handleCloseEvent"
+    :images="imagesArray"
+  />
   <section class="photos">
     <div v-for="(item, index) in smallImages" :key="index" class="photo">
-      <img :src="item.photo" alt="" />
+      <img 
+        :src="item.photo" 
+        alt=""
+        @click="overlayOpen = true"
+      />
       <p>{{ $t(item.name) }}</p>
     </div>
     <div class="photo-main">
@@ -59,29 +68,16 @@
     <!-- <component :is="currentProjectComponent" /> -->
     <SingleComponent :nameAcronym="nameAcronym" :nameCamelCase="nameCamelCase" :name="project.name" :slug="project.slug"/>
   </section>
-  <section class="offer">
-    <h2>
-      {{ $t("home.offer.h2P1")
-      }}<span class="arrow"
-        ><img src="/images/home/offer-arrow.svg" alt="" /></span
-      ><br />
-      <div class="decor">
-        {{ $t("home.offer.h2P2") }}<br />
-        {{ $t("home.offer.h2P3") }} ?
-      </div>
-    </h2>
-    <p>
-      {{ $t("home.offer.p") }}
-    </p>
-  </section>
+  <OfferComponent />
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
-import UrbanGraceComponent from "../components/Projects/UrbanGraceComponent.vue";
 import Breadcrumbs from "../../components/Tools/Breadcrumbs.vue";
 import SingleComponent from "../../components/Projects/SingleComponent.vue";
+import OfferComponent from '/components/Blocks/OfferComponent.vue';
+import FullWidthImage from "../../components/Swipers/FullWidthImage.vue";
 
 const route = useRoute();
 
@@ -90,6 +86,15 @@ const { data: projectData } = await useAsyncData("project", () =>
 );
 
 const project = ref(projectData.value || null);
+
+const imagesArray = computed(() =>
+  project.value?.images?.map(item => item.photo) || []
+);
+const overlayOpen = ref(false);
+
+const handleCloseEvent = () => {
+  overlayOpen.value = false;
+}
 
 const nameAcronym = computed(() => {
   const firstLetter = project.value?.slug?.split("-")[0][0];
@@ -113,14 +118,6 @@ const smallImages = computed(() => {
 const mainImage = computed(() => {
   return project.value?.images?.[project.value.images.length - 1] || {};
 });
-
-const projectComponents = {
-  "urban-grace": UrbanGraceComponent,
-};
-
-const currentProjectComponent = computed(
-  () => projectComponents[project.value?.slug] || null
-);
 </script>
 
 <style lang="sass" scoped>
@@ -139,11 +136,16 @@ const currentProjectComponent = computed(
     @media (max-width: 1200px)
       grid-template-columns: 1.5fr 1fr
       gap: 2rem
+    @media (max-width: 576px)
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr
     .numbers
       background: var(--bg-url) no-repeat center center / cover
       background-size: cover
       border-radius: 12px
       display: flex
+      @media (max-width: 576px)
+        grid-row: 2
       .label
         background-color: rgba($bgc-main, 0.7)
         width: 21rem
@@ -179,6 +181,8 @@ const currentProjectComponent = computed(
     .customer
       margin-top: 10rem
       // float: left
+      @media (max-width: 576px)
+        margin-top: 1rem
       p
         font-size: 1.25rem
         color: $font-grey
@@ -192,6 +196,8 @@ const currentProjectComponent = computed(
       width: 70%
       @media (max-width: 1200px)
         width: 100%
+      @media (max-width: 576px)
+        text-align: left
     // .info-right
     //   .type
     //       text-align: right

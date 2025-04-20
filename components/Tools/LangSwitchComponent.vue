@@ -6,7 +6,7 @@
     @click="isOpen = !isOpen"
   >
     <div class="current">
-      {{ currentLocal }}
+      {{ currentLocal.toUpperCase() }}
     </div>
     <div class="dropdown" :class="{open: isOpen}">
       <NuxtLink
@@ -14,7 +14,7 @@
         :key="locale.code"
         :to="switchLocalePath(locale.code)"
       >
-        {{ locale.name }}
+        {{ locale.name.toUpperCase() }}
       </NuxtLink>
     </div>
   </div>
@@ -41,6 +41,8 @@ const isOpen = ref(false);
 .switcher
   position: relative
   left: 40px
+  @media (max-width: 992px)
+    left: 5px
   @media (max-width: 768px)
     left: 0
     top: 0
@@ -67,20 +69,25 @@ const isOpen = ref(false);
     overflow: hidden
     display: flex
     max-height: 0
-    left: calc(-50% - 10px)
+    left: calc(-35%)
     top: 1.5rem
     border-radius: 12px
-    flex-direction: row
+    flex-direction: column
     justify-content: center
     align-items: center
     gap: 10px
     background-color: rgba($font-white, 0.7)
     transition-duration: 0.2s
+    a
+      color: $font-grey
+    @media (max-width: 1500px)
+      left: -11px
     @media (max-width: 768px)
       font-size: 2.3rem
-      width: 55px
+      width: 45px
       gap: 0
-      left: 10px
+      left: 18px
+      top: 20px
     .image-wrapper
       display: flex
       align-items: center

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="logo">
         <NuxtLink to="/">
-          <img src="@/assets/logo.png" alt="Razam" />
+          <img src="/images/logo.webp" alt="Razam" />
         </NuxtLink>
       </div>
 
@@ -159,9 +159,14 @@ export default defineComponent({
       li
         a
           text-decoration: none
-          font-size: 1rem
+          font-size: 1.25rem
           color: $font-grey
+          font-weight: 500
           transition: color 0.3s ease
+          @media (max-width: 992px)
+            font-size: 1.25rem !important
+          @media (max-width: 850px)
+            font-size: 1rem !important
 
           &:hover
             color: $font-black

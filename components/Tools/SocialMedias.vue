@@ -60,8 +60,8 @@
     display: flex
     justify-content: center
     align-items: center
-    width: 30px
-    height: 30px
+    width: 2rem
+    height: 2rem
     background-color: $font-white
     border: 2px solid $font-white
     border-radius: 50%
@@ -75,7 +75,7 @@
       transition: color 0.3s ease
     &:hover
       background-color: transparent
-      border-color: #007bff
+      border-color: $bgc-second
       svg
-        fill: #007bff
+        fill: $bgc-second
 </style>

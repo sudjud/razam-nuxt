@@ -1,8 +1,8 @@
 <template>
   <main class="services-main">
     <div class="photos">
-      <img class="first" src="/images/services/1.jpg" alt="" />
-      <img class="second" src="/images/services/2.jpg" alt="" />
+      <img class="first" src="/images/services/1.webp" alt="" />
+      <img class="second" src="/images/services/2.webp" alt="" />
     </div>
     <div class="content">
       <div class="content-wrapper">
@@ -27,7 +27,7 @@
           src="/images/services/arrow-down.svg"
           alt=""
         />
-        <img class="logo" src="@/assets/logo.png" alt="" />
+        <img class="logo" src="/images/logo.webp" alt="" />
         <p>{{ $t("services.main.razamText") }}</p>
       </div>
     </div>
@@ -80,26 +80,13 @@
       </div>
     </div>
   </section>
-  <section class="offer">
-    <h2>
-      {{ $t("home.offer.h2P1")
-      }}<span class="arrow"
-        ><img src="/images/home/offer-arrow.svg" alt="" /></span
-      ><br />
-      <div class="decor">
-        {{ $t("home.offer.h2P2") }}<br />
-        {{ $t("home.offer.h2P3") }} ?
-      </div>
-    </h2>
-    <p>
-      {{ $t("home.offer.p") }}
-    </p>
-  </section>
+  <OfferComponent />
 </template>
 
 <script setup>
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
 import HomeGallery from "../components/Swipers/HomeGallery.vue";
+import OfferComponent from '/components/Blocks/OfferComponent.vue'
 import { ref } from "vue";
 
 const isOpen = ref(false);

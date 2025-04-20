@@ -24,9 +24,11 @@
         >
           <swiper-slide v-for="(slide, index) in slides" :key="index">
             <div class="slide-content">
-              <img :src="slide.image" :alt="slide.title" />
-              <h3>{{ slide.title }}</h3>
-              <p>{{ $t(slide.description) }}</p>
+              <NuxtLink :to="localePath(`/portfolio/${slide.slug}`)">
+                <img :src="slide.image" :alt="slide.title" />
+                <h3>{{ slide.title }}</h3>
+                <p>{{ descFormatter($t(slide.description)) }}</p>
+              </NuxtLink>
             </div>
           </swiper-slide>
         </swiper>
@@ -42,8 +44,12 @@ import { Swiper as SwiperInstance } from "swiper/types";
 import SwiperCore from "swiper";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay } from "swiper/modules";
-import slide1 from "/images/home/projects/1.jpg";
-import slide2 from "/images/home/projects/2.jpg";
+import slide1 from "/images/projects/previews/chambre-enfant.webp";
+import slide2 from "/images/projects/previews/elemental-harmony.webp";
+import slide3 from "/images/projects/previews/modern-vista.webp";
+import slide4 from "/images/projects/previews/natural-essence.webp";
+import slide5 from "/images/projects/previews/serene-lines.webp";
+import slide6 from "/images/projects/previews/urban-grace.webp";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -54,28 +60,45 @@ export default defineComponent({
     const slides = ref([
       {
         title: "Chambre d'enfant",
-        description: "home.project1",
+        description: "portfolio.projects.chambreEnfant.desc",
         image: slide1,
+        slug: "chambre-enfant",
       },
       {
-        title: "ELEMENTAL HARMONY",
-        description: "home.project2",
+        title: "Elemental harmony",
+        description: "portfolio.projects.chambreEnfant.desc",
         image: slide2,
+        slug: "elemental-harmony",
       },
       {
-        title: "MODERN VISTA",
-        description: "home.project3",
-        image: slide1,
+        title: "Modern vista",
+        description: "portfolio.projects.modernVista.desc",
+        image: slide3,
+        slug: "modern-vista",
       },
       {
-        title: "URBAN LIVING",
-        description: "home.project4",
-        image: slide2,
+        title: "Natural essence",
+        description: "portfolio.projects.naturalEssence.desc",
+        image: slide4,
+        slug: "natural-essence",
+      },
+      {
+        title: "Serene lines",
+        description: "portfolio.projects.sereneLines.desc",
+        image: slide5,
+        slug: "serene-lines",
+      },
+      {
+        title: "Urban grace",
+        description: "portfolio.projects.urbanGrace.desc",
+        image: slide6,
+        slug: "urban-grace",
       },
     ]);
     const currentPage = ref(1);
     const totalPages = slides.value.length;
     const swiper = ref<SwiperInstance | null>(null);
+    const localePath = useLocalePath();
 
     // Привязка экземпляра Swiper
     const bindSwiperInstance = (instance: SwiperInstance) => {
@@ -88,6 +111,14 @@ export default defineComponent({
     };
     const prevSlide = () => {
       swiper.value?.slidePrev();
+    };
+
+    const descFormatter = (str) => {
+      if (str.length > 70) {
+        return str.split(" ").slice(0, 16).join(" ") + "...";
+      } else {
+        return str;
+      }
     };
 
     const breakpoints = ref({
@@ -133,12 +164,17 @@ export default defineComponent({
       prevSlide,
       bindSwiperInstance,
       breakpoints,
+      descFormatter,
+      localePath,
     };
   },
 });
 </script>
 
 <style lang="sass" scoped>
+
+:deep(.swiper)
+  padding-top: 10px
 
 .slider
   .container
@@ -202,12 +238,21 @@ export default defineComponent({
   align-items: center
   border-radius: 8px
   text-align: left
+  overflow: visible
 
 .slide-content
   width: 35rem
+  transition: 0.1s
+  &:hover
+    transform: scale(1.007)
+    transition: 0.1s
+    h3
+      text-decoration: underline
   img
     width: 100%
-    border-radius: 8px
+    border-radius: 12px
+  a
+    text-decoration: none
 
   h3
     font-size: 2rem

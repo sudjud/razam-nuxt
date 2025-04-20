@@ -15,7 +15,7 @@
   <section class="expert-design">
     <div class="container">
       <div class="image-wrapper">
-        <img src="/images/home/2.jpg" alt="Interior" />
+        <img src="/images/home/2.webp" alt="Interior" />
       </div>
       <div class="filler"></div>
       <div class="text-content">
@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="image-wrapper">
-          <img src="/images/home/3.jpg" alt="Интерьер" />
+          <img src="/images/home/3.webp" alt="Интерьер" />
         </div>
       </div>
       <ValuesArrowsComponent />
@@ -79,21 +79,7 @@
     <div class="divider"></div>
     <ReviewsSliderComponent />
   </section>
-  <section class="offer">
-    <h2>
-      {{ $t("home.offer.h2P1")
-      }}<span class="arrow"
-        ><img src="/images/home/offer-arrow.svg" alt="" /></span
-      ><br />
-      <div class="decor">
-        {{ $t("home.offer.h2P2") }}<br />
-        {{ $t("home.offer.h2P3") }} ?
-      </div>
-    </h2>
-    <p>
-      {{ $t("home.offer.p") }}
-    </p>
-  </section>
+  <OfferComponent />
   <section class="process">
     <div class="container">
       <h2>
@@ -160,6 +146,8 @@ import FaqComponent from "../components/Tools/FaqComponent.vue";
 import NewsSwiperComponent from "../components/Swipers/NewsSwiperComponent.vue";
 import { ref } from "vue";
 import HomeStatsComponent from "../components/Blocks/HomeStatsComponent.vue";
+import OfferComponent from "../components/Blocks/OfferComponent.vue";
+import CostCalculator from "../components/Tools/CostCalculator.vue";
 
 const isOpen = ref(false);
 
@@ -172,7 +160,7 @@ const toggleIsOpen = () => {
 .home
   position: relative
   height: 100vh
-  background: url('/images/home/main.jpg') no-repeat center
+  background: url('/images/home/main.webp') no-repeat center
   background-size: cover
   display: flex
   align-items: center
@@ -230,12 +218,10 @@ const toggleIsOpen = () => {
       padding: 0 20px
     .image-wrapper
       border-radius: 10px
-      @media (max-width: 768px)
-        padding: 0 50px
       img
         max-width: 100%
         height: auto
-        border-radius: 10px
+        border-radius: 12px
 
     .text-content
       align-self: flex-end
@@ -289,7 +275,8 @@ const toggleIsOpen = () => {
         padding-top: 9%
         transform: translateX(40px)
       img
-        max-width: 100%
+        max-width: 100% 
+        border-radius: 0 0 0 12px
         @media (max-width: 576px)
           display: none
   .arrow-down span
@@ -402,49 +389,6 @@ const toggleIsOpen = () => {
 
 // -------------------------------------
 
-.offer
-  position: relative
-  max-width: calc(100% - 200px)
-  margin: 0 auto
-  background-color: $bgc-second
-  padding: 6.75rem 14.9rem 5.1rem 14.9rem
-  @media (max-width: 992px)
-    max-width: calc(100% - 100px)
-    padding: 6.75rem 5rem 5.1rem 5rem
-  @media (max-width: 768px)
-    max-width: calc(100% - 100px)
-  @media (max-width: 576px)
-    max-width: calc(100% - 40px)
-  h2
-    color: $font-black
-    line-height: 7.5rem
-    @media (max-width: 1500px)
-      font-size: 5rem
-      line-height: 6rem
-    .decor
-      margin-left: 12rem
-      @media (max-width: 992px)
-        margin-left: 0
-    .arrow
-      margin-left: 40px
-      margin-top: 20px
-      @media (max-width: 992px)
-        display: none
-  p
-    position: absolute
-    bottom: 1rem
-    left: 60rem
-    text-align: right
-    font-size: 1.25rem
-    color: $font-grey
-    max-width: 17.25rem
-    @media (max-width: 1500px)
-      left: 50rem
-    @media (max-width: 992px)
-      display: none
-
-// -------------------------------------------
-
 .process
   margin-top: 22rem
   @media (max-width: 576px)
@@ -541,7 +485,8 @@ const toggleIsOpen = () => {
 .news
   margin-bottom: 22rem
   @media (max-width: 576px)
-    margin-bottom: $mob-col-gap
+    margin-bottom: 15rem
+    margin-top: 10rem
   h2
     text-align: center
     color: $font-black

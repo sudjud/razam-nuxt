@@ -28,10 +28,10 @@
   </main>
 
   <section class="image">
-    <img src="/images/portfolio/1.jpg" alt="" />
+    <img src="/images/portfolio/1.webp" alt="" />
   </section>
   <section class="portfolio">
-    <h2><span v-reveal class="wow reveal-bb">Портфолио</span></h2>
+    <h2><span v-reveal class="wow reveal-bb">{{ $t('menu.portfolio') }}</span></h2>
     <TabsPortfolioComponent />
   </section>
   <section class="process">
@@ -187,26 +187,13 @@
       </div>
     </div>
   </section>
-  <section class="offer">
-    <h2>
-      {{ $t("home.offer.h2P1")
-      }}<span class="arrow"
-        ><img src="/images/home/offer-arrow.svg" alt="" /></span
-      ><br />
-      <div class="decor">
-        {{ $t("home.offer.h2P2") }}<br />
-        {{ $t("home.offer.h2P3") }} ?
-      </div>
-    </h2>
-    <p>
-      {{ $t("home.offer.p") }}
-    </p>
-  </section>
+  <OfferComponent />
 </template>
 
 <script setup>
 import Breadcrumbs from "../../components/Tools/Breadcrumbs.vue";
 import TabsPortfolioComponent from "../components/Blocks/TabsPortfolioComponent.vue";
+import OfferComponent from '/components/Blocks/OfferComponent.vue';
 </script>
 
 <style lang="sass" scoped>

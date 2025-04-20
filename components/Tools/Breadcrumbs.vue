@@ -33,7 +33,7 @@ const breadcrumbs = computed(() => {
   const crumbs = [{ label: t("menu.home"), to: "/" }];
 
   pathArray.forEach((segment, index) => {
-    if (segment !== "fr" && segment !== "en") {
+    if (segment !== "ru" && segment !== "en") {
       breadcrumbPath += `/${segment}`;
       const isLast = index === pathArray.length - 1;
 

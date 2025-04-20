@@ -1,7 +1,7 @@
 <template>
   <div class="shield">
     <div class="text">
-      <NuxtLink to="/contact#formContactLink">
+      <NuxtLink :to="localePath('/contact')">
         <h1>
           <span class="no-wrap">{{ $t("services.contactShield2.h1") }}</span>
           <div class="spaced">
@@ -16,10 +16,14 @@
       <p>{{ $t("services.contactShield2.p") }}</p>
     </div>
     <div class="image">
-      <img src="/images/services/house-renovation/shield.jpg" alt="" />
+      <img src="/images/services/house-renovation/shield.webp" alt="" />
     </div>
   </div>
 </template>
+
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style lang="sass">
 .no-wrap

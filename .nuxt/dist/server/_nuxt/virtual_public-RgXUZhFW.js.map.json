@@ -1,0 +1,1 @@
+{"file":"virtual_public-RgXUZhFW.js","mappings":";AAAuD,MAAe,aAAA,gBAAgB,gDAAgD;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fcommerce-renovation%2Fmain.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/commerce-renovation/main.webp\")"],"version":3}

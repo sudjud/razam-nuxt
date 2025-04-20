@@ -1,17 +1,17 @@
 <template>
-  <section class="card">
-    <div class="wrapper-image">
-      <img :src="previewImg" alt="" />
-    </div>
-    <p class="category">{{ $t(category) }}</p>
-    <NuxtLink :to="localePath(`/news/${slug}`)">
+  <NuxtLink :to="localePath(`/news/${slug}`)">
+    <section class="card">
+      <div class="wrapper-image">
+        <img :src="previewImg" alt="" />
+      </div>
+      <p class="category">{{ $t(category) }}</p>
       <h4 class="name">{{ $t(name) }}</h4>
-    </NuxtLink>
-    <div class="details">
-      <p class="by">by {{ by }}</p>
-      <p class="date">{{ date }}</p>
-    </div>
-  </section>
+      <div class="details">
+        <p class="by">by {{ by }}</p>
+        <p class="date">{{ date }}</p>
+      </div>
+    </section>
+  </NuxtLink>
 </template>
 
 <script setup>
@@ -31,14 +31,18 @@ defineProps({
 </script>
 
 <style lang="sass" scoped>
+a
+  text-decoration: none
 .card
   display: flex
   flex-direction: column
   border-top: 1px solid $font-grey
   padding-top: 2rem
-  a
-    text-decoration: none
-    &:hover
+  transition: 0.1s
+  &:hover
+    transition: 0.1s
+    transform: scale(1.01)
+    h4
       text-decoration: underline
   & > *
     padding: 0 1rem

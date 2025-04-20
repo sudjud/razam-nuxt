@@ -19,7 +19,7 @@
       </div>
       <div class="lounge-image">
         <img
-          :src="`/images/projects/${slug}/1.jpg`"
+          :src="`/images/projects/${slug}/1.webp`"
           alt="urban-grace"
         />
       </div>
@@ -39,15 +39,15 @@
         </p>
       </div>
       <div class="image">
-        <img :src="`/images/projects/${slug}/2.jpg`" alt="" />
+        <img :src="`/images/projects/${slug}/2.webp`" alt="" />
       </div>
     </div>
   </section>
   <section class="lights">
     <div class="content-wrapper">
       <div class="images">
-        <img :src="`/images/projects/${slug}/3.jpg`" alt="" />
-        <img :src="`/images/projects/${slug}/4.jpg`" alt="" />
+        <img :src="`/images/projects/${slug}/3.webp`" alt="" />
+        <img :src="`/images/projects/${slug}/4.webp`" alt="" />
       </div>
       <div class="text-wrapper">
         <h2>

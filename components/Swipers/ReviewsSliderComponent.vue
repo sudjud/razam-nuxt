@@ -38,8 +38,8 @@ import { Swiper as SwiperInstance } from "swiper/types";
 import SwiperCore from "swiper";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay, EffectCube } from "swiper/modules";
-import user1 from "/images/home/Julien.jpg";
-import user2 from "/images/home/Julien.jpg";
+import user1 from "/images/home/Julien.webp";
+import user2 from "/images/home/Julien.webp";
 
 SwiperCore.use([Navigation, Autoplay, EffectCube]);
 

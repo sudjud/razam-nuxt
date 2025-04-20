@@ -3,12 +3,7 @@
     <div class="left">
       <Breadcrumbs :reservedLastCrumb="$t(article.name)" />
       <h4>{{ $t(article?.category || "blog.articles.unknownCategory") }}</h4>
-      <div class="search">
-        <input type="text" class="search" placeholder="Поиск" />
-        <div class="loupe">
-          <img src="/images/blog/loupe.svg" alt="" />
-        </div>
-      </div>
+      <SearchComponent />
     </div>
     <div class="right">
       <h1>
@@ -23,13 +18,13 @@
   
     <aside>
       <div class="categories">
-        <h4>Категории</h4>
+        <h4>{{ $t('search.category') }}</h4>
         <ul>
-          <li>{{ $t("blog.articles.categories.architecture") }}</li>
-          <li>{{ $t("blog.articles.categories.interiorDesign") }}</li>
-          <li>{{ $t("blog.articles.categories.construction") }}</li>
-          <li>{{ $t("blog.articles.categories.renovation") }}</li>
-          <li>{{ $t("blog.articles.categories.landscapeDesign") }}</li>
+          <li><NuxtLink :to="localePath(`/search?cat=${$t('blog.articles.categories.architecture')}`)">{{ $t("blog.articles.categories.architecture") }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath(`/search?cat=${$t('blog.articles.categories.interiorDesign')}`)">{{ $t("blog.articles.categories.interiorDesign") }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath(`/search?cat=${$t('blog.articles.categories.construction')}`)">{{ $t("blog.articles.categories.construction") }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath(`/search?cat=${$t('blog.articles.categories.renovation')}`)">{{ $t("blog.articles.categories.renovation") }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath(`/search?cat=${$t('blog.articles.categories.landscapeDesign')}`)">{{ $t("blog.articles.categories.landscapeDesign") }}</NuxtLink></li>
         </ul>
       </div>
     </aside>
@@ -40,7 +35,7 @@
   </main>
 
   <div v-if="loading" class="loading">
-    <p>Загрузка...</p>
+    <p>{{ $t('search.loading') }}...</p>
   </div>
 </template>
 
@@ -49,7 +44,10 @@ import { ref, computed, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 import LightsArticleComponent from "../components/Blog/LightsArticleComponent.vue";
 import Breadcrumbs from "../../components/Tools/Breadcrumbs.vue";
+import SearchComponent from "../../components/Tools/SearchComponent.vue";
+import { useLocalePath } from "#imports";
 
+const localePath = useLocalePath();
 const route = useRoute();
 const article = ref(null);
 const loading = ref(true); // Добавляем индикатор загрузки
@@ -177,6 +175,11 @@ aside
         color: $font-grey
         padding: 1rem 0
         border-top: 1px solid $font-grey
+        a
+          text-decoration: none
+          color: black
+          &:hover
+            text-decoration: underline
   .last-articles
     ul
       list-style: none

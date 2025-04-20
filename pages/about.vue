@@ -3,13 +3,17 @@
   <main class="main">
     <h1>
       <Breadcrumbs />
-      <span v-reveal class="wow reveal-bb reveal-visible">{{ $t("about.h1P1") }} </span>
+      <span v-reveal class="wow reveal-bb reveal-visible"
+        >{{ $t("about.h1P1") }}
+      </span>
       <div class="devider">/</div>
-      <div v-reveal class="space wow reveal-sw reveal-visible">{{ $t("about.h1P2") }}</div>
+      <div v-reveal class="space wow reveal-sw reveal-visible">
+        {{ $t("about.h1P2") }}
+      </div>
     </h1>
     <h4>{{ $t("about.h4") }}</h4>
     <div class="main-image">
-      <img src="/images/about/1.jpg" alt="" />
+      <img src="/images/about/1.webp" alt="" />
     </div>
   </main>
   <section class="design">
@@ -22,10 +26,10 @@
       </p>
       <div class="filler"></div>
       <div class="image1">
-        <img src="/images/about/2.jpg" alt="" />
+        <img src="/images/about/2.webp" alt="" />
       </div>
       <div class="image2">
-        <img src="/images/about/3.jpg" alt="" />
+        <img src="/images/about/3.webp" alt="" />
       </div>
     </div>
   </section>
@@ -55,7 +59,7 @@
         </div>
       </div>
       <div class="rates-img">
-        <img src="/images/about/5.jpg" alt="" />
+        <img src="/images/about/5.webp" alt="" />
       </div>
     </div>
     <div class="rates-second">
@@ -120,7 +124,7 @@
     <div class="team-top">
       <div class="team-item">
         <div class="item-img">
-          <img src="/images/about/julien.jpg" alt="" />
+          <img src="/images/about/julien.webp" alt="" />
         </div>
         <h4>{{ $t("about.team.member1_name") }}</h4>
         <div class="separator"></div>
@@ -128,7 +132,7 @@
       </div>
       <div class="team-item">
         <div class="item-img">
-          <img src="/images/about/camile.jpg" alt="" />
+          <img src="/images/about/camile.webp" alt="" />
         </div>
         <h4>{{ $t("about.team.member2_name") }}</h4>
         <div class="separator"></div>
@@ -143,7 +147,7 @@
     <div class="team-bottom">
       <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
-          <img src="/images/about/emil.jpg" alt="" />
+          <img src="/images/about/emil.webp" alt="" />
         </div>
         <h4>{{ $t("about.team.member3_name") }}</h4>
         <div class="separator"></div>
@@ -151,7 +155,7 @@
       </div>
       <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
-          <img src="/images/about/sophie.jpg" alt="" />
+          <img src="/images/about/sophie.webp" alt="" />
         </div>
         <h4>{{ $t("about.team.member4_name") }}</h4>
         <div class="separator"></div>
@@ -159,7 +163,7 @@
       </div>
       <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
-          <img src="/images/about/tomas.jpg" alt="" />
+          <img src="/images/about/tomas.webp" alt="" />
         </div>
         <h4>{{ $t("about.team.member5_name") }}</h4>
         <div class="separator"></div>
@@ -167,7 +171,7 @@
       </div>
       <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
-          <img src="/images/about/clara.jpg" alt="" />
+          <img src="/images/about/clara.webp" alt="" />
         </div>
         <h4>{{ $t("about.team.member6_name") }}</h4>
         <div class="separator"></div>
@@ -176,23 +180,26 @@
     </div>
   </section>
   <div class="contact">
-    <h1>
-      <span v-html="$t('contactPlate.h1')"></span>
-      <span class="indent">{{ $t("contactPlate.span1") }}</span
-      ><br />
-      <span class="indent">{{ $t("contactPlate.span2") }}</span>
-      <span><img src="/images/about/contact-arrow.svg" alt="" /></span>
-    </h1>
+    <NuxtLink :to="localePath('/contact')">
+      <h2>
+        <span v-html="$t('contactPlate.h1')"></span>
+        <span class="indent">{{ $t("contactPlate.span1") }}</span
+        ><br />
+        <span class="indent">{{ $t("contactPlate.span2") }}</span>
+        <span><img src="/images/about/contact-arrow.svg" alt="" /></span>
+      </h2>
+    </NuxtLink>
     <p>
       {{ $t("contactPlate.p") }}
     </p>
-    <img src="/images/about/6.jpg" alt="" />
+    <img src="/images/about/6.webp" alt="" />
   </div>
 </template>
 
 <script setup>
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
 import WhyWeComponent from "../components/Tools/WhyWeComponent.vue";
+const localePath = useLocalePath();
 </script>
 
 <style lang="sass" scoped>
@@ -458,7 +465,9 @@ section.rates
     padding-right: 5rem
     @media (max-width: 576px)
       display: none
-  h1
+  a
+    text-decoration: none
+  h2
     color: $font-black
     @media (max-width: 1400px)
       font-size: 7rem
@@ -470,6 +479,8 @@ section.rates
       font-size: 4rem
     span.indent
       margin-left: 1em
+    &:hover
+      text-decoration: underline
     img
       width: 4rem
       margin-left: 3rem

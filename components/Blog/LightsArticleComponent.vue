@@ -1,7 +1,7 @@
 <template>
   <main class="lights">
     <div class="main-image">
-      <img src="/images/blog/lights/1.jpg" alt="" />
+      <img src="/images/blog/lights/1.webp" alt="" />
     </div>
     <div class="text-content">
       <h5>
@@ -47,9 +47,9 @@
       </p>
     </div>
     <div class="images-block">
-      <img src="/images/blog/lights/2.jpg" alt="" />
-      <img src="/images/blog/lights/3.jpg" alt="" />
-      <img src="/images/blog/lights/4.jpg" alt="" />
+      <img src="/images/blog/lights/2.webp" alt="" />
+      <img src="/images/blog/lights/3.webp" alt="" />
+      <img src="/images/blog/lights/4.webp" alt="" />
     </div>
     <div class="quote">
       <div class="image-wrapper">
