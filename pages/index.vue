@@ -147,13 +147,15 @@ import NewsSwiperComponent from "../components/Swipers/NewsSwiperComponent.vue";
 import { ref } from "vue";
 import HomeStatsComponent from "../components/Blocks/HomeStatsComponent.vue";
 import OfferComponent from "../components/Blocks/OfferComponent.vue";
-import CostCalculator from "../components/Tools/CostCalculator.vue";
+import { useSeo } from "../composables/useSeo";
 
 const isOpen = ref(false);
 
 const toggleIsOpen = () => {
   isOpen.value = !isOpen.value;
 };
+
+useSeo('home');
 </script>
 
 <style lang="sass" scoped>

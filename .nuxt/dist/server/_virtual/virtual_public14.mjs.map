@@ -1,0 +1,1 @@
+{"version":3,"file":"virtual_public14.mjs","sources":["../../../../virtual:public?%2Fimages%2Fabout%2F6.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/6.webp\")"],"names":[],"mappings":";AAAuD,MAAe,cAAA,gBAAgB,sBAAsB;"}

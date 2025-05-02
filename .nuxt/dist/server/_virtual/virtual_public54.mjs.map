@@ -1,0 +1,1 @@
+{"version":3,"file":"virtual_public54.mjs","sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fcommerce-renovation%2Fshield.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/commerce-renovation/shield.webp\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,kDAAkD;"}

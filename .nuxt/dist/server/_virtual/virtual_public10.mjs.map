@@ -1,0 +1,1 @@
+{"version":3,"file":"virtual_public10.mjs","sources":["../../../../virtual:public?%2Fimages%2Fabout%2Fsophie.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/sophie.webp\")"],"names":[],"mappings":";AAAsE,gBAAgB,2BAA2B;"}

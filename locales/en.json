@@ -1,8 +1,45 @@
 {
   "meta": {
-    "title": "Razam | Expert design and renovation on the French Riviera.",
-    "description": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes.",
-    "keywords": "interior design, renovation, architecture, Riviera, France, Côte d'Azur, apartment design, villa renovation, modern interior, house remodeling, design studio"
+    "common": {
+      "title": "Razam | Expert design and renovation on the French Riviera.",
+      "description": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "home": {
+      "title": "Home",
+      "description": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "We’re always ready to discuss your project and answer any questions. Whether you're looking to renovate, develop a design from scratch, or learn more about our services, get in touch your way.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "search": {
+      "title": "Search",
+      "description": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "We create unique and functional spaces in Nice, Cannes, Antibes, and beyond. Our team designs projects that reflect your style and make interiors truly comfortable.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "news": {
+      "title": "News",
+      "description": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "We carefully check every detail to ensure it matches the project. You receive a space fully ready for life or work.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    },
+    "services": {
+      "title": "Services",
+      "description": "We offer a full range of services: from concept development and design to turnkey renovation. Every project is tailored to your preferences, needs, and the specifics of the space.",
+      "keywords": "interior design, renovation, architecture, Riviera, France, French Riviera, apartment design, villa renovation, modern interior, home remodeling, design studio"
+    }
   },
   "menu": {
     "home": "Home",
@@ -568,7 +605,8 @@
     "loading": "Loading"
   },
   "calculator": {
-    "h": "Calculate the cost of the project",
+    "h1": "Calculate",
+    "h2": "the cost of the project",
     "directions": {
       "design": "Interior design",
       "renovation": "Renovation"
@@ -600,6 +638,8 @@
     },
     "confirmation": "I agree to the processing of personal data",
     "button": "Get a quote",
-    "success": "Thank you! We will contact you within 24 hours."
+    "success": "Thank you! We will contact you within 24 hours.",
+    "next": "Next",
+    "prev": "Previous"
   }
 }

@@ -180,19 +180,23 @@
     </div>
   </section>
   <div class="contact">
-    <NuxtLink :to="localePath('/contact')">
-      <h2>
-        <span v-html="$t('contactPlate.h1')"></span>
-        <span class="indent">{{ $t("contactPlate.span1") }}</span
-        ><br />
-        <span class="indent">{{ $t("contactPlate.span2") }}</span>
-        <span><img src="/images/about/contact-arrow.svg" alt="" /></span>
-      </h2>
-    </NuxtLink>
-    <p>
-      {{ $t("contactPlate.p") }}
-    </p>
-    <img src="/images/about/6.webp" alt="" />
+    <div class="text">
+      <NuxtLink :to="localePath('/contact')">
+        <h2>
+          <span v-html="$t('contactPlate.h1')"></span>
+          <span class="indent">{{ $t("contactPlate.span1") }}</span
+          ><br />
+          <span class="indent">{{ $t("contactPlate.span2") }}</span>
+          <span><img src="/images/about/contact-arrow.svg" alt="" /></span>
+        </h2>
+      </NuxtLink>
+      <p>
+        {{ $t("contactPlate.p") }}
+      </p>
+    </div>
+    <div class="contact__image">
+      <img src="/images/about/6.webp" alt="" />
+    </div>
   </div>
 </template>
 
@@ -200,6 +204,9 @@
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
 import WhyWeComponent from "../components/Tools/WhyWeComponent.vue";
 const localePath = useLocalePath();
+import { useSeo } from "../composables/useSeo";
+
+useSeo("about");
 </script>
 
 <style lang="sass" scoped>
@@ -446,37 +453,43 @@ section.rates
 .contact
   margin-top: 20rem
   display: grid
-  grid-template-columns: 7fr 2fr 3fr
+  grid-template-columns: 1fr auto
   gap: 20px
   background-color: $bgc-second
   align-items: center
   padding-left: 100px
-  @media (max-width: 1400px)
-    grid-template-columns: 6fr 3fr 3fr
-  @media (max-width: 992px)
-    padding-left: 30px
   @media (max-width: 768px)
-    padding-left: 20px
-    grid-template-columns: 5fr 4fr 3fr
+    padding-left: 30px
+  .text
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 8rem
+    @media (max-width: 1000px)
+      gap: 4rem
+    @media (max-width: 576px)
+      justify-content: center
   @media (max-width: 576px)
-    grid-template-columns: 9fr 3fr
     margin-top: $mob-col-gap
   p
-    padding-right: 5rem
+    @media (max-width: 992px)
+      font-size: 1rem
     @media (max-width: 576px)
       display: none
   a
     text-decoration: none
   h2
     color: $font-black
-    @media (max-width: 1400px)
-      font-size: 7rem
-    @media (max-width: 1200px)
+    @media (max-width: 1732px)
       font-size: 6rem
-    @media (max-width: 992px)
+    @media (max-width: 1664px)
+      font-size: 5.5rem
+    @media (max-width: 1582px)
       font-size: 5rem
-    @media (max-width: 768px)
+    @media (max-width: 1250px)
       font-size: 4rem
+    @media (max-width: 656px)
+      font-size: 3rem
     span.indent
       margin-left: 1em
     &:hover
@@ -486,4 +499,8 @@ section.rates
       margin-left: 3rem
       @media (max-width: 992px)
         width: 3rem
+  &__image
+    height: 35vw
+    img
+      max-height: 35vw
 </style>

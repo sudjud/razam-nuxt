@@ -2,7 +2,7 @@
   <div class="shield">
     <div class="text">
       <NuxtLink :to="localePath('/contact')">
-        <h1>
+        <h2>
           <span class="no-wrap">{{ $t("services.contactShield1.h1") }}</span>
           <div class="spaced">
             <span>{{ $t("services.contactShield1.h2") }}</span
@@ -11,9 +11,11 @@
               >{{ $t("services.contactShield1.h3")
               }}<img class="arrow" src="/images/home/offer-arrow.svg" alt=""
             /></span>
-          </div></h1
+          </div></h2
       ></NuxtLink>
-      <p>{{ $t("services.contactShield1.p") }}</p>
+      <div class="text__small">
+        <p>{{ $t("services.contactShield1.p") }}</p>
+      </div>
     </div>
     <div class="image">
       <img src="/images/services/shield.webp" alt="" />
@@ -25,7 +27,7 @@
 const localePath = useLocalePath();
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .no-wrap
   white-space: nowrap
 .shield
@@ -34,23 +36,27 @@ const localePath = useLocalePath();
     text-decoration: none
     &:hover
       text-decoration: underline
-  max-height: 33vw
-  display: flex
+  display: grid
   align-items: center
+  grid-template-columns: 1fr auto
   margin-top: 15rem
   line-height: 0
   background-color: $bgc-second
   @media (max-width: 694px)
-    padding: 50px 0
+    padding: 20px 0
   .text
     display: flex
-    align-items: center
-    flex: 1
     flex-direction: row
-    gap: 2rem
-    padding-left: clamp(1rem, 3.65vw, 70px)
-    padding-right: clamp(1rem, 5vw, 160px)
-    h1
+    justify-content: center
+    align-items: center
+    gap: 10rem
+    padding: 0 2rem
+    @media (max-width: 1350px)
+      gap: 5rem
+    &__small
+      display: flex
+      justify-content: end
+    h2
       .spaced
         padding-left: clamp(1rem, 15vw, 415px)
         .arrow
@@ -58,29 +64,24 @@ const localePath = useLocalePath();
           margin-left: 0.4em
         @media (max-width: 1500px)
           padding-left: clamp(1rem, 10vw, 415px)
-      @media (max-width: 1732px)
-        font-size: 7rem
-      @media (max-width: 1664px)
-        font-size: 6.5rem
-      @media (max-width: 1582px)
-        font-size: 6rem
-      @media (max-width: 1500px)
-        font-size: 7rem
-      @media (max-width: 1110px)
-        font-size: 6rem
-      @media (max-width: 992px)
+      @media (max-width: 1680px)
         font-size: 5rem
+      @media (max-width: 992px)
+        font-size: 4rem
       @media (max-width: 838px)
-        font-size: 4.7rem
+        font-size: 4rem
       @media (max-width: 480px)
         font-size: 3rem
     p
       color: $font-grey
       font-size: 1.25rem
       max-width: 227px
-      @media (max-width: 868px)
-        font-size: 1.1rem
+      @media (max-width: 1150px)
+        font-size: 1rem
+      @media (max-width: 768px)
+        font-size: 0.7rem
   .image
+    margin-left: auto
     @media (max-width: 694px)
       display: none
     img

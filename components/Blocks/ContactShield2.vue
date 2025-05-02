@@ -2,7 +2,7 @@
   <div class="shield">
     <div class="text">
       <NuxtLink :to="localePath('/contact')">
-        <h1>
+        <h2>
           <span class="no-wrap">{{ $t("services.contactShield2.h1") }}</span>
           <div class="spaced">
             <span>{{ $t("services.contactShield2.h2") }}</span
@@ -11,7 +11,7 @@
               >{{ $t("services.contactShield2.h3")
               }}<img class="arrow" src="/images/home/offer-arrow.svg" alt=""
             /></span>
-          </div></h1
+          </div></h2
       ></NuxtLink>
       <p>{{ $t("services.contactShield2.p") }}</p>
     </div>
@@ -25,7 +25,7 @@
 const localePath = useLocalePath();
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .no-wrap
   white-space: nowrap
 .shield
@@ -50,23 +50,15 @@ const localePath = useLocalePath();
     gap: 4rem
     padding-left: clamp(1rem, 9.65vw, 200px)
     padding-right: clamp(2.5rem, 3vw, 160px)
-    h1
+    h2
       .spaced
-        padding-left: clamp(1rem, 11vw, 415px)
+        padding-left: clamp(1rem, 10vw, 415px)
         .arrow
           height: 0.6em
           margin-left: 0.4em
         @media (max-width: 1500px)
-          padding-left: clamp(1rem, 10vw, 415px)
-      @media (max-width: 1732px)
-        font-size: 7rem
-      @media (max-width: 1664px)
-        font-size: 6.5rem
-      @media (max-width: 1582px)
-        font-size: 6rem
-      @media (max-width: 1500px)
-        font-size: 7rem
-      @media (max-width: 1110px)
+          padding-left: clamp(1rem, 8vw, 415px)
+      @media (max-width: 1600px)
         font-size: 6rem
       @media (max-width: 992px)
         font-size: 5rem
@@ -79,7 +71,7 @@ const localePath = useLocalePath();
       font-size: 1.25rem
       max-width: 227px
       @media (max-width: 868px)
-        font-size: 1.1rem
+        font-size: 0.8rem
   .image
     @media (max-width: 694px)
       display: none

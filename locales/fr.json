@@ -1,8 +1,45 @@
 {
   "meta": {
-    "title": "Razam | Design et rénovation experts sur la Côte d'Azur.",
-    "description": "Nous sommes spécialisés dans la création d'intérieurs uniques et élégants pour maisons, appartements et espaces commerciaux à Nice, Cannes et Antibes.",
-    "keywords": "design d'intérieur, rénovation, architecture, Riviera, France, Côte d'Azur, design d'appartement, rénovation de villa, intérieur moderne, rénovation de maison, studio de design"
+    "common": {
+      "title": "Razam | Design et rénovation d’exception sur la Côte d’Azur.",
+      "description": "Nous sommes spécialisés dans la création d’intérieurs uniques et élégants pour maisons, appartements et locaux commerciaux à Nice, Cannes et Antibes.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "home": {
+      "title": "Accueil",
+      "description": "Nous sommes spécialisés dans la création d’intérieurs uniques et élégants pour maisons, appartements et locaux commerciaux à Nice, Cannes et Antibes.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Nous sommes toujours prêts à discuter de votre projet et à répondre à toutes vos questions. Que vous souhaitiez rénover, créer un design de zéro ou en savoir plus sur nos services, contactez-nous comme vous le souhaitez.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "search": {
+      "title": "Recherche",
+      "description": "Nous sommes spécialisés dans la création d’intérieurs uniques et élégants pour maisons, appartements et locaux commerciaux à Nice, Cannes et Antibes.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Nous créons des espaces uniques et fonctionnels à Nice, Cannes, Antibes et ailleurs dans la région. Notre équipe conçoit des projets qui reflètent votre style et rendent l’espace confortable.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "news": {
+      "title": "Actualités",
+      "description": "Nous sommes spécialisés dans la création d’intérieurs uniques et élégants pour maisons, appartements et locaux commerciaux à Nice, Cannes et Antibes.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Nous vérifions chaque détail pour que tout soit conforme au projet. Vous obtenez un espace prêt à vivre ou à travailler.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Nous proposons une gamme complète de services : de la création du concept et du design à la rénovation clé en main. Chaque projet est développé selon vos préférences, vos besoins et les caractéristiques du lieu.",
+      "keywords": "design d’intérieur, rénovation, architecture, Riviera, France, Côte d’Azur, design d’appartement, rénovation de villa, intérieur moderne, réhabilitation de maison, studio de design"
+    }
   },
   "menu": {
     "home": "Accueil",
@@ -568,7 +605,8 @@
     "loading": "Chargement"
   },
   "calculator": {
-    "h": "Calculer le coût du projet",
+    "h1": "Calculer",
+    "h2": "le coût du projet",
     "directions": {
       "design": "Design d’intérieur",
       "renovation": "Rénovation"
@@ -600,6 +638,8 @@
     },
     "confirmation": "J’accepte les conditions de traitement des données personnelles",
     "button": "Obtenir un devis",
-    "success": "Merci ! Nous vous contacterons dans les 24 heures."
+    "success": "Merci ! Nous vous contacterons dans les 24 heures.",
+    "next": "Suivant",
+    "prev": "Précédent"
   }
 }

@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public-D98CVXli.js","sources":["../../../../virtual:public?%2Fimages%2Flogo.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/logo.webp\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,mBAAmB;"}

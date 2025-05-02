@@ -57,6 +57,62 @@
 import ContactShield3 from "../../components/Blocks/ContactShield3.vue";
 import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
 import CostCalculator from "../../components/Tools/CostCalculator.vue";
+
+const { t, locale } = useI18n();
+const route = useRoute();
+const baseURL = "https://razam.fr";
+
+useHead({
+  title: () => t("services.commerceRenovation.h1"),
+  titleTemplate: (chunk) => `${chunk}`,
+  meta: [
+    {
+      name: "description",
+      content: () => t(`services.commerceRenovation.text.p1`).slice(0, 160),
+    },
+    { name: "keywords", content: () => t(`meta.common.keywords`) },
+    { property: "og:title", content: () => t(`services.commerceRenovation.h1`) },
+    {
+      property: "og:description",
+      content: () => t(`services.commerceRenovation.text.p1`).slice(0, 160),
+    },
+    { property: "og:url", content: () => `${baseURL}${route.path}` },
+    {
+      property: "og:locale",
+      content: () => {
+        switch (locale.value) {
+          case "en":
+            return "en_US";
+          case "ru":
+            return "ru_RU";
+          default:
+            return "fr_FR";
+        }
+      },
+    },
+    { property: "og:image", content: `${baseURL}/images/logo.webp` },
+    { property: "og:image:alt", content: () => t(`services.commerceRenovation.h1`) },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: () => t(`services.commerceRenovation.h1`) },
+    {
+      name: "twitter:description",
+      content: () => t(`services.commerceRenovation.text.p1`).slice(0, 160),
+    },
+    { name: "twitter:image", content: `${baseURL}/images/logo.webp` },
+    { name: "twitter:image:alt", content: () => t(`services.commerceRenovation.h1`) },
+  ],
+  link: [
+    { rel: "canonical", href: `${baseURL}${route.path}` },
+    { rel: "alternate", hreflang: "en", href: `${baseURL}/en${route.path}` },
+    { rel: "alternate", hreflang: "fr", href: `${baseURL}${route.path}` },
+    { rel: "alternate", hreflang: "ru", href: `${baseURL}/ru${route.path}` },
+    {
+      rel: "alternate",
+      hreflang: "x-default",
+      href: `${baseURL}${route.path}`,
+    },
+  ],
+});
 </script>
 
 <style lang="sass" scoped>

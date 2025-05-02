@@ -2,7 +2,7 @@
   <header class="header" :class="{ hidden: isHidden }">
     <div class="container">
       <div class="logo">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <img src="/images/logo.webp" alt="Razam" />
         </NuxtLink>
       </div>

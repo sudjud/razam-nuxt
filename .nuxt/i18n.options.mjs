@@ -9,108 +9,111 @@ export const localeCodes =  [
 ]
 
 export const localeLoaders = {
-  "en": [],
-  "fr": [],
-  "ru": []
+  en: [],
+  fr: [],
+  ru: []
 }
 
 export const vueI18nConfigs = [
-  () => import("../locales/index.js?hash=3bdf132e&config=1" /* webpackChunkName: "__locales_index_js_3bdf132e" */)
+  () => import("#nuxt-i18n/30548bad" /* webpackChunkName: "config_index_46js_30548bad" */)
 ]
 
 export const nuxtI18nOptions = {
-  "restructureDir": "i18n",
-  "experimental": {
-    "localeDetector": "",
-    "switchLocalePathLinkSSR": false,
-    "autoImportTranslationFunctions": false,
-    "typedPages": true,
-    "typedOptionsAndMessages": false,
-    "generatedLocaleFilePathFormat": "absolute",
-    "alternateLinkCanonicalQueries": false
+  restructureDir: false,
+  experimental: {
+    localeDetector: "",
+    switchLocalePathLinkSSR: false,
+    autoImportTranslationFunctions: false,
+    typedPages: true,
+    typedOptionsAndMessages: false,
+    generatedLocaleFilePathFormat: "absolute",
+    alternateLinkCanonicalQueries: false,
+    hmr: true
   },
-  "bundle": {
-    "compositionOnly": true,
-    "runtimeOnly": false,
-    "fullInstall": true,
-    "dropMessageCompiler": false,
-    "optimizeTranslationDirective": true
+  bundle: {
+    compositionOnly: true,
+    runtimeOnly: false,
+    fullInstall: true,
+    dropMessageCompiler: false,
+    optimizeTranslationDirective: true
   },
-  "compilation": {
-    "jit": true,
-    "strictMessage": true,
-    "escapeHtml": false
+  compilation: {
+    strictMessage: true,
+    escapeHtml: false
   },
-  "customBlocks": {
-    "defaultSFCLang": "json",
-    "globalSFCScope": false
+  customBlocks: {
+    defaultSFCLang: "json",
+    globalSFCScope: false
   },
-  "vueI18n": "./locales/index.js",
-  "locales": [
+  locales: [
     {
-      "code": "en",
-      "iso": "en-US",
-      "name": "En"
+      code: "en",
+      iso: "en-US",
+      name: "En",
+      files: []
     },
     {
-      "code": "fr",
-      "iso": "fr-FR",
-      "name": "Fr"
+      code: "fr",
+      iso: "fr-FR",
+      name: "Fr",
+      files: []
     },
     {
-      "code": "ru",
-      "iso": "ru-RU",
-      "name": "Ru"
+      code: "ru",
+      iso: "ru-RU",
+      name: "Ru",
+      files: []
     }
   ],
-  "defaultLocale": "fr",
-  "defaultDirection": "ltr",
-  "routesNameSeparator": "___",
-  "trailingSlash": false,
-  "defaultLocaleRouteNameSuffix": "default",
-  "strategy": "prefix_except_default",
-  "lazy": false,
-  "langDir": "locales",
-  "detectBrowserLanguage": {
-    "alwaysRedirect": false,
-    "cookieCrossOrigin": false,
-    "cookieDomain": null,
-    "cookieKey": "i18n_redirected",
-    "cookieSecure": false,
-    "fallbackLocale": "",
-    "redirectOn": "root",
-    "useCookie": true
+  defaultLocale: "fr",
+  defaultDirection: "ltr",
+  routesNameSeparator: "___",
+  trailingSlash: false,
+  defaultLocaleRouteNameSuffix: "default",
+  strategy: "prefix_except_default",
+  lazy: false,
+  langDir: "locales",
+  rootRedirect: undefined,
+  detectBrowserLanguage: {
+    alwaysRedirect: false,
+    cookieCrossOrigin: false,
+    cookieDomain: null,
+    cookieKey: "i18n_redirected",
+    cookieSecure: false,
+    fallbackLocale: "",
+    redirectOn: "root",
+    useCookie: true
   },
-  "differentDomains": false,
-  "baseUrl": "http://localhost:3000",
-  "customRoutes": "page",
-  "pages": {},
-  "skipSettingLocaleOnNavigate": false,
-  "types": "composition",
-  "debug": false,
-  "parallelPlugin": false,
-  "multiDomainLocales": false,
-  "i18nModules": []
+  differentDomains: false,
+  baseUrl: "http://localhost:3000",
+  customRoutes: "page",
+  pages: {},
+  skipSettingLocaleOnNavigate: false,
+  types: "composition",
+  debug: false,
+  parallelPlugin: false,
+  multiDomainLocales: false,
+  i18nModules: []
 }
 
 export const normalizedLocales = [
   {
-    "code": "en",
-    "iso": "en-US",
-    "name": "En",
-    "files": []
+    code: "en",
+    iso: "en-US",
+    name: "En",
+    files: []
   },
   {
-    "code": "fr",
-    "iso": "fr-FR",
-    "name": "Fr",
-    "files": []
+    code: "fr",
+    iso: "fr-FR",
+    name: "Fr",
+    files: []
   },
   {
-    "code": "ru",
-    "iso": "ru-RU",
-    "name": "Ru",
-    "files": []
+    code: "ru",
+    iso: "ru-RU",
+    name: "Ru",
+    files: []
   }
 ]
 
@@ -119,6 +122,9 @@ export const parallelPlugin = false
 export const isSSG = false
 export const hasPages = true
 
-export const DEFAULT_DYNAMIC_PARAMS_KEY = "nuxtI18nInternal"
 export const DEFAULT_COOKIE_KEY = "i18n_redirected"
+export const DEFAULT_DYNAMIC_PARAMS_KEY = "nuxtI18nInternal"
 export const SWITCH_LOCALE_PATH_LINK_IDENTIFIER = "nuxt-i18n-slp"
+/** client **/
+
+/** client-end **/

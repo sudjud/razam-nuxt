@@ -1,1 +1,0 @@
-{"file":"virtual_public-CRjF2Z9m.js","mappings":";AAAuD,MAAe,aAAA,gBAAgB,yBAAyB;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Farrow.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/arrow.svg\")"],"version":3}

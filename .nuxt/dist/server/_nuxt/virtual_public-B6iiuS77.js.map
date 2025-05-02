@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public-B6iiuS77.js","sources":["../../../../virtual:public?%2Fimages%2Fblog%2Flights%2Fquote.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/blog/lights/quote.svg\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,+BAA+B;"}

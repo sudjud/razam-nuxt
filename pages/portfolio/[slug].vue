@@ -118,6 +118,61 @@ const smallImages = computed(() => {
 const mainImage = computed(() => {
   return project.value?.images?.[project.value.images.length - 1] || {};
 });
+
+const { t, locale } = useI18n();
+const baseURL = "https://razam.fr";
+
+useHead({
+  title: () => project.value.name,
+  titleTemplate: (chunk) => `${chunk}`,
+  meta: [
+    {
+      name: "description",
+      content: () => t(project.value.desc).slice(0, 160),
+    },
+    { name: "keywords", content: () => t(`meta.common.keywords`) },
+    { property: "og:title", content: () => project.value.name },
+    {
+      property: "og:description",
+      content: () => t(project.value.desc).slice(0, 160),
+    },
+    { property: "og:url", content: () => `${baseURL}${route.path}` },
+    {
+      property: "og:locale",
+      content: () => {
+        switch (locale.value) {
+          case "en":
+            return "en_US";
+          case "ru":
+            return "ru_RU";
+          default:
+            return "fr_FR";
+        }
+      },
+    },
+    { property: "og:image", content: `${baseURL}/images/logo.webp` },
+    { property: "og:image:alt", content: () => project.value.name },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: () => project.value.name },
+    {
+      name: "twitter:description",
+      content: () => t(project.value.desc).slice(0, 160),
+    },
+    { name: "twitter:image", content: `${baseURL}/images/logo.webp` },
+    { name: "twitter:image:alt", content: () => project.value.name },
+  ],
+  link: [
+    { rel: "canonical", href: `${baseURL}${route.path}` },
+    { rel: "alternate", hreflang: "en", href: `${baseURL}/en${route.path}` },
+    { rel: "alternate", hreflang: "fr", href: `${baseURL}${route.path}` },
+    { rel: "alternate", hreflang: "ru", href: `${baseURL}/ru${route.path}` },
+    {
+      rel: "alternate",
+      hreflang: "x-default",
+      href: `${baseURL}${route.path}`,
+    },
+  ],
+});
 </script>
 
 <style lang="sass" scoped>

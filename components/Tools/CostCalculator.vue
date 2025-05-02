@@ -2,8 +2,12 @@
   <div class="calculator-wrapper">
     <form class="calculator" @submit.prevent="submitForm">
       <!-- Шаг 1: Выбор направления -->
-      <h3>{{ $t('calculator.h') }}</h3>
-      <section class="design-or-repair">
+      <h3>
+        {{ $t('calculator.h1') }}
+        <br />
+        {{ $t('calculator.h2') }}
+      </h3>
+      <section class="design-or-repair" v-if="page === 1">
         <label>
           <input type="checkbox" v-model="form.design" />
           {{ $t("calculator.directions.design") }}
@@ -15,7 +19,7 @@
       </section>
 
       <!-- Шаг 2: Тип объекта и параметры -->
-      <section v-if="form.design || form.renovation">
+      <section v-if="page === 1">
         <div class="object-type">
           <label v-for="(label, value) in objectTypes" :key="value">
             <input
@@ -30,18 +34,15 @@
 
         <div class="object-details">
           <label>
-            {{ $t("calculator.params.area") }} (м²)
-            <input type="number" v-model.number="form.area" min="0" />
+            <input type="number" v-model.number="form.area" min="0" :placeholder="$t('calculator.params.area') + ' (м²)'" />
           </label>
 
           <label>
-            {{ $t("calculator.params.bathrooms") }}
-            <input type="number" v-model.number="form.bathrooms" min="0" />
+            <input type="number" v-model.number="form.bathrooms" min="0" :placeholder="$t('calculator.params.bathrooms')" />
           </label>
 
           <label>
-            {{ $t("calculator.params.rooms") }}
-            <input type="number" v-model.number="form.rooms" min="0" />
+            <input type="number" v-model.number="form.rooms" min="0" :placeholder='$t("calculator.params.rooms")' />
           </label>
 
           <label class="kitchen">
@@ -52,7 +53,7 @@
       </section>
 
       <!-- Шаг 4: Контактная информация -->
-      <section class="contact-info">
+      <section class="contact-info" v-if="page === 2">
         <input
           type="text"
           v-model="form.name"
@@ -74,28 +75,44 @@
       </section>
 
       <!-- Шаг 5: Подтверждение и кнопка -->
-      <section class="confirmation">
+      <section v-if="page === 2" class="confirmation">
         <label>
           <input type="checkbox" v-model="form.accepted" required />
           {{ $t("calculator.confirmation") }}
         </label>
-
-        <button type="submit">
-          {{ $t("calculator.button") }}
-        </button>
       </section>
+      <div class="buttons">
+        <button 
+          v-show="page === 2"
+          class="prev-button"
+          @click="prevPage"
+          type="button"
+          >{{ $t("calculator.prev") }}
+        </button>
+        <p :class="{submit: submitted}" class="success-message">
+          {{ $t("calculator.success") }}
+        </p>
 
-      <!-- Шаг 6: Сообщение об успехе -->
-      <p v-if="submitted" class="success-message">
-        {{ $t("calculator.success") }}
-      </p>
+        <button 
+          class="next-submit" 
+          @click="handleClick"
+          :type="page === 2 ? 'submit' : 'button'"
+          :disabled="(page === 1 && (!form.objectType || (!form.design && !form.renovation) || !form.area || !form.bathrooms || !form.rooms)) || (page === 2 && (!form.name || !form.email || !form.accepted))"
+          >{{ page === 2 ? 
+            $t("calculator.button") 
+              : 
+            $t("calculator.next") }}
+        </button>
+      </div>
     </form>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref  } from "vue";
 import PhoneInputComponent from "./PhoneInputComponent.vue";
+
+const page = ref(1);
 
 const phoneInput = ref(null);
 
@@ -105,8 +122,8 @@ const form = ref({
   objectType: "",
   area: null,
   bathrooms: null,
-  hasKitchen: false,
   rooms: null,
+  hasKitchen: false,
   name: "",
   phone: "",
   email: "",
@@ -123,25 +140,59 @@ const objectTypes = {
 };
 
 const submitForm = () => {
-  // Здесь будет логика отправки формы
-  const isValidPhone = phoneInput.value?.isValid;
-  if (!isValidPhone) {
-    // Программа покажет сообщение через PhoneInput (hasBeenBlurred = true)
-    phoneInput.value?.triggerValidation?.();
-    return;
-  }
   submitted.value = true;
+  setTimeout(() => {
+    submitted.value = false;
+  }, 5000)
+  form.value = {
+    design: false,
+    renovation: false,
+    objectType: "",
+    area: null,
+    bathrooms: null,
+    rooms: null,
+    hasKitchen: false,
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+    accepted: false,
+  }
+  page.value = 1;
   console.log(form.value);
 
   // Сброс формы при необходимости
   // Object.assign(form.value, { ...defaultValues })
 };
+
+const nextPage = () => {
+  if (page.value < 2) {
+    page.value++;
+  }
+  return;
+};
+
+const prevPage = () => {
+  if (page.value > 1) {
+    page.value--
+  }
+  return;
+};
+
+const handleClick = () => {
+  if (page.value === 2) {
+    submitForm();
+  } else {
+    nextPage();
+  }
+};
+
 </script>
 
 <style lang="sass" scoped>
 *
   font-family: Mont, sans-serif
-  font-size: 1rem
+  font-size: 1.25rem
   user-select: none
 
 .calculator-wrapper
@@ -150,11 +201,50 @@ const submitForm = () => {
   display: flex
   flex-direction: column
   gap: 2rem
-  max-width: 600px
+  height: 732.78px
+  max-width: 34rem
   padding: 2rem
-  min-height: 51.5rem
   background-color: #fff
   border-radius: 12px
+  @media (max-width: 1500px)
+    height: 590.86px
+  @media (max-width: 1250px)
+    height: 519.92px
+  @media (max-width: 992px)
+    height: 519.92px
+  @media (max-width: 768px)
+    height: 453.06px
+  @media (max-width: 576px)
+    height: 382.38px
+  .buttons
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: auto
+    .success-message
+      opacity: 0
+      position: fixed
+      z-index: 10000000
+      top: 10%
+      left: 50%
+      transform: translateX(-50%)
+      font-size: 1.5rem
+      font-weight: 600
+      padding: 2rem
+      background-color: $bgc-second
+      border-radius: 30px
+      transition-duration: 0.6s
+      &.submit
+        transition-duration: 0.6s
+        opacity: 1
+    .next-submit
+      margin-left: auto
+      padding: 1rem 3rem
+    .prev-button
+      background-color: #fff
+      color: black
+      border: 1px solid black
+      padding: 1rem 3rem
   h3
     font-size: 2rem
     font-family: Geometria, sans-serif
@@ -168,12 +258,20 @@ const submitForm = () => {
   .object-type
     display: flex
     flex-direction: column
+    gap: 10px
+    input
+      margin: 0
   .object-details
     display: flex
     flex-direction: column
+    margin-top: 1rem
+    gap: 1rem
     label
       display: flex
       justify-content: space-between
+      input[type="number"]
+        width: 100%
+        font-size: 1.25rem
       &.kitchen
         justify-content: start
         flex-direction: row-reverse
@@ -188,18 +286,19 @@ input[type="tel"],
 input[type="email"],
 input[type="number"],
 textarea
-  padding: 0.5rem
+  padding: 1rem
   border-radius: 6px
   border: 1px solid #ccc
 
 button
-  padding: 0.8rem 1.5rem
   border: none
   background: black
   color: white
-  font-weight: bold
   border-radius: 8px
   cursor: pointer
+  font-weight: 300
+  &:disabled
+    background-color: rgba(black, 0.5) !important
 
 .success-message
   color: green
@@ -210,18 +309,15 @@ input[type="radio"]
   appearance: none
   -webkit-appearance: none
   background-color: #fff
-  border: 2px solid $font-grey
-  width: 18px
-  height: 18px
+  border: 1px solid #ccc
+  padding: 0
+  width: 1.5rem
+  height: 1.5rem
   border-radius: 4px
   position: relative
   cursor: pointer
-  margin-right: 10px
   display: inline-block
   vertical-align: middle
-  @media (max-width: 1250px)
-    width: 13px
-    height: 13px
 
 input[type="radio"]
   border-radius: 50%
@@ -233,17 +329,24 @@ input[type="radio"]:checked::after
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  width: 10px
-  height: 10px
+  width: 0.8rem
+  height: 0.8rem
   background-color: $font-grey
   border-radius: inherit
-  @media (max-width: 1250px)
-    width: 6px
-    height: 6px
 
 label
   display: flex
   align-items: center
   font-size: 1rem
   gap: 0.5rem
+
+input, textarea
+  font-family: 'Mont', sans-serif
+  &:focus
+    outline: none
+  
+button
+  &:hover
+    background-color: rgba(black, 0.8)
+
 </style>

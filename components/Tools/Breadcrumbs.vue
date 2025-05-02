@@ -4,7 +4,7 @@
       <li v-for="(crumb, index) in breadcrumbs" :key="index">
         <NuxtLink
           v-if="crumb.to"
-          :to="crumb.to"
+          :to="localePath(crumb.to)"
           :aria-current="index === breadcrumbs.length - 1 ? 'page' : null"
         >
           {{ crumb.label }}
@@ -22,6 +22,7 @@ import { useI18n } from "vue-i18n";
 
 const route = useRoute();
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const props = defineProps({
   reservedLastCrumb: String,

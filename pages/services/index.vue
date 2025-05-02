@@ -88,8 +88,11 @@ import Breadcrumbs from "../components/Tools/Breadcrumbs.vue";
 import HomeGallery from "../components/Swipers/HomeGallery.vue";
 import OfferComponent from '/components/Blocks/OfferComponent.vue'
 import { ref } from "vue";
+import { useSeo } from "../../composables/useSeo";
 
 const isOpen = ref(false);
+
+useSeo('services');
 
 const toggleIsOpen = () => {
   isOpen.value = !isOpen.value;

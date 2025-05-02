@@ -35,6 +35,9 @@
 <script setup>
 import { ref, computed, nextTick } from "vue";
 import BlogCardComponent from "../components/Blog/BlogCardComponent.vue";
+import { useSeo } from "../../composables/useSeo";
+
+useSeo('news');
 
 const { data: blog } = await useAsyncData("blog", async () => {
   const response = await $fetch("/api/blog");

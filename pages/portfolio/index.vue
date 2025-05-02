@@ -192,8 +192,11 @@
 
 <script setup>
 import Breadcrumbs from "../../components/Tools/Breadcrumbs.vue";
+import { useSeo } from "../../composables/useSeo";
 import TabsPortfolioComponent from "../components/Blocks/TabsPortfolioComponent.vue";
 import OfferComponent from '/components/Blocks/OfferComponent.vue';
+
+useSeo('portfolio');
 </script>
 
 <style lang="sass" scoped>

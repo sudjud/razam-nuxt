@@ -33,25 +33,26 @@ setTimeout(() => {
   loader.value = false;
 }, 2310);
 
-const url = useRequestURL();
-const baseURL = `${url.protocol}//${url.host}`;
+const { t, locale } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
+const config = useRuntimeConfig()
 
-const { t, locale } = useI18n();
-const route = useRoute();
+const baseURL = config.public.siteUrl || 'https://razam.fr'
 
 useHead({
-  title: () => t("meta.title"),
+  title: () => t("meta.common.title"),
   htmlAttrs: {
     lang: () => locale.value || 'fr'
   },
   meta: [
-    { name: "description", content: () => t("meta.description").slice(0, 160) },
-    { name: "keywords", content: () => t("meta.keywords") },
+    { name: "description", content: () => t("meta.common.description").slice(0, 160) },
+    { name: "keywords", content: () => t("meta.common.keywords") },
 
     // Open Graph
-    { property: "og:title", content: () => t("meta.title") },
-    { property: "og:description", content: () => t("meta.description").slice(0, 160) },
-    { property: "og:url", content: () => `${baseURL}${route.path}` },
+    { property: "og:title", content: () => t("meta.common.title") },
+    { property: "og:description", content: () => t("meta.common.description").slice(0, 160) },
+    { property: "og:url", content: () => `${baseURL}${route.fullPath}` },
     { property: "og:locale", content: () => {
       switch (locale.value) {
         case 'en': return 'en_US';
@@ -60,21 +61,21 @@ useHead({
       }
     }},
     { property: "og:image", content: `${baseURL}/images/logo.webp` },
-    { property: "og:image:alt", content: () => t("meta.title") },
+    { property: "og:image:alt", content: () => t("meta.common.title") },
 
     // Twitter
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: () => t("meta.title") },
-    { name: "twitter:description", content: () => t("meta.description").slice(0, 160) },
+    { name: "twitter:title", content: () => t("meta.common.title") },
+    { name: "twitter:description", content: () => t("meta.common.description").slice(0, 160) },
     { name: "twitter:image", content: `${baseURL}/images/logo.webp` },
-    { name: "twitter:image:alt", content: () => t("meta.title") },
+    { name: "twitter:image:alt", content: () => t("meta.common.title") },
   ],
   link: [
-    { rel: "canonical", href: `${baseURL}${route.path}` },
-    { rel: "alternate", hreflang: "en", href: `${baseURL}/en/` },
-    { rel: "alternate", hreflang: "fr", href: `${baseURL}/` },
-    { rel: "alternate", hreflang: "ru", href: `${baseURL}/ru/` },
-    { rel: "alternate", hreflang: "x-default", href: `${baseURL}/` }
+    { rel: "canonical", href: `${baseURL}${route.fullPath}` },
+    { rel: "alternate", hreflang: "fr", href: `${baseURL}${localePath('index', 'fr')}` },
+    { rel: "alternate", hreflang: "en", href: `${baseURL}${localePath('index', 'en')}` },
+    { rel: "alternate", hreflang: "ru", href: `${baseURL}${localePath('index', 'ru')}` },
+    { rel: "alternate", hreflang: "x-default", href: `${baseURL}${localePath('index', 'fr')}` }
   ]
 })
 

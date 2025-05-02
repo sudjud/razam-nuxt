@@ -15,8 +15,8 @@
         <NuxtLink
           :to="
             item.type === 'project'
-              ? `/portfolio/${item.slug}`
-              : `/news/${item.slug}`
+              ? localePath(`/portfolio/${item.slug}`)
+              : localePath(`/news/${item.slug}`)
           "
           class="result-link"
         >
@@ -46,6 +46,7 @@ import debounce from "lodash/debounce";
 import { searchContent } from "~/utils/search";
 
 const { locale, t } = useI18n();
+const localePath = useLocalePath();
 
 const searchQuery = ref("");
 const searchResults = ref([]);

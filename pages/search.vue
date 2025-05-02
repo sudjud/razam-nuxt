@@ -39,9 +39,12 @@ import articles from "~/server/data/blog";
 import ProjectCardComponent from "../components/Projects/ProjectCardComponent.vue";
 import Breadcrumbs from "/components/Tools/Breadcrumbs.vue";
 import SearchComponent from "/components/Tools/SearchComponent.vue"
+import { useSeo } from "../composables/useSeo";
 
 const route = useRoute();
 const { t } = useI18n();
+
+useSeo('search');
 
 const categoryName = route.query.cat?.toLowerCase() ?? "";
 const catsOpened = ref(false);
@@ -53,8 +56,6 @@ const filteredProjects = projects.filter(
 const filteredArticles = articles.filter(
   (a) => t(a.category).toLowerCase() === categoryName
 );
-
-console.log(filteredArticles);
 </script>
 
 <style lang="sass" scoped>
