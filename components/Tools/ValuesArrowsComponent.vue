@@ -3,7 +3,7 @@
     <div class="values-list-top">
       <div class="value-item wow animate__animated animate__fadeInBottomLeft">
         <span class="circle"
-          ><img src="/images/home/diag-arrow.webp" alt="arrow"
+          ><img data-not-lazy src="/images/home/diag-arrow.webp" alt="arrow"
         /></span>
         <p v-html="$t('home.valuesP1')"></p>
       </div>
@@ -12,7 +12,7 @@
         data-wow-delay="0.1s"
       >
         <span class="circle"
-          ><img src="/images/home/diag-arrow.webp" alt="arrow"
+          ><img data-not-lazy src="/images/home/diag-arrow.webp" alt="arrow"
         /></span>
         <p v-html="$t('home.valuesP2')"></p>
       </div>
@@ -21,7 +21,7 @@
         data-wow-delay="0.2s"
       >
         <span class="circle"
-          ><img src="/images/home/diag-arrow.webp" alt="arrow"
+          ><img data-not-lazy src="/images/home/diag-arrow.webp" alt="arrow"
         /></span>
         <p v-html="$t('home.valuesP3')"></p>
       </div>
@@ -32,7 +32,7 @@
         data-wow-delay="0.3s"
       >
         <span class="circle"
-          ><img src="/images/home/diag-arrow.webp" alt="arrow"
+          ><img data-not-lazy src="/images/home/diag-arrow.webp" alt="arrow"
         /></span>
         <p v-html="$t('home.valuesP4')"></p>
       </div>
@@ -41,7 +41,7 @@
         data-wow-delay="0.4s"
       >
         <span class="circle"
-          ><img src="/images/home/diag-arrow.webp" alt="arrow"
+          ><img data-not-lazy src="/images/home/diag-arrow.webp" alt="arrow"
         /></span>
         <p v-html="$t('home.valuesP5')"></p>
       </div>
@@ -51,7 +51,7 @@
         data-wow-delay="0.5s"
       >
         <span class="circle"
-          ><img src="/images/home/diag-arrow.webp" alt="arrow"
+          ><img data-not-lazy src="/images/home/diag-arrow.webp" alt="arrow"
         /></span>
         <p v-html="$t('home.valuesP6')"></p>
       </div>

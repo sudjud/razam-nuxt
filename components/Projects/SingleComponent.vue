@@ -83,7 +83,7 @@ h2
   color: $font-black
   span
     text-decoration: underline
-  @media (max-width: 1400px)
+  @media (max-width: 1450px)
     font-size: 5rem
   @media (max-width: 576px)
     font-size: 4rem

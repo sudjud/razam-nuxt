@@ -139,7 +139,7 @@ const bindSwiperInstance = (instance) => {
 
 const nextSlide = () => {
   if (swipe.value) {
-    swipe.value.slideNex;
+    swipe.value.slideNext();
   }
 };
 

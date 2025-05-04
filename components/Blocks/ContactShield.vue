@@ -9,7 +9,7 @@
             ><br />
             <span
               >{{ $t("services.contactShield1.h3")
-              }}<img class="arrow" src="/images/home/offer-arrow.svg" alt=""
+              }}<img data-not-lazy class="arrow" src="/images/home/offer-arrow.svg" alt=""
             /></span>
           </div></h2
       ></NuxtLink>

@@ -271,7 +271,7 @@ main
 
 .design
   +regpad
-  margin-top: 20rem
+  margin-top: 13rem
   @media (max-width: 576px)
     margin-top: $mob-col-gap
   h2

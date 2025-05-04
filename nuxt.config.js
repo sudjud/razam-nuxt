@@ -7,7 +7,11 @@ export default defineNuxtConfig({
   devtools: false,
   ssr: true,
   css: ["@/assets/styles/global.sass"],
-  modules: ['@nuxtjs/i18n'],
+  modules: [
+    '@nuxtjs/i18n', 
+    '@nuxt/image', 
+    'nuxt-lazy-load'
+  ],
   plugins: ["~/directives/reveal.js"],
   vite: {
     css: {
@@ -37,10 +41,14 @@ export default defineNuxtConfig({
       { code: "ru", iso: "ru-RU", name: "Ru" },
     ],
     defaultLocale: "fr",
-    vueI18n: "./locales/index.js",
+    vueI18n: "./locales/i18n.config.js",
     strategy: "prefix_except_default",
     baseUrl: process.env.BASE_URL || "http://localhost:3000",
     restructureDir: false
+  },
+  lazyLoad: {
+    images: true,
+    defaultImage: '/images/placeholder.gif'
   },
   compatibilityDate: "2025-03-04",
 });

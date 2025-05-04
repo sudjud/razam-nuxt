@@ -15,7 +15,10 @@
   <section class="expert-design">
     <div class="container">
       <div class="image-wrapper">
-        <img src="/images/home/2.webp" alt="Interior" />
+        <img
+          src="/images/home/2.webp" 
+          alt="Interior"
+        />
       </div>
       <div class="filler"></div>
       <div class="text-content">
@@ -466,7 +469,7 @@ useSeo('home');
 .faq
   display: grid
   grid-template-columns: 1fr 3fr
-  margin: 22rem 0
+  margin: 15rem 0
   padding: 0 4rem 0 6rem
   @media (max-width: 992px)
     grid-template-columns: 1fr
@@ -485,7 +488,7 @@ useSeo('home');
 // ---------------------------------------
 
 .news
-  margin-bottom: 22rem
+  margin-bottom: 12rem
   @media (max-width: 576px)
     margin-bottom: 15rem
     margin-top: 10rem

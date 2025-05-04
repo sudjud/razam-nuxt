@@ -104,6 +104,12 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
+      "#image": [
+        "../node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "../node_modules/@nuxt/image/dist/runtime/*"
+      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -141,10 +147,10 @@
         "../node_modules/@nuxtjs/i18n/dist/types"
       ],
       "#nuxt-i18n/logger": [
-        "./nuxt-i18n-logger.mjs"
+        "./nuxt-i18n-logger"
       ],
       "#app-manifest": [
-        "./manifest/meta/1c84b0a1-6e53-4861-8f13-babbb63a995f.json"
+        "./manifest/meta/dev"
       ],
       "#components": [
         "./components"
@@ -190,6 +196,10 @@
     "../**/*",
     "../node_modules/@nuxtjs/i18n/runtime",
     "../node_modules/@nuxtjs/i18n/dist/runtime",
+    "../node_modules/@nuxt/image/runtime",
+    "../node_modules/@nuxt/image/dist/runtime",
+    "../node_modules/nuxt-lazy-load/runtime",
+    "../node_modules/nuxt-lazy-load/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
     "../node_modules/@nuxt/telemetry/dist/runtime",
     ".."
@@ -199,9 +209,15 @@
     "../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/i18n/node_modules",
+    "../node_modules/@nuxt/image/node_modules",
+    "../node_modules/nuxt-lazy-load/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../node_modules/@nuxtjs/i18n/runtime/server",
     "../node_modules/@nuxtjs/i18n/dist/runtime/server",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@nuxt/image/dist/runtime/server",
+    "../node_modules/nuxt-lazy-load/runtime/server",
+    "../node_modules/nuxt-lazy-load/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "../node_modules/@nuxt/telemetry/dist/runtime/server",
     "../.output"
