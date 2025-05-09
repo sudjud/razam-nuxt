@@ -36,7 +36,7 @@
             <div class="buttons-idx">{{ padNumber(index + 1) }}</div>
             <div v-if="index === currentIndex" class="arrow-wrapper">
               <div class="arrow">
-                <img src="/public/images/home/diag-arrow2.webp" alt="arrow" />
+                <img data-not-lazy src="/public/images/home/diag-arrow2.webp" alt="arrow" />
               </div>
             </div>
           </div>
@@ -44,6 +44,7 @@
         </div>
       </div>
       <img
+        data-not-lazy
         v-if="items[currentIndex]"
         :src="items[currentIndex].image"
         :alt="items[currentIndex].service"
@@ -83,8 +84,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import photo1 from "/images/services/interior-design/main.webp";
-import photo2 from "/public/images/services/interior-design/1gallery.webp";
-import photo3 from "/public/images/services/interior-design/2gallery.webp";
+// import photo2 from "/public/images/services/interior-design/1gallery.webp";
+// import photo3 from "/public/images/services/interior-design/2gallery.webp";
 import photo4 from "/images/services/house-renovation/main.webp";
 import photo5 from "/images/services/commerce-renovation/main.webp"
 import { useRouter } from "vue-router";
@@ -101,16 +102,16 @@ const items = [
     service: "home.service1", 
     slug: "interiordesign" 
   },
-  { 
-    image: photo2, 
-    service: "home.service2", 
-    slug: "interiordesign" 
-  },
-  { 
-    image: photo3, 
-    service: "home.service3", 
-    slug: "interiordesign" 
-  },
+  // { 
+  //   image: photo2, 
+  //   service: "home.service2", 
+  //   slug: "interiordesign" 
+  // },
+  // { 
+  //   image: photo3, 
+  //   service: "home.service3", 
+  //   slug: "interiordesign" 
+  // },
   { 
     image: photo4, 
     service: "home.service4", 

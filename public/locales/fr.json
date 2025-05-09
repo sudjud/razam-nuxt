@@ -92,14 +92,56 @@
     "project3": "Un design moderne pour une marque. Un intérieur lumineux axé sur le confort et le style, idéal pour un environnement professionnel.",
     "project4": "Une maison privée élégante où le minimalisme se mêle à la chaleur. Des espaces généreux et des vues panoramiques assurent un confort sur la Côte d'Azur.",
     "reviewsH2P1": "Avis de nos",
-    "reviewsH2P2": "clients",
+    "reviewsH2P2": "clients\n(google maps)",
     "reviews": {
-      "review1Title": "Style irréprochable et attention aux détails",
-      "review1Text": "De la première discussion à la finalisation du projet, l'équipe a fait preuve de professionnalisme et d'écoute...",
-      "review1Name": "Julien, Nice",
-      "review2Title": "Une approche véritablement qualitative",
-      "review2Text": "Dès la première rencontre jusqu'aux finitions, l'équipe a montré un grand professionnalisme et une attention particulière à nos idées. Nous avons apprécié leur capacité à transformer notre appartement en un espace non seulement élégant mais aussi incroyablement confortable. Leur souci du détail et l'ajout d'éléments uniques ont rendu notre intérieur vraiment spécial. Je recommande vivement pour ceux qui recherchent une approche créative et de qualité.",
-      "review2Name": "Anna, Cannes"
+      "1": {
+        "text": "Les gars ont rénové ma véranda et ma piscine, et franchement, je n’ai jamais vu une telle attention et approche personnalisée ailleurs ! Ils vous aident, vous conseillent, vous guident ! Je suis ravie ! Pour un nouveau logement, je ne ferai appel qu’à vous ! ❤️",
+        "name": "Victoria Kukharenko"
+      },
+      "2": {
+        "text": "J’ai fait appel à l’entreprise pour des travaux d’isolation et de création d’un faut plafond.\nLes travaux ont pu commencer rapidement après la première visite technique. Les délais de début de travaux et de durée ont été respectés. Le travail est soigné et de qualité.\nL’entreprise a su également faire preuve d’adaptabilité.\nJe recommande et je ferai de nouveau appel à eux pour de futurs travaux dans d’autres logements.",
+        "name": "aymen B"
+      },
+      "3": {
+        "text": "Entreprise jeune et dynamique, à l’écoute du client et très professionnelle\nSalle de douche remise au propre travail très soigné\nJe recommande",
+        "name": "Gillet-Christophe Levet"
+      },
+      "4": {
+        "text": "Si vous cherchez une Entreprise en PACA) de Rénovation ou de construction je vous recommande : « CAPITAL HOME CONSTRUCTION » située à Vallauris 06220. Entreprise ponctuelle, efficace, professionnelle à l’écoute de ses clients et d’un prix raisonnable. Ils ont effectué la rénovation totale de mon appartement : cloisons, sol, marbre, carrelage, salle de bain, cuisine, peinture, papiers peints, sticker panoramique, Electricité, tableau électrique, plomberie Tout corps d’état, le tout à la perfection.",
+        "name": "Sylviane Denoo"
+      },
+      "5": {
+        "text": "J'ai fait rénover ma salle de bain et mes toilettes. Le directeur des travaux est très à l'écoute, le travail a été très bien fait par un spécialiste également très à l'écoute. Par conséquence, je conseille vraiment cette société  pour tous travaux de rénovation",
+        "name": "David amoros"
+      },
+      "6": {
+        "text": "Mon projet était de refaire ma salle de bain , ils m'ont accompagnée du début à la fin , c'est une entreprise très compétente à qui on peut faire totalement confiance et je referai appel à eux pour mon futur projet de cuisine , je l'ai remercie tous pour leur excellent travail de qualité.",
+        "name": "Claudia Dewan"
+      },
+      "7": {
+        "text": "Ils font sans aucun doute un travail très bien fait et d'une extrême beauté, je recommande un professionnalisme absolu à 100%.",
+        "name": "Santiago villamiel temprano"
+      },
+      "8": {
+        "text": "Une équipe professionnelle. Ils ont vraiment fait un très bon travail de rénovation de ma salle de bains.\nJe les contacterai certainement à nouveau !",
+        "name": "Victorious (Bunny)"
+      },
+      "9": {
+        "text": "Les travaux ont été effectués avec beaucoup de soin et l'appartement a été bien protégé pour éviter la poussière. Je recommande !",
+        "name": "LE VRAI BINCHOTAN"
+      },
+      "10": {
+        "text": "Rénovation de la salle de bains. Ils ont respecté le délai. Le travail a été effectué de manière qualitative.",
+        "name": "Raphael Roux"
+      },
+      "11": {
+        "text": "Travail parfait nous sommes très contents et nous recommandons vos entreprise",
+        "name": "Marie Françoise Dumonal"
+      },
+      "12": {
+        "text": "Disponibilité, Ponctualité, Qualité, Professionnalisme, Prix",
+        "name": "Mathieu Lopez"
+      }
     },
     "offer": {
       "h2P1": "Prêts à créer",
@@ -124,13 +166,15 @@
       "q1": "Combien de temps dure l'élaboration d'un projet de design ?",
       "a1": "L'élaboration d'un projet de design prend généralement de 2 à 4 semaines, selon la complexité et l'ampleur. Nous optimisons le processus afin que chaque étape réponde à vos attentes et garantisse un résultat de qualité. Il est important que vous soyez rassuré à chaque phase du projet.",
       "q2": "Quels matériaux sont utilisés pour la rénovation ?",
-      "a2": "Nous utilisons uniquement des matériaux éprouvés et de haute qualité, sélectionnés spécialement pour chaque projet. Nos solutions sont écologiques, durables et conformes aux normes modernes de sécurité.",
+      "a2": "Nous collaborons directement avec de nombreux fournisseurs et showrooms sur la Côte d’Azur, ce qui nous permet d’offrir des conditions et des prix personnalisés, nettement inférieurs à ceux du marché. Les éléments en bois (portes, fenêtres, parquet, etc.) sont principalement commandés en Ukraine — ce sont des matériaux de haute qualité à un prix inférieur à la moyenne locale.",
       "q3": "Peut-on commander uniquement le design sans la rénovation ?",
       "a3": "Oui, il est possible de commander uniquement la conception du projet. Nous fournirons toute la documentation nécessaire et des recommandations pour sa réalisation par vous-même ou par d'autres prestataires.",
       "q4": "Quel est le coût d'un projet clé en main ?",
-      "a4": "Le coût dépend de la superficie, de la complexité des travaux et des matériaux utilisés. Nous proposons une tarification transparente et une estimation personnalisée pour chaque client.",
+      "a4": "Le coût dépend de la surface, des objectifs et du volume des travaux. Vous pouvez facilement estimer le coût prévisionnel de votre projet à l’aide de notre calculateur :",
       "q5": "Comment garantissez-vous la qualité à chaque étape ?",
-      "a5": "Nous assurons un suivi rigoureux à chaque étape : depuis le choix des matériaux jusqu'à la livraison du projet. Des contrôles réguliers et une coordination claire garantissent un niveau de qualité élevé."
+      "a5": "Notre entreprise regroupe à la fois le design et la rénovation sous un même toit. Grâce à cela, toutes les étapes du projet passent par un système de contrôle en quatre étapes. La communication interne complète entre les équipes permet de réagir avec flexibilité aux changements, d'approuver rapidement les décisions et de garantir une qualité d’exécution élevée à chaque étape.",
+      "q6": "Combien de temps dure la rénovation ?",
+      "a6": "En moyenne, la rénovation d’un appartement de 100 m² selon un projet de design prêt dure de 2 à 4 mois. La durée exacte dépend de la complexité du projet, des matériaux et d'autres facteurs individuels."
     },
     "news": {
       "H2": "Actualités",
@@ -424,7 +468,7 @@
         }
       },
       "elementalHarmony": {
-        "workingTime": "74 jours",
+        "workingTime": "89 jours",
         "client": "Louis Bergier",
         "dislocation": "Nice, France",
         "desc": "Elemental Harmony est un projet où le confort se marie avec le minimalisme et les teintes naturelles. L’espace est soigneusement pensé : formes douces du mobilier, textures chaleureuses du bois et touches subtiles créent une ambiance paisible et confortable. Chaque zone est harmonieusement liée, offrant confort et esthétique au quotidien.",
@@ -447,7 +491,7 @@
         }
       },
       "modernVista": {
-        "workingTime": "74 jours",
+        "workingTime": "104 jours",
         "client": "Antoine Duplessis",
         "dislocation": "Nice, France",
         "desc": "Modern Vista est un projet qui allie esthétique contemporaine, praticité et confort. Chaque détail est pensé pour une vie agréable dans un rythme urbain dynamique. L’harmonie des matériaux, des teintes chaleureuses et des solutions fonctionnelles rend l’intérieur à la fois élégant et adapté à un usage quotidien. Un espace où l’on a envie de se détendre, de travailler et de profiter de chaque instant chez soi.",
@@ -470,7 +514,7 @@
         }
       },
       "naturalEssence": {
-        "workingTime": "74 jours",
+        "workingTime": "92 jours",
         "client": "Lucas Durand",
         "dislocation": "Antibes, France",
         "desc": "Natural Essence est un projet qui incarne l’harmonie des textures naturelles, des formes douces et d’une palette chaleureuse. L’espace est conçu pour une vie confortable, où chaque élément met en valeur la légèreté et le naturel.",
@@ -493,7 +537,7 @@
         }
       },
       "sereneLines": {
-        "workingTime": "74 jours",
+        "workingTime": "79 jours",
         "client": "Laetitia Vignet",
         "dislocation": "Nice, France",
         "desc": "Serene Lines est un intérieur qui allie douceur des lignes, palette neutre et chaleureuse, et fonctionnalité réfléchie. L’espace baigne dans la lumière et le confort, créant une atmosphère idéale pour une vie paisible au rythme de la ville.",
@@ -517,7 +561,7 @@
       },
       "chambreEnfant": {
         "workingTime": "74 jours",
-        "client": "Clément Duval",
+        "client": "Nikolaï Prokhine",
         "dislocation": "Nice, France",
         "desc": "Chambre d'enfant est un projet où se rejoignent fonctionnalité, sécurité et joie de l'enfance. Chaque détail est conçu avec soin pour que la chambre évolue avec l'enfant tout en restant confortable et belle pendant de nombreuses années.",
         "componentData": {
@@ -607,6 +651,7 @@
   "calculator": {
     "h1": "Calculer",
     "h2": "le coût du projet",
+    "modalButton": "Estimer le projet",
     "directions": {
       "design": "Design d’intérieur",
       "renovation": "Rénovation"
@@ -619,7 +664,7 @@
     "params": {
       "area": "Superficie",
       "bathrooms": "Nombre de salles de bain",
-      "kitchen": "Cuisine",
+      "kitchen": "Y a-t-il une cuisine ?",
       "rooms": "Nombre de pièces / espaces"
     },
     "services": {
@@ -640,6 +685,8 @@
     "button": "Obtenir un devis",
     "success": "Merci ! Nous vous contacterons dans les 24 heures.",
     "next": "Suivant",
-    "prev": "Précédent"
+    "prev": "Précédent",
+    "prompt1": "Sélectionnez un ou les deux services :",
+    "prompt2": "Quel est le type de votre bien ?"
   }
 }

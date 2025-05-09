@@ -32,6 +32,7 @@ interface _GlobalComponents {
     'SwipersProjectsSwiperComponent': typeof import("../components/Swipers/ProjectsSwiperComponent.vue")['default']
     'SwipersReviewsSliderComponent': typeof import("../components/Swipers/ReviewsSliderComponent.vue")['default']
     'ToolsBreadcrumbs': typeof import("../components/Tools/Breadcrumbs.vue")['default']
+    'ToolsCostCalcModal': typeof import("../components/Tools/CostCalcModal.vue")['default']
     'ToolsCostCalculator': typeof import("../components/Tools/CostCalculator.vue")['default']
     'ToolsFaqComponent': typeof import("../components/Tools/FaqComponent.vue")['default']
     'ToolsGoogleReviewsComponent': typeof import("../components/Tools/GoogleReviewsComponent.vue")['default']
@@ -88,6 +89,7 @@ interface _GlobalComponents {
     'LazySwipersProjectsSwiperComponent': LazyComponent<typeof import("../components/Swipers/ProjectsSwiperComponent.vue")['default']>
     'LazySwipersReviewsSliderComponent': LazyComponent<typeof import("../components/Swipers/ReviewsSliderComponent.vue")['default']>
     'LazyToolsBreadcrumbs': LazyComponent<typeof import("../components/Tools/Breadcrumbs.vue")['default']>
+    'LazyToolsCostCalcModal': LazyComponent<typeof import("../components/Tools/CostCalcModal.vue")['default']>
     'LazyToolsCostCalculator': LazyComponent<typeof import("../components/Tools/CostCalculator.vue")['default']>
     'LazyToolsFaqComponent': LazyComponent<typeof import("../components/Tools/FaqComponent.vue")['default']>
     'LazyToolsGoogleReviewsComponent': LazyComponent<typeof import("../components/Tools/GoogleReviewsComponent.vue")['default']>
@@ -150,6 +152,7 @@ export const SwipersNewsSwiperComponent: typeof import("../components/Swipers/Ne
 export const SwipersProjectsSwiperComponent: typeof import("../components/Swipers/ProjectsSwiperComponent.vue")['default']
 export const SwipersReviewsSliderComponent: typeof import("../components/Swipers/ReviewsSliderComponent.vue")['default']
 export const ToolsBreadcrumbs: typeof import("../components/Tools/Breadcrumbs.vue")['default']
+export const ToolsCostCalcModal: typeof import("../components/Tools/CostCalcModal.vue")['default']
 export const ToolsCostCalculator: typeof import("../components/Tools/CostCalculator.vue")['default']
 export const ToolsFaqComponent: typeof import("../components/Tools/FaqComponent.vue")['default']
 export const ToolsGoogleReviewsComponent: typeof import("../components/Tools/GoogleReviewsComponent.vue")['default']
@@ -206,6 +209,7 @@ export const LazySwipersNewsSwiperComponent: LazyComponent<typeof import("../com
 export const LazySwipersProjectsSwiperComponent: LazyComponent<typeof import("../components/Swipers/ProjectsSwiperComponent.vue")['default']>
 export const LazySwipersReviewsSliderComponent: LazyComponent<typeof import("../components/Swipers/ReviewsSliderComponent.vue")['default']>
 export const LazyToolsBreadcrumbs: LazyComponent<typeof import("../components/Tools/Breadcrumbs.vue")['default']>
+export const LazyToolsCostCalcModal: LazyComponent<typeof import("../components/Tools/CostCalcModal.vue")['default']>
 export const LazyToolsCostCalculator: LazyComponent<typeof import("../components/Tools/CostCalculator.vue")['default']>
 export const LazyToolsFaqComponent: LazyComponent<typeof import("../components/Tools/FaqComponent.vue")['default']>
 export const LazyToolsGoogleReviewsComponent: LazyComponent<typeof import("../components/Tools/GoogleReviewsComponent.vue")['default']>

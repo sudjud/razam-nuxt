@@ -6,7 +6,7 @@
           <span class="no-wrap">{{ $t("services.contactShield3.h1") }}</span>
           <div class="spaced">
             <span>{{ $t("services.contactShield3.h2") }}</span><br />
-            <span>{{ $t("services.contactShield3.h3") }}<img class="arrow" src="/images/home/offer-arrow.svg" alt="" /></span>
+            <span>{{ $t("services.contactShield3.h3") }}<img data-not-lazy class="arrow" src="/images/home/offer-arrow.svg" alt="" /></span>
           </div>
         </h2>
       </NuxtLink>

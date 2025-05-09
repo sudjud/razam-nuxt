@@ -4,12 +4,12 @@
       <!-- Логотип -->
       <div class="logo" :class="{ open: isOpen }">
         <NuxtLink :to="localePath('/')">
-          <img src="/logo.webp" alt="Razam" />
+          <img data-not-lazy src="/logo.webp" alt="Razam" />
         </NuxtLink>
       </div>
       <div class="logo logo-white" :class="{ open: isOpen }">
         <NuxtLink :to="localePath('/')">
-          <img src="/logo-white.webp" alt="Razam" />
+          <img data-not-lazy src="/logo-white.webp" alt="Razam" />
         </NuxtLink>
       </div>
 
@@ -76,6 +76,24 @@
               >{{ $t("menu.contact") }}</NuxtLink
             >
           </li>
+          <li class="cost-modal">
+            <CostCalcModal
+              @close-modal="toggleModal"
+              @submit-form="submitModal"
+              @click.stop
+              v-if="modalOpened"
+            />
+            
+            <p :class="{ submit: modalSubmitted }" class="success-message">
+              {{ $t("calculator.success") }}
+            </p>
+            <button
+              @click.stop="toggleModal"
+              class="go-to-calc_btn"
+            >
+              {{ $t("calculator.modalButton") }}
+            </button>
+          </li>
           <li @click.stop class="lang-switch">
             <LangSwitchComponent />
           </li>
@@ -95,11 +113,28 @@ import { ref } from "vue";
 import { useRoute } from "vue-router";
 import LangSwitchComponent from "../components/Tools/LangSwitchComponent.vue";
 import SocialMedias from "../components/Tools/SocialMedias.vue";
+import CostCalcModal from "../Tools/CostCalcModal.vue";
 
-// Определение активного маршрута
 const route = useRoute();
 const localePath = useLocalePath();
 const { locale } = useI18n();
+
+
+const modalOpened = ref(false);
+const modalSubmitted = ref(false);
+
+const submitModal = () => {
+  modalSubmitted.value = true;
+  setTimeout(() => {
+    modalSubmitted.value = false;
+    closeMenu();
+  }, 3000);
+  modalOpened.value = false;
+}
+
+const toggleModal = () => {
+  modalOpened.value = !modalOpened.value;
+}
 
 const lastScrollY = ref(0);
 const isHidden = ref(false);
@@ -140,6 +175,24 @@ const closeMenu = () => {
 </script>
 
 <style scoped lang="sass">
+.go-to-calc_btn
+  font-family: Geometria, sans-serif
+  padding: 1rem 2rem
+  font-weight: 500
+  color: $bgc-main
+  border: 2px solid $bgc-main
+  font-size: 18px
+  border-radius: 12px
+  background-color: transparent
+  margin-left: 10px
+  @media (max-width: 1200px)
+    border: 1px solid $bgc-main
+  @media (max-width: 850px)
+    font-size: 18px
+  &:hover
+    transform: scale(1.02)
+  &:active
+    transform: scale(1)
 .header
   position: fixed
   width: 100%
@@ -149,6 +202,25 @@ const closeMenu = () => {
   align-items: center
   padding: 5px 20px 5px 20px
   z-index: 100
+  .cost-modal
+    font-weight: normal
+    .success-message
+      opacity: 0
+      position: fixed
+      z-index: 10000000
+      top: 10%
+      left: 50%
+      transform: translateX(-50%)
+      font-size: 1.5rem
+      font-weight: 600
+      padding: 2rem
+      background-color: $bgc-second
+      color: green
+      border-radius: 30px
+      transition-duration: 0.6s
+      &.submit
+        transition-duration: 0.6s
+        opacity: 1
   .container
     display: flex
     justify-content: space-between
@@ -231,6 +303,8 @@ const closeMenu = () => {
     margin: 0
     margin-bottom: 120px
     text-align: center
+    .cost-modal
+      text-align: left
     li
       margin: 10px 0
       font-size: 18px

@@ -5,7 +5,7 @@
       <span v-reveal class="wow reveal-bb reveal-visible">{{
         $t("contact.contactUs")
       }}</span
-      ><span><img src="/images/contact-us/arrow.svg" alt="" /></span>
+      ><span><img data-not-lazy src="/images/contact-us/arrow.svg" alt="" /></span>
     </h1>
     <div class="image-wrapper">
       <img src="/images/contact-us/main.webp" alt="" />
@@ -46,7 +46,7 @@
 
       <button type="submit">
         {{ $t("contact.form.submitButton")
-        }}<span><img src="/images/contact-us/submit-arrow.svg" alt="" /></span>
+        }}<span><img data-not-lazy src="/images/contact-us/submit-arrow.svg" alt="" /></span>
       </button>
     </form>
   </section>
@@ -59,7 +59,7 @@
         <span v-reveal class="wow reveal-bb">{{
           $t("contact.info.titleFirst")
         }}</span>
-        <span><img src="/images/contact-us/arrow.svg" alt="" /></span><br />
+        <span><img data-not-lazy src="/images/contact-us/arrow.svg" alt="" /></span><br />
         <span v-reveal class="wow reveal-bb">{{
           $t("contact.info.titleSecond")
         }}</span>
@@ -67,11 +67,11 @@
       <div class="info-wrapper">
         <div class="field">
           <p>Email</p>
-          <h4>contact@razam.fr</h4>
+          <h4>info@razam.fr</h4>
         </div>
         <div class="field">
           <p>{{ $t("footer.tel") }}</p>
-          <h4>+33 7 88 77 88 66</h4>
+          <h4>+33 6 64 36 12 20</h4>
         </div>
         <div class="field">
           <p>{{ $t("contact.info.locationLabel") }}</p>
@@ -258,7 +258,7 @@ form
     display: flex
     font-size: 1rem
     margin-top: 3rem
-    font-family: 'Mont', sans-serif
+    font-family: Geometria, sans-serif
     @media (max-width: 1200px)
       margin-top: 2rem
     span
@@ -267,7 +267,7 @@ form
     padding: 10px
     border: none
     border-bottom: 1px solid $font-grey
-    font-family: 'Mont', sans-serif
+    font-family: Geometria, sans-serif
     background-color: $bgc-main
     font-size: 1.5rem
     @media (max-width: 1200px)

@@ -16,7 +16,7 @@
   </section>
   <div class="pagination">
     <button @click="prevPage" :disabled="currentPage === 1">
-      <img src="/images/blog/left-arrow.svg" alt="" />
+      <img data-not-lazy src="/images/blog/left-arrow.svg" alt="" />
     </button>
     <div
       v-for="page in totalPages"
@@ -27,7 +27,7 @@
       {{ page }}
     </div>
     <button @click="nextPage" :disabled="currentPage === totalPages">
-      <img src="/images/blog/right-arrow.svg" alt="" />
+      <img data-not-lazy src="/images/blog/right-arrow.svg" alt="" />
     </button>
   </div>
 </template>

@@ -2,9 +2,10 @@
   <transition name="fade">
     <div v-if="!loaded" class="loader">
       <div class="logo">
-        <img class="logo-img" src="/images/loader/logo-white.webp" alt="Logo">
+        <img data-not-lazy class="logo-img" src="/images/loader/logo-white.webp" alt="Logo">
         <img
           ref="stick"
+          data-not-lazy
           src="/images/loader/devider.webp"
           alt="Loading Stick"
           class="stick"

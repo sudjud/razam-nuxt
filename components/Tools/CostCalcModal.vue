@@ -1,142 +1,151 @@
 <template>
-  <div class="calculator-wrapper">
-    <form class="calculator" @submit.prevent="submitForm">
-      <!-- Шаг 1: Выбор направления -->
-      <h3>
-        {{ $t("calculator.h1") }}
-        <br />
-        {{ $t("calculator.h2") }}
-      </h3>
-      <section class="design-or-repair" v-if="page === 1">
-        <span class="prompt">{{ $t("calculator.prompt1") }}</span>
-        <div class="design-or-repair_wrapper">
+  <div class="overlay">
+    <div class="calculator-wrapper">
+      <div @click="handleClose" class="close">✕</div>
+      <form class="calculator" @submit.prevent="submitForm">
+        <!-- Шаг 1: Выбор направления -->
+        <h3>
+          {{ $t("calculator.h1") }}
+          <br />
+          {{ $t("calculator.h2") }}
+        </h3>
+        <section class="design-or-repair" v-if="page === 1">
+          <span class="prompt">{{ $t('calculator.prompt1') }}</span>
+          <div class="design-or-repair_wrapper">
+            <label>
+              <input type="checkbox" v-model="form.design" />
+              {{ $t("calculator.directions.design") }}
+            </label>
+            <label>
+              <input type="checkbox" v-model="form.renovation" />
+              {{ $t("calculator.directions.renovation") }}
+            </label>
+          </div>
+        </section>
+
+        <!-- Шаг 2: Тип объекта и параметры -->
+        <section v-if="page === 1">
+          <div class="object-type">
+            <span class="prompt">{{ $t('calculator.prompt2') }}</span>
+            <label v-for="(label, value) in objectTypes" :key="value">
+              <input
+                type="radio"
+                name="objectType"
+                :value="value"
+                v-model="form.objectType"
+              />
+              {{ $t(label) }}
+            </label>
+          </div>
+
+          <div class="object-details">
+            <label>
+              <input
+                type="number"
+                v-model.number="form.area"
+                min="0"
+                :placeholder="$t('calculator.params.area') + ' (м²)'"
+              />
+            </label>
+
+            <label>
+              <input
+                type="number"
+                v-model.number="form.bathrooms"
+                min="0"
+                :placeholder="$t('calculator.params.bathrooms')"
+              />
+            </label>
+
+            <label>
+              <input
+                type="number"
+                v-model.number="form.rooms"
+                min="0"
+                :placeholder="$t('calculator.params.rooms')"
+              />
+            </label>
+
+            <label class="kitchen">
+              <input type="checkbox" v-model="form.hasKitchen" />
+              {{ $t("calculator.params.kitchen") }}
+            </label>
+          </div>
+        </section>
+
+        <!-- Шаг 4: Контактная информация -->
+        <section class="contact-info" v-if="page === 2">
+          <input
+            type="text"
+            v-model="form.name"
+            :placeholder="$t('calculator.contact.name')"
+            required
+          />
+          <!-- <input type="tel" v-model="form.phone" :placeholder="$t('calculator.contact.phone')" required /> -->
+          <PhoneInputComponent v-model="form.phone" ref="phoneInput" />
+          <input
+            type="email"
+            v-model="form.email"
+            :placeholder="$t('calculator.contact.email')"
+            required
+          />
+          <textarea
+            v-model="form.message"
+            :placeholder="$t('calculator.contact.message')"
+          ></textarea>
+        </section>
+
+        <!-- Шаг 5: Подтверждение и кнопка -->
+        <section v-if="page === 2" class="confirmation">
           <label>
-            <input type="checkbox" v-model="form.design" />
-            {{ $t("calculator.directions.design") }}
+            <input type="checkbox" v-model="form.accepted" required />
+            {{ $t("calculator.confirmation") }}
           </label>
-          <label>
-            <input type="checkbox" v-model="form.renovation" />
-            {{ $t("calculator.directions.renovation") }}
-          </label>
+        </section>
+        <div class="buttons">
+          <button
+            v-show="page === 2"
+            class="prev-button"
+            @click="prevPage"
+            type="button"
+          >
+            {{ $t("calculator.prev") }}
+          </button>
+          <p :class="{ submit: submitted }" class="success-message">
+            {{ $t("calculator.success") }}
+          </p>
+
+          <button
+            class="next-submit"
+            @click="handleClick"
+            :type="page === 2 ? 'submit' : 'button'"
+            :disabled="
+              (page === 1 &&
+                (!form.objectType ||
+                  (!form.design && !form.renovation) ||
+                  !form.area ||
+                  !form.bathrooms ||
+                  !form.rooms)) ||
+              (page === 2 && (!form.name || !form.email || !form.accepted))
+            "
+          >
+            {{ page === 2 ? $t("calculator.button") : $t("calculator.next") }}
+          </button>
         </div>
-      </section>
-
-      <!-- Шаг 2: Тип объекта и параметры -->
-      <section v-if="page === 1">
-        <div class="object-type">
-          <span class="prompt">{{ $t('calculator.prompt2') }}</span>
-          <label v-for="(label, value) in objectTypes" :key="value">
-            <input
-              type="radio"
-              name="objectType"
-              :value="value"
-              v-model="form.objectType"
-            />
-            {{ $t(label) }}
-          </label>
-        </div>
-
-        <div class="object-details">
-          <label>
-            <input
-              type="number"
-              v-model.number="form.area"
-              min="0"
-              :placeholder="$t('calculator.params.area') + ' (м²)'"
-            />
-          </label>
-
-          <label>
-            <input
-              type="number"
-              v-model.number="form.bathrooms"
-              min="0"
-              :placeholder="$t('calculator.params.bathrooms')"
-            />
-          </label>
-
-          <label>
-            <input
-              type="number"
-              v-model.number="form.rooms"
-              min="0"
-              :placeholder="$t('calculator.params.rooms')"
-            />
-          </label>
-
-          <label class="kitchen">
-            <input type="checkbox" v-model="form.hasKitchen" />
-            {{ $t("calculator.params.kitchen") }}
-          </label>
-        </div>
-      </section>
-
-      <!-- Шаг 4: Контактная информация -->
-      <section class="contact-info" v-if="page === 2">
-        <input
-          type="text"
-          v-model="form.name"
-          :placeholder="$t('calculator.contact.name')"
-          required
-        />
-        <!-- <input type="tel" v-model="form.phone" :placeholder="$t('calculator.contact.phone')" required /> -->
-        <PhoneInputComponent v-model="form.phone" ref="phoneInput" />
-        <input
-          type="email"
-          v-model="form.email"
-          :placeholder="$t('calculator.contact.email')"
-          required
-        />
-        <textarea
-          v-model="form.message"
-          :placeholder="$t('calculator.contact.message')"
-        ></textarea>
-      </section>
-
-      <!-- Шаг 5: Подтверждение и кнопка -->
-      <section v-if="page === 2" class="confirmation">
-        <label>
-          <input type="checkbox" v-model="form.accepted" required />
-          {{ $t("calculator.confirmation") }}
-        </label>
-      </section>
-      <div class="buttons">
-        <button
-          v-show="page === 2"
-          class="prev-button"
-          @click="prevPage"
-          type="button"
-        >
-          {{ $t("calculator.prev") }}
-        </button>
-        <p :class="{ submit: submitted }" class="success-message">
-          {{ $t("calculator.success") }}
-        </p>
-
-        <button
-          class="next-submit"
-          @click="handleClick"
-          :type="page === 2 ? 'submit' : 'button'"
-          :disabled="
-            (page === 1 &&
-              (!form.objectType ||
-                (!form.design && !form.renovation) ||
-                !form.area ||
-                !form.bathrooms ||
-                !form.rooms)) ||
-            (page === 2 && (!form.name || !form.email || !form.accepted))
-          "
-        >
-          {{ page === 2 ? $t("calculator.button") : $t("calculator.next") }}
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import PhoneInputComponent from "./PhoneInputComponent.vue";
+
+const emit = defineEmits(["close-modal", "submit-form"]);
+const handleClose = () => emit("close-modal");
+const handleSubmit = () => {
+  emit("submit-form");
+};
 
 const page = ref(1);
 
@@ -164,32 +173,6 @@ const objectTypes = {
   public: "calculator.objectType.public",
   office: "calculator.objectType.office",
 };
-
-// const submitForm = () => {
-//   submitted.value = true;
-//   setTimeout(() => {
-//     submitted.value = false;
-//   }, 5000);
-//   form.value = {
-//     design: false,
-//     renovation: false,
-//     objectType: "",
-//     area: null,
-//     bathrooms: null,
-//     rooms: null,
-//     hasKitchen: false,
-//     name: "",
-//     phone: "",
-//     email: "",
-//     message: "",
-//     accepted: false,
-//   };
-//   page.value = 1;
-//   console.log(form.value);
-
-//   // Сброс формы при необходимости
-//   // Object.assign(form.value, { ...defaultValues })
-// };
 
 const submitForm = async () => {
   const endpoint = "https://formspree.io/f/mnndzqeq";
@@ -219,27 +202,7 @@ const submitForm = async () => {
     const result = await response.json();
 
     if (response.ok) {
-      submitted.value = true;
-      setTimeout(() => {
-        submitted.value = false;
-      }, 5000);
-
-      // Reset form
-      form.value = {
-        design: false,
-        renovation: false,
-        objectType: "",
-        area: null,
-        bathrooms: null,
-        rooms: null,
-        hasKitchen: false,
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-        accepted: false
-      };
-      page.value = 1;
+      handleSubmit();
     } else {
       console.error("Ошибка при отправке формы: ", result);
     }
@@ -280,8 +243,35 @@ const handleClick = () => {
 .prompt
   font-size: 0.7em
 
+.overlay
+  position: fixed
+  z-index: 100000
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(black, 0.8)
+  display: flex
+  justify-content: center
+  align-items: center
 .calculator-wrapper
   padding: 4rem
+  position: relative
+  .close
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #fff
+    width: 2rem
+    height: 2rem
+    border-radius: 50%
+    position: absolute
+    right: 2rem
+    top: 2rem
+    &:hover
+      transform: scale(1.05)
+    &:active
+      transform: scale(0.95)
 .calculator
   display: flex
   flex-direction: column

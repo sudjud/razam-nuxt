@@ -88,11 +88,11 @@
       </h2>
       <div class="field">
         <p>Email</p>
-        <h4>contact@razam.fr</h4>
+        <h4>info@razam.fr</h4>
       </div>
       <div class="field">
         <p>{{ $t("footer.tel") }}</p>
-        <h4>+33 7 88 77 88 66</h4>
+        <h4>+33 6 64 36 12 20</h4>
       </div>
       <div class="field">
         <p>{{ $t("footer.location") }}</p>

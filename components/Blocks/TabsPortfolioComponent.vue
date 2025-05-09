@@ -37,7 +37,7 @@
             <p class="year">{{ item.year }}</p>
             <p class="type">{{ $t(item.type) }}</p>
             <div :class="{ open: expandedItem === index }" class="arrow">
-              <img src="/images/about/diag-arrow.svg" alt="" />
+              <img data-not-lazy src="/images/about/diag-arrow.svg" alt="" />
             </div>
           </li>
         </ul>

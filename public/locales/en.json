@@ -92,14 +92,56 @@
     "project3": "A modern design for a brand. A bright interior focusing on comfort and style, perfect for a business setting.",
     "project4": "An elegant private house blending minimalism with coziness. Spacious rooms and panoramic windows ensure comfort on the Riviera.",
     "reviewsH2P1": "Reviews from our",
-    "reviewsH2P2": "clients",
+    "reviewsH2P2": "clients\n(google maps)",
     "reviews": {
-      "review1Title": "Impeccable style and attention to detail",
-      "review1Text": "From the first discussion to the project's completion, the team demonstrated professionalism and sensitivity to our wishes...",
-      "review1Name": "Julien, Nice",
-      "review2Title": "A truly quality approach",
-      "review2Text": "From the initial consultation to the final touches, the team showed professionalism and care in addressing our ideas. We loved how they transformed our apartment into a space that is both stylish and incredibly comfortable. Their attention to every detail and the ability to add unique elements made our interior truly special. Highly recommended for those seeking a quality and creative approach.",
-      "review2Name": "Anna, Cannes"
+      "1": {
+        "text": "The team renovated my veranda and pool, and honestly, I’ve never experienced such exceptional attention and a personalized approach anywhere else! They help, advise, and guide you! I’m thrilled! For a new home, it’s only you I’ll turn to! ❤️",
+        "name": "Victoria Kukharenko"
+      },
+      "2": {
+        "text": "I hired the company for insulation work and the creation of a suspended ceiling.\nThe work started quickly after the initial technical visit. The start date and duration were respected. The work is neat and high-quality.\nThe company also demonstrated flexibility.\nI recommend them and will definitely call on them again for future work in other properties.",
+        "name": "aymen B"
+      },
+      "3": {
+        "text": "A young and dynamic company, attentive to the client and very professional.\nShower room refreshed — the work is very neat.\nI recommend them.",
+        "name": "Gillet-Christophe Levet"
+      },
+      "4": {
+        "text": "If you're looking for a renovation or construction company in the PACA region, I recommend CAPITAL HOME CONSTRUCTION, located in Vallauris (06220). A punctual, efficient, professional company, attentive to its clients and reasonably priced. They carried out the complete renovation of my apartment: partitions, flooring, marble, tiling, bathroom, kitchen, painting, wallpaper, panoramic stickers, electricity, electrical panel, plumbing — all trades, all done to perfection ",
+        "name": "Sylviane Denoo"
+      },
+      "5": {
+        "text": "I had my bathroom and toilet renovated. The project manager was very attentive, and the work was done very well by a specialist who was also very attentive. As a result, I truly recommend this company for any renovation work.",
+        "name": "David amoros"
+      },
+      "6": {
+        "text": "My project was to renovate my bathroom.\nThey supported me from start to finish — it’s a very competent company you can fully trust.\nI will definitely call on them again for my future kitchen project.\nI thank them all for their excellent, high-quality work.",
+        "name": "Claudia Dewan"
+      },
+      "7": {
+        "text": "They undoubtedly do an excellent and extremely beautiful job. I 100% recommend their absolute professionalism.",
+        "name": "Santiago villamiel temprano"
+      },
+      "8": {
+        "text": "A professional team. They really did a great job renovating my bathroom. I’ll definitely contact them again!",
+        "name": "Victorious (Bunny)"
+      },
+      "9": {
+        "text": "The work was done with great care, and the apartment was well protected to avoid dust. I recommend them!",
+        "name": "LE VRAI BINCHOTAN"
+      },
+      "10": {
+        "text": "Bathroom renovation. They respected the deadline. The work was done in a high-quality manner.",
+        "name": "Raphael Roux"
+      },
+      "11": {
+        "text": "Perfect work, we are very happy and recommend your company.",
+        "name": "Marie Françoise Dumonal"
+      },
+      "12": {
+        "text": "Willingness to collaborate, Punctuality, Quality, Professionalism, Prices",
+        "name": "Mathieu Lopez"
+      }
     },
     "offer": {
       "h2P1": "Ready to create",
@@ -124,13 +166,15 @@
       "q1": "How long does it take to develop a design project?",
       "a1": "A design project typically takes 2 to 4 weeks, depending on complexity and scope. We strive to optimize the process so that every stage meets your expectations and delivers a quality outcome. It is important that you feel the project is moving in the right direction at every stage.",
       "q2": "What materials are used for renovations?",
-      "a2": "We use only proven and high-quality materials, selected individually for each project. Our solutions are eco-friendly, durable, and meet modern safety standards.",
+      "a2": "We work directly with many suppliers and showrooms on the French Riviera, which allows us to offer customized terms and prices significantly below market rates. Wooden elements (doors, windows, parquet, etc.) are mainly sourced from Ukraine — these are high-quality materials at a price lower than the local mid-range.",
       "q3": "Is it possible to order design without renovation?",
       "a3": "Yes, you can order a design project only. We will provide all the necessary documentation and recommendations for its execution by yourself or other contractors.",
       "q4": "How much does a turnkey project cost?",
-      "a4": "The cost depends on the area, work complexity, and materials used. We offer transparent pricing and a customized estimate for every client.",
+      "a4": "The cost depends on the area, the objectives, and the scope of work. You can easily calculate a preliminary project estimate using our calculator:",
       "q5": "How do you control quality at all stages?",
-      "a5": "We monitor the process at every stage: from material selection to project handover. Regular checks and clear coordination guarantee a high-quality result."
+      "a5": "Our company combines both design and renovation under one roof. Thanks to this, all stages of the project go through a four-level control system. Full internal communication between teams allows for flexible responses to changes, fast decision-making, and ensures high execution quality at every stage.",
+      "q6": "How long does the renovation take?",
+      "a6": "On average, renovating a 100 m² apartment based on a completed design project takes 2 to 4 months. The exact duration depends on the complexity of the project, materials, and other individual factors."
     },
     "news": {
       "H2": "Latest News",
@@ -424,7 +468,7 @@
         }
       },
       "elementalHarmony": {
-        "workingTime": "74 days",
+        "workingTime": "89 days",
         "client": "Louis Bergier",
         "dislocation": "Nice, France",
         "desc": "Elemental Harmony is a project where coziness blends with minimalism and natural tones. The space is carefully designed: soft furniture shapes, warm wood textures, and gentle accents create an atmosphere of tranquility and comfort. Each area is harmoniously connected, offering both comfort and aesthetics for everyday life.",
@@ -447,7 +491,7 @@
         }
       },
       "modernVista": {
-        "workingTime": "74 days",
+        "workingTime": "104 days",
         "client": "Antoine Duplessis",
         "dislocation": "Nice, France",
         "desc": "Modern Vista is a project that combines contemporary aesthetics, practicality, and coziness. Every detail is designed for comfortable living in the fast rhythm of the city. The harmony of materials, warm tones, and functional solutions makes the interior not only stylish but also convenient for everyday use. It’s a space where you want to relax, work, and enjoy every moment at home.",
@@ -470,7 +514,7 @@
         }
       },
       "naturalEssence": {
-        "workingTime": "74 days",
+        "workingTime": "92 days",
         "client": "Lucas Durand",
         "dislocation": "Antibes, France",
         "desc": "Natural Essence is a project that embodies the harmony of natural textures, soft forms, and a warm palette. The space is designed for comfortable living, where every element emphasizes lightness and naturalness.",
@@ -493,7 +537,7 @@
         }
       },
       "sereneLines": {
-        "workingTime": "74 days",
+        "workingTime": "79 days",
         "client": "Laetitia Vignet",
         "dislocation": "Nice, France",
         "desc": "Serene Lines is an interior that combines soft lines, a warm neutral palette, and thoughtful functionality. The space is filled with light and coziness, creating the perfect atmosphere for peaceful living in the rhythm of the city.",
@@ -516,8 +560,8 @@
         }
       },
       "chambreEnfant": {
-        "workingTime": "74 days",
-        "client": "Clément Duval",
+        "workingTime": "55 days",
+        "client": "Nikolai Prokhin",
         "dislocation": "Nice, France",
         "desc": "Chambre d'enfant is a project where functionality, safety, and childhood joy come together. Every detail is designed with care so that the room grows with the child and remains comfortable and beautiful for many years.",
         "componentData": {
@@ -607,6 +651,7 @@
   "calculator": {
     "h1": "Calculate",
     "h2": "the cost of the project",
+    "modalButton": "Get estimate",
     "directions": {
       "design": "Interior design",
       "renovation": "Renovation"
@@ -619,7 +664,7 @@
     "params": {
       "area": "Area",
       "bathrooms": "Number of bathrooms",
-      "kitchen": "Kitchen",
+      "kitchen": "Is there a kitchen?",
       "rooms": "Number of rooms / spaces"
     },
     "services": {
@@ -640,6 +685,8 @@
     "button": "Get a quote",
     "success": "Thank you! We will contact you within 24 hours.",
     "next": "Next",
-    "prev": "Previous"
+    "prev": "Previous",
+    "prompt1": "Select one or both services:",
+    "prompt2": "What type of property do you have?"
   }
 }

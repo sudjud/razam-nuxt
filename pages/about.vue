@@ -85,35 +85,35 @@
     <div class="way-grid">
       <div class="way-item">
         <div class="number">
-          01 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          01 <span><img data-not-lazy src="/images/about/arrow.svg" alt="" /></span>
         </div>
         <div class="title">{{ $t("about.way.step1_title") }}</div>
         <p>{{ $t("about.way.step1_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          02 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          02 <span><img data-not-lazy src="/images/about/arrow.svg" alt="" /></span>
         </div>
         <div class="title">{{ $t("about.way.step2_title") }}</div>
         <p>{{ $t("about.way.step2_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          03 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          03 <span><img data-not-lazy src="/images/about/arrow.svg" alt="" /></span>
         </div>
         <div class="title">{{ $t("about.way.step3_title") }}</div>
         <p>{{ $t("about.way.step3_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          04 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          04 <span><img data-not-lazy src="/images/about/arrow.svg" alt="" /></span>
         </div>
         <div class="title">{{ $t("about.way.step4_title") }}</div>
         <p>{{ $t("about.way.step4_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          05 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          05 <span><img data-not-lazy src="/images/about/arrow.svg" alt="" /></span>
         </div>
         <div class="title">{{ $t("about.way.step5_title") }}</div>
         <p>{{ $t("about.way.step5_text") }}</p>
@@ -187,7 +187,7 @@
           <span class="indent">{{ $t("contactPlate.span1") }}</span
           ><br />
           <span class="indent">{{ $t("contactPlate.span2") }}</span>
-          <span><img src="/images/about/contact-arrow.svg" alt="" /></span>
+          <span><img data-not-lazy src="/images/about/contact-arrow.svg" alt="" /></span>
         </h2>
       </NuxtLink>
       <p>

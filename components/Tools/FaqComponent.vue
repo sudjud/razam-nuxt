@@ -20,6 +20,7 @@
             viewBox="0 0 32 32"
             width="25"
             height="25"
+            data-not-lazy
           >
             <path
               d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"
@@ -37,19 +38,37 @@
           <p class="answer">
             {{ $t(item.answer) }}
           </p>
+          <button @click="toggleModal" class="go-to-calc_btn" v-if="index === 5">
+            {{ $t("calculator.modalButton") }}
+          </button>
         </div>
       </transition>
     </div>
+    <CostCalcModal @close-modal="toggleModal" @submit-form="submitModal" v-if="modalOpened" />
+    <p :class="{ submit: modalSubmitted }" class="success-message">
+      {{ $t("calculator.success") }}
+    </p>
   </div>
 </template>
 
 <script setup>
+import CostCalcModal from "/components/Tools/CostCalcModal";
 import { reactive, nextTick } from "vue";
 
 const questions = reactive([
   {
+    question: "home.FAQ.q3",
+    answer: "home.FAQ.a3",
+    open: false,
+  },
+  {
     question: "home.FAQ.q1",
     answer: "home.FAQ.a1",
+    open: false,
+  },
+  {
+    question: "home.FAQ.q6",
+    answer: "home.FAQ.a6",
     open: false,
   },
   {
@@ -58,8 +77,8 @@ const questions = reactive([
     open: false,
   },
   {
-    question: "home.FAQ.q3",
-    answer: "home.FAQ.a3",
+    question: "home.FAQ.q5",
+    answer: "home.FAQ.a5",
     open: false,
   },
   {
@@ -67,12 +86,22 @@ const questions = reactive([
     answer: "home.FAQ.a4",
     open: false,
   },
-  {
-    question: "home.FAQ.q5",
-    answer: "home.FAQ.a5",
-    open: false,
-  },
 ]);
+
+const modalOpened = ref(false);
+const modalSubmitted = ref(false);
+
+const submitModal = () => {
+  modalSubmitted.value = true;
+  setTimeout(() => {
+    modalSubmitted.value = false;
+  }, 3000)
+  modalOpened.value = false;
+}
+
+const toggleModal = () => {
+  modalOpened.value = !modalOpened.value;
+};
 
 const toggleAnswer = async (index) => {
   questions[index].open = !questions[index].open;
@@ -109,8 +138,35 @@ const leave = (el) => {
 </script>
 
 <style lang="sass" scoped>
+.go-to-calc_btn
+  font-family: Geometria, sans-serif
+  padding: 1rem 3rem
+  font-size: 1.25rem
+  border-radius: 12px
+  background-color: transparent
+  margin-left: 10px
+  &:hover
+    transform: scale(1.02)
+
 .question-block
   cursor: pointer
+  .success-message
+    opacity: 0
+    position: fixed
+    z-index: 10000000
+    top: 10%
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 1.5rem
+    font-weight: 600
+    padding: 2rem
+    background-color: $bgc-second
+    color: green
+    border-radius: 30px
+    transition-duration: 0.6s
+    &.submit
+      transition-duration: 0.6s
+      opacity: 1
   .question-item
     border-top: 1px solid $font-grey
     padding: 2rem 0 2rem 0

@@ -44,7 +44,7 @@
           <div class="number">
             01
             <span class="number-arrow"
-              ><img src="/images/portfolio/process-arrow.svg" alt=""
+              ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
             /></span>
           </div>
           <h4>{{ $t("home.process.title1") }}</h4>
@@ -61,7 +61,7 @@
           <div class="number">
             02
             <span class="number-arrow"
-              ><img src="/images/portfolio/process-arrow.svg" alt=""
+              ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
             /></span>
           </div>
           <h4>{{ $t("home.process.title2") }}</h4>
@@ -76,7 +76,7 @@
           <div class="number">
             04
             <span class="number-arrow"
-              ><img src="/images/portfolio/process-arrow.svg" alt=""
+              ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
             /></span>
           </div>
           <h4>{{ $t("home.process.title4") }}</h4>
@@ -93,7 +93,7 @@
           <div class="number">
             03
             <span class="number-arrow"
-              ><img src="/images/portfolio/process-arrow.svg" alt=""
+              ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
             /></span>
           </div>
           <h4>{{ $t("home.process.title3") }}</h4>
@@ -108,7 +108,7 @@
           <div class="number">
             05
             <span class="number-arrow"
-              ><img src="/images/portfolio/process-arrow.svg" alt=""
+              ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
             /></span>
           </div>
           <h4>{{ $t("home.process.title5") }}</h4>
@@ -123,7 +123,7 @@
         <div class="number">
           01
           <span class="number-arrow"
-            ><img src="/images/portfolio/process-arrow.svg" alt=""
+            ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
           /></span>
         </div>
         <h4>{{ $t("home.process.title1") }}</h4>
@@ -138,7 +138,7 @@
         <div class="number">
           02
           <span class="number-arrow"
-            ><img src="/images/portfolio/process-arrow.svg" alt=""
+            ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
           /></span>
         </div>
         <h4>{{ $t("home.process.title2") }}</h4>
@@ -150,7 +150,7 @@
         <div class="number">
           03
           <span class="number-arrow"
-            ><img src="/images/portfolio/process-arrow.svg" alt=""
+            ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
           /></span>
         </div>
         <h4>{{ $t("home.process.title3") }}</h4>
@@ -165,7 +165,7 @@
         <div class="number">
           04
           <span class="number-arrow"
-            ><img src="/images/portfolio/process-arrow.svg" alt=""
+            ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
           /></span>
         </div>
         <h4>{{ $t("home.process.title4") }}</h4>
@@ -177,7 +177,7 @@
         <div class="number">
           05
           <span class="number-arrow"
-            ><img src="/images/portfolio/process-arrow.svg" alt=""
+            ><img src="/images/portfolio/process-arrow.svg" data-not-lazy alt=""
           /></span>
         </div>
         <h4>{{ $t("home.process.title5") }}</h4>

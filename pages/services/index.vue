@@ -26,6 +26,7 @@
           class="arrow wow animate__animated animate__fadeInDownBig"
           src="/images/services/arrow-down.svg"
           alt=""
+          data-not-lazy
         />
         <img class="logo" src="/images/logo.webp" alt="" />
         <p>{{ $t("services.main.razamText") }}</p>

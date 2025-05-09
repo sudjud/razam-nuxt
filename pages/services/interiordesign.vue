@@ -33,35 +33,35 @@
     <div class="way-grid">
       <div class="way-item">
         <div class="number">
-          01 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          01 <span><img src="/images/about/arrow.svg" data-not-lazy alt="" /></span>
         </div>
         <div class="title">{{ $t("services.interiorDesign.way.step1_title") }}</div>
         <p>{{ $t("services.interiorDesign.way.step1_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          02 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          02 <span><img src="/images/about/arrow.svg" data-not-lazy alt="" /></span>
         </div>
         <div class="title">{{ $t("services.interiorDesign.way.step2_title") }}</div>
         <p>{{ $t("services.interiorDesign.way.step2_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          03 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          03 <span><img src="/images/about/arrow.svg" data-not-lazy alt="" /></span>
         </div>
         <div class="title">{{ $t("services.interiorDesign.way.step3_title") }}</div>
         <p>{{ $t("services.interiorDesign.way.step3_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          04 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          04 <span><img src="/images/about/arrow.svg" data-not-lazy alt="" /></span>
         </div>
         <div class="title">{{ $t("services.interiorDesign.way.step4_title") }}</div>
         <p>{{ $t("services.interiorDesign.way.step4_text") }}</p>
       </div>
       <div class="way-item">
         <div class="number">
-          05 <span><img src="/images/about/arrow.svg" alt="" /></span>
+          05 <span><img src="/images/about/arrow.svg" data-not-lazy alt="" /></span>
         </div>
         <div class="title">{{ $t("services.interiorDesign.way.step5_title") }}</div>
         <p>{{ $t("services.interiorDesign.way.step5_text") }}</p>

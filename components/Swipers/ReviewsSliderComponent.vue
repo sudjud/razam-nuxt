@@ -14,7 +14,7 @@
         </div>
         <!-- Отзыв -->
         <div class="testimonials-content">
-          <h5>{{ $t(testimonial.title) }}</h5>
+          <!-- <h5>{{ $t(testimonial.title) }}</h5> -->
           <p>{{ $t(testimonial.text) }}</p>
           <div class="testimonial-author">{{ $t(testimonial.name) }}</div>
         </div>
@@ -38,8 +38,6 @@ import { Swiper as SwiperInstance } from "swiper/types";
 import SwiperCore from "swiper";
 import "swiper/swiper-bundle.css";
 import { Navigation, Autoplay, EffectCube } from "swiper/modules";
-import user1 from "/images/home/Julien.webp";
-import user2 from "/images/home/Julien.webp";
 
 SwiperCore.use([Navigation, Autoplay, EffectCube]);
 
@@ -49,16 +47,76 @@ export default defineComponent({
   setup() {
     const testimonials = [
       {
-        photo: user1,
-        title: "home.reviews.review1Title",
-        text: "home.reviews.review1Text",
-        name: "home.reviews.review1Name",
+        photo: undefined,
+        title: "",
+        text: "home.reviews.1.text",
+        name: "home.reviews.1.name",
       },
       {
-        photo: user2,
-        title: "home.reviews.review2Title",
-        text: "home.reviews.review2Text",
-        name: "home.reviews.review2Name",
+        photo: undefined,
+        title: "",
+        text: "home.reviews.2.text",
+        name: "home.reviews.2.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.3.text",
+        name: "home.reviews.3.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.4.text",
+        name: "home.reviews.4.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.5.text",
+        name: "home.reviews.5.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.6.text",
+        name: "home.reviews.6.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.7.text",
+        name: "home.reviews.7.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.8.text",
+        name: "home.reviews.8.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.9.text",
+        name: "home.reviews.9.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.10.text",
+        name: "home.reviews.10.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.11.text",
+        name: "home.reviews.11.name",
+      },
+      {
+        photo: undefined,
+        title: "",
+        text: "home.reviews.12.text",
+        name: "home.reviews.12.name",
       },
     ];
     const swiper = ref<SwiperInstance | null>(null);

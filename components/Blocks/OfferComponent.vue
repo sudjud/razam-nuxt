@@ -4,7 +4,7 @@
       <h2>
         {{ $t("home.offer.h2P1")
         }}<span class="arrow"
-          ><img src="/images/home/offer-arrow.svg" alt="" /></span
+          ><img data-not-lazy src="/images/home/offer-arrow.svg" alt="" /></span
         ><br />
         <div class="decor">
           {{ $t("home.offer.h2P2") }}<br />

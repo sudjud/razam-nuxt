@@ -2,7 +2,7 @@
   <div class="phone-input">
     <div class="phone-input__select" @click="toggleDropdown">
       <div class="phone-input__selected">
-        <img :src="countries[selectedCountry].flag" alt="" /><img class="arrow" src="/public/images/flags/arrow.png" alt="" />
+        <img :src="countries[selectedCountry].flag" alt="" /><img data-not-lazy class="arrow" src="/public/images/flags/arrow.png" alt="" />
       </div>
 
       <div v-show="dropdownOpen" class="phone-input__dropdown">
@@ -195,7 +195,7 @@ watch(() => props.modelValue, (newVal) => {
     flex-grow: 1
     padding: 1rem 0
     font-size: 1.25rem
-    font-family: Mont, sans-serif
+    font-family: Geometria, sans-serif
     border: 1px solid #ccc
     border-radius: 0 6px 6px 0
     border-left: 0

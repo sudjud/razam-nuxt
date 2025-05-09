@@ -6,10 +6,10 @@
     <section class="cover">
       <div class="numbers" :style="`--bg-url: url(${project.preview})`">
         <div class="label">
-          <div>
+          <!-- <div>
             <p>{{ $t("portfolio.projects.common.square") }}</p>
             <p>{{ project.totalArea }} m³</p>
-          </div>
+          </div> -->
           <div>
             <p>{{ $t("portfolio.projects.common.livingArea") }}</p>
             <p>{{ project.livingArea }} m²</p>
@@ -18,10 +18,10 @@
             <p>{{ $t("portfolio.projects.common.workingTime") }}</p>
             <p>{{ $t(project.workingTime) }}</p>
           </div>
-          <div>
+          <!-- <div>
             <p class="cost">{{ $t("portfolio.projects.common.cost") }}</p>
             <h4>€{{ project.cost }}</h4>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="info">
@@ -217,9 +217,7 @@ useHead({
           display: flex
           flex-direction: row
           justify-content: space-between
-          &:last-child
-            margin-top: 3rem
-            h4
+          &:last-child h4
               color: $font-black
               padding-top: 10px
   .info
