@@ -10,7 +10,8 @@
       <swiper-slide v-for="(testimonial, index) in testimonials" :key="index">
         <!-- Фото -->
         <div class="testimonials-photo">
-          <img :src="testimonial.photo" :alt="testimonial.name" />
+          <!-- <img :src="testimonial.photo" :alt="testimonial.name" /> -->
+           <div class="profile-pic">{{ $t(testimonial.name)[0] }}</div>
         </div>
         <!-- Отзыв -->
         <div class="testimonials-content">
@@ -166,6 +167,17 @@ export default defineComponent({
     align-items: flex-start
     justify-content: flex-start
     margin-bottom: auto
+    .profile-pic
+      width: 5rem
+      height: 5rem
+      border-radius: 50%
+      font-weight: 500
+      font-size: 2rem
+      display: flex
+      align-items: center
+      justify-content: center
+      color: white
+      background-color: purple
     img
       width: 6.25rem
       height: 6.25rem

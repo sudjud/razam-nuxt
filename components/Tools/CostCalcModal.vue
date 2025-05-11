@@ -1,7 +1,7 @@
 <template>
-  <div class="overlay">
+  <div :class="{ submit: submitted }" class="overlay">
     <div class="calculator-wrapper">
-      <div @click="handleClose" class="close">✕</div>
+      <div @click.stop="handleClose" class="close">✕</div>
       <form class="calculator" @submit.prevent="submitForm">
         <!-- Шаг 1: Выбор направления -->
         <h3>
@@ -111,9 +111,6 @@
           >
             {{ $t("calculator.prev") }}
           </button>
-          <p v-if="submitted" :class="{ submit: submitted }" class="success-message">
-            {{ $t("calculator.success") }}
-          </p>
 
           <button
             class="next-submit"
@@ -135,16 +132,25 @@
       </form>
     </div>
   </div>
+  <p :class="{ submit: submitted }" class="success-message">
+    {{ $t("calculator.success") }}
+  </p>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import PhoneInputComponent from "./PhoneInputComponent.vue";
 
+const submitted = ref(false);
+
 const emit = defineEmits(["close-modal", "submit-form"]);
 const handleClose = () => emit("close-modal");
+
 const handleSubmit = () => {
-  emit("submit-form");
+  submitted.value = true;
+  setTimeout(() => {
+    emit("submit-form");
+  }, 3000)
 };
 
 const page = ref(1);
@@ -166,7 +172,7 @@ const form = ref({
   accepted: false,
 });
 
-const submitted = ref(false);
+
 
 const objectTypes = {
   apartment: "calculator.objectType.apartment",
@@ -245,7 +251,7 @@ const handleClick = () => {
 
 .overlay
   position: fixed
-  z-index: 100000
+  z-index: 10
   top: 0
   left: 0
   width: 100vw
@@ -254,6 +260,8 @@ const handleClick = () => {
   display: flex
   justify-content: center
   align-items: center
+  &.submit
+    display: none
 .calculator-wrapper
   padding: 4rem
   position: relative
@@ -296,22 +304,6 @@ const handleClick = () => {
     flex-direction: row
     justify-content: space-between
     margin-top: auto
-    .success-message
-      opacity: 0
-      position: fixed
-      z-index: 10000000
-      top: 10%
-      left: 50%
-      transform: translateX(-50%)
-      font-size: 1.5rem
-      font-weight: 600
-      padding: 2rem
-      background-color: $bgc-second
-      border-radius: 30px
-      transition-duration: 0.6s
-      &.submit
-        transition-duration: 0.6s
-        opacity: 1
     .next-submit
       margin-left: auto
       padding: 1rem 3rem
@@ -386,10 +378,6 @@ button
   &:disabled
     background-color: rgba(black, 0.5) !important
 
-.success-message
-  color: green
-  text-align: center
-
 input[type="checkbox"],
 input[type="radio"]
   appearance: none
@@ -434,4 +422,23 @@ input, textarea
 button
   &:hover
     background-color: rgba(black, 0.8)
+
+.success-message
+  opacity: 0
+  position: fixed
+  z-index: 10000000
+  top: 10%
+  left: 50%
+  transform: translateX(-50%)
+  font-size: 1.5rem
+  font-weight: 600
+  padding: 2rem
+  background-color: $bgc-second
+  border-radius: 30px
+  transition-duration: 0.6s
+  color: green
+  text-align: center
+  &.submit
+    transition-duration: 0.6s
+    opacity: 1
 </style>

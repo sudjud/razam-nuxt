@@ -109,7 +109,7 @@
         >
           {{ $t("calculator.prev") }}
         </button>
-        <p v-if="submitted" :class="{ submit: submitted }" class="success-message">
+        <p :class="{ submit: submitted }" class="success-message">
           {{ $t("calculator.success") }}
         </p>
 
@@ -164,32 +164,6 @@ const objectTypes = {
   public: "calculator.objectType.public",
   office: "calculator.objectType.office",
 };
-
-// const submitForm = () => {
-//   submitted.value = true;
-//   setTimeout(() => {
-//     submitted.value = false;
-//   }, 5000);
-//   form.value = {
-//     design: false,
-//     renovation: false,
-//     objectType: "",
-//     area: null,
-//     bathrooms: null,
-//     rooms: null,
-//     hasKitchen: false,
-//     name: "",
-//     phone: "",
-//     email: "",
-//     message: "",
-//     accepted: false,
-//   };
-//   page.value = 1;
-//   console.log(form.value);
-
-//   // Сброс формы при необходимости
-//   // Object.assign(form.value, { ...defaultValues })
-// };
 
 const submitForm = async () => {
   const endpoint = "https://formspree.io/f/mnndzqeq";
@@ -319,6 +293,8 @@ const handleClick = () => {
       background-color: $bgc-second
       border-radius: 30px
       transition-duration: 0.6s
+      color: green
+      text-align: center
       &.submit
         transition-duration: 0.6s
         opacity: 1
@@ -395,10 +371,6 @@ button
   font-weight: 300
   &:disabled
     background-color: rgba(black, 0.5) !important
-
-.success-message
-  color: green
-  text-align: center
 
 input[type="checkbox"],
 input[type="radio"]

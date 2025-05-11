@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ open: isOpen, hidden: isHidden && !isOpen }">
+  <header class="headersm" :class="{ open: isOpen, hidden: isHidden && !isOpen }">
     <div class="container">
       <!-- Логотип -->
       <div class="logo" :class="{ open: isOpen }">
@@ -83,14 +83,8 @@
               @click.stop
               v-if="modalOpened"
             />
-            
-            <p v-if="modalSubmitted" :class="{ submit: modalSubmitted }" class="success-message">
-              {{ $t("calculator.success") }}
-            </p>
-            <button
-              @click.stop="toggleModal"
-              class="go-to-calc_btn"
-            >
+
+            <button @click.stop="toggleModal" class="go-to-calc_btn">
               {{ $t("calculator.modalButton") }}
             </button>
           </li>
@@ -119,7 +113,6 @@ const route = useRoute();
 const localePath = useLocalePath();
 const { locale } = useI18n();
 
-
 const modalOpened = ref(false);
 const modalSubmitted = ref(false);
 
@@ -130,11 +123,11 @@ const submitModal = () => {
     closeMenu();
   }, 3000);
   modalOpened.value = false;
-}
+};
 
 const toggleModal = () => {
   modalOpened.value = !modalOpened.value;
-}
+};
 
 const lastScrollY = ref(0);
 const isHidden = ref(false);
@@ -193,7 +186,7 @@ const closeMenu = () => {
     transform: scale(1.02)
   &:active
     transform: scale(1)
-.header
+.headersm
   position: fixed
   width: 100%
   display: flex
@@ -204,23 +197,6 @@ const closeMenu = () => {
   z-index: 100
   .cost-modal
     font-weight: normal
-    .success-message
-      opacity: 0
-      position: fixed
-      z-index: 10000000
-      top: 10%
-      left: 50%
-      transform: translateX(-50%)
-      font-size: 1.5rem
-      font-weight: 600
-      padding: 2rem
-      background-color: $bgc-second
-      color: green
-      border-radius: 30px
-      transition-duration: 0.6s
-      &.submit
-        transition-duration: 0.6s
-        opacity: 1
   .container
     display: flex
     justify-content: space-between

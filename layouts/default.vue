@@ -1,7 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div id="app">
-    <component :is="currentHeaderComponent" />
+    <div class="headersm__wrapper">
+      <HeaderSmComponent />
+    </div>
+    <div class="headerxl__wrapper">
+      <HeaderComponent />
+    </div>
 
     <!-- Прелоадер -->
     <LoaderComponent />
@@ -78,36 +83,18 @@ useHead({
     { rel: "alternate", hreflang: "x-default", href: `${baseURL}${localePath('index', 'fr')}` }
   ]
 })
-
-
-const getInitialHeaderComponent = () => {
-  if (typeof window === "undefined") return HeaderComponent;
-  return window.innerWidth <= 768 ? HeaderSmComponent : HeaderComponent;
-};
-
-const currentHeaderComponent = shallowRef(getInitialHeaderComponent());
-
-if (process.client) {
-  // Функция выбора хедера по ширине экрана
-  const updateHeaderComponent = () => {
-    currentHeaderComponent.value =
-      window.innerWidth <= 768 ? HeaderSmComponent : HeaderComponent;
-  };
-
-  // Устанавливаем хедер при загрузке
-  onMounted(() => {
-    updateHeaderComponent();
-    window.addEventListener("resize", updateHeaderComponent);
-  });
-
-  // Убираем слушатель событий при удалении компонента
-  onUnmounted(() => {
-    window.removeEventListener("resize", updateHeaderComponent);
-  });
-}
 </script>
 
 <style lang="sass">
+.headersm__wrapper
+  display: none
+  @media (max-width: 768px)
+    display: block
+.headerxl__wrapper
+  display: block
+  @media (max-width: 768px)
+    display: none
+
 /* Прелоадер */
 .preloader
   position: fixed

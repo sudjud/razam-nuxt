@@ -65,10 +65,7 @@
               @submit-form="submitModal"
               v-if="modalOpened"
             />
-            
-            <p v-if="modalSubmitted" :class="{ submit: modalSubmitted }" class="success-message">
-              {{ $t("calculator.success") }}
-            </p>
+  
             <button
               @click="toggleModal"
               class="go-to-calc_btn"
@@ -202,23 +199,6 @@ onUnmounted(() => {
       padding: 0
       .cost-modal
         font-weight: normal
-      .success-message
-        opacity: 0
-        position: fixed
-        z-index: 10000000
-        top: 10%
-        left: 50%
-        transform: translateX(-50%)
-        font-size: 1.5rem
-        font-weight: 600
-        padding: 2rem
-        background-color: $bgc-second
-        color: green
-        border-radius: 30px
-        transition-duration: 0.6s
-        &.submit
-          transition-duration: 0.6s
-          opacity: 1
       li
         a
           text-decoration: none

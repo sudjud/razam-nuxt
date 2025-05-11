@@ -40,6 +40,8 @@ const isOpen = ref(false);
 <style lang="sass" scoped>
 .switcher
   position: relative
+  width: min-content
+  margin: 0 auto
   left: 40px
   @media (max-width: 992px)
     left: 5px
@@ -64,30 +66,28 @@ const isOpen = ref(false);
   .dropdown
     font-size: 1.3rem
     font-weight: 400
-    margin-top: 5px
     position: absolute
     overflow: hidden
     display: flex
     max-height: 0
-    left: calc(-35%)
-    top: 1.5rem
+    padding: 0
     border-radius: 12px
     flex-direction: column
     justify-content: center
     align-items: center
     gap: 10px
+    left: -10px
     background-color: rgba($font-white, 0.7)
     transition-duration: 0.2s
     a
       color: $font-grey
-    @media (max-width: 1500px)
-      left: -11px
     @media (max-width: 768px)
       font-size: 2.3rem
       width: 45px
+      left: -7px
       gap: 0
-      left: 18px
-      top: 20px
+    @media (max-width: 576px)
+      left: -9px
     .image-wrapper
       display: flex
       align-items: center

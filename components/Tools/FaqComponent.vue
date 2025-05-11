@@ -45,9 +45,6 @@
       </transition>
     </div>
     <CostCalcModal @close-modal="toggleModal" @submit-form="submitModal" v-if="modalOpened" />
-    <p v-if="modalSubmitted" :class="{ submit: modalSubmitted }" class="success-message">
-      {{ $t("calculator.success") }}
-    </p>
   </div>
 </template>
 
@@ -153,23 +150,6 @@ const leave = (el) => {
 
 .question-block
   cursor: pointer
-  .success-message
-    opacity: 0
-    position: fixed
-    z-index: 10000000
-    top: 10%
-    left: 50%
-    transform: translateX(-50%)
-    font-size: 1.5rem
-    font-weight: 600
-    padding: 2rem
-    background-color: $bgc-second
-    color: green
-    border-radius: 30px
-    transition-duration: 0.6s
-    &.submit
-      transition-duration: 0.6s
-      opacity: 1
   .question-item
     border-top: 1px solid $font-grey
     padding: 2rem 0 2rem 0
