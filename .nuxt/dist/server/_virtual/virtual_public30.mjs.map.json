@@ -1,1 +1,0 @@
-{"file":"virtual_public30.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,yCAAyC;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fservices%2Finterior-design%2F1.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/interior-design/1.webp\")"],"version":3}

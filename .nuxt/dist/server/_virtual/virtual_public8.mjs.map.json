@@ -1,1 +1,0 @@
-{"file":"virtual_public8.mjs","mappings":";AAAsE,gBAAgB,8BAA8B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Farrow-down.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/arrow-down.svg\")"],"version":3}

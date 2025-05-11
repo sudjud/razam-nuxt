@@ -1,1 +1,0 @@
-{"file":"virtual_public33.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,+BAA+B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fblog%2Flights%2Fquote.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/blog/lights/quote.svg\")"],"version":3}

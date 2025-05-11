@@ -176,8 +176,10 @@ section.form
         font-size: 3.5rem
       @media (max-width: 500px)
         font-size: 2.5rem
-    button img
-      margin-left: 5px
+    button
+      background-color: transparent 
+      img
+        margin-left: 5px
 
 section.info
   +regpad

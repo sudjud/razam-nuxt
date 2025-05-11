@@ -1,1 +1,0 @@
-{"file":"virtual_public26.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,mBAAmB;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Flogo.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/logo.webp\")"],"version":3}

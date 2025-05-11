@@ -1,1 +1,0 @@
-{"file":"virtual_public46.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,8BAA8B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fhome%2Fdiag-arrow.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/home/diag-arrow.webp\")"],"version":3}

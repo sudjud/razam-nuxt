@@ -84,7 +84,7 @@
               v-if="modalOpened"
             />
             
-            <p :class="{ submit: modalSubmitted }" class="success-message">
+            <p v-if="modalSubmitted" :class="{ submit: modalSubmitted }" class="success-message">
               {{ $t("calculator.success") }}
             </p>
             <button
@@ -200,7 +200,7 @@ const closeMenu = () => {
   height: 70px
   justify-content: space-between
   align-items: center
-  padding: 5px 20px 5px 20px
+  padding: 5px 20px
   z-index: 100
   .cost-modal
     font-weight: normal

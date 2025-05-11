@@ -1,1 +1,0 @@
-{"file":"virtual_public35.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,0CAA0C;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fhouse-renovation%2F1.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/house-renovation/1.webp\")"],"version":3}

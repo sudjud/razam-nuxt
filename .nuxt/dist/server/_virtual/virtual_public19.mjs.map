@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public19.mjs","sources":["../../../../virtual:public?%2Fimages%2Fcontact-us%2Fsubmit-arrow.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/contact-us/submit-arrow.svg\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,qCAAqC;"}

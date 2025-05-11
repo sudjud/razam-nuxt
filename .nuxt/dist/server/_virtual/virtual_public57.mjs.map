@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public57.mjs","sources":["../../../../virtual:public?%2Fimages%2Fprojects%2Fpreviews%2Fmodern-vista.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/projects/previews/modern-vista.webp\")"],"names":[],"mappings":";AAAuD,MAAe,SAAA,gBAAgB,6CAA6C;"}

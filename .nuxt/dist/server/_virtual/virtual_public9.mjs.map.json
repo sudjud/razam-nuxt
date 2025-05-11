@@ -1,1 +1,0 @@
-{"file":"virtual_public9.mjs","mappings":";AAAsE,gBAAgB,yBAAyB;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Femil.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/emil.webp\")"],"version":3}

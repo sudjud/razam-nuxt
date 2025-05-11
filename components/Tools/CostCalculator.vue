@@ -109,7 +109,7 @@
         >
           {{ $t("calculator.prev") }}
         </button>
-        <p :class="{ submit: submitted }" class="success-message">
+        <p v-if="submitted" :class="{ submit: submitted }" class="success-message">
           {{ $t("calculator.success") }}
         </p>
 
@@ -286,21 +286,21 @@ const handleClick = () => {
   display: flex
   flex-direction: column
   gap: 0
-  height: 732.78px
+  height: 750px
   max-width: 34rem
   padding: 2rem
   background-color: #fff
   border-radius: 12px
   @media (max-width: 1500px)
-    height: 590.86px
+    height: 610px
   @media (max-width: 1250px)
-    height: 519.92px
+    height: 540px
   @media (max-width: 992px)
-    height: 519.92px
+    height: 540px
   @media (max-width: 768px)
-    height: 453.06px
+    height: 470px
   @media (max-width: 576px)
-    height: 382.38px
+    height: 410px
   .buttons
     display: flex
     flex-direction: row

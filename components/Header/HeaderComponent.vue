@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ hidden: isHidden }">
+  <header class="headerxl" :class="{ hidden: isHidden }">
     <div class="container">
       <div class="logo">
         <NuxtLink :to="localePath('/')">
@@ -66,7 +66,7 @@
               v-if="modalOpened"
             />
             
-            <p :class="{ submit: modalSubmitted }" class="success-message">
+            <p v-if="modalSubmitted" :class="{ submit: modalSubmitted }" class="success-message">
               {{ $t("calculator.success") }}
             </p>
             <button
@@ -160,7 +160,7 @@ onUnmounted(() => {
     transform: scale(1.02)
   &:active
     transform: scale(1)
-.header
+.headerxl
   position: fixed
   top: 0
   left: 0
@@ -244,7 +244,7 @@ onUnmounted(() => {
           margin: 0 0px
 
 @media (max-width: 1200px)
-  .header
+  .headerxl
     .container
       padding: 0 70px 0 70px
       .nav-menu ul
@@ -253,7 +253,7 @@ onUnmounted(() => {
           margin: 0 3px
 
 @media (max-width: 992px)
-  .header
+  .headerxl
     .container
       padding: 0 30px
     .logo

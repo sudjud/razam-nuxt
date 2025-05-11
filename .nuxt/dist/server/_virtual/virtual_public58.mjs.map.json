@@ -1,1 +1,0 @@
-{"file":"virtual_public58.mjs","mappings":";AAAuD,MAAe,SAAA,gBAAgB,gDAAgD;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fprojects%2Fpreviews%2Fnatural-essence.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/projects/previews/natural-essence.webp\")"],"version":3}

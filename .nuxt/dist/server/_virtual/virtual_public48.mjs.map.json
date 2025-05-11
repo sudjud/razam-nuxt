@@ -1,1 +1,0 @@
-{"file":"virtual_public48.mjs","mappings":";AAAuD,MAAe,QAAA,gBAAgB,yBAAyB;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fnews%2Fideas.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/news/ideas.webp\")"],"version":3}

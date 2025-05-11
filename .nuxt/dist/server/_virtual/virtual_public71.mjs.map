@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public71.mjs","sources":["../../../../virtual:public?%2Fimages%2Floader%2Fdevider.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/loader/devider.webp\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,6BAA6B;"}

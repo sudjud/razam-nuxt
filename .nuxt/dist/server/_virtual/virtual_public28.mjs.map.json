@@ -1,1 +1,0 @@
-{"file":"virtual_public28.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,qCAAqC;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fportfolio%2Fprocess-arrow.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/portfolio/process-arrow.svg\")"],"version":3}

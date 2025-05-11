@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public25.mjs","sources":["../../../../virtual:public?%2Fimages%2Fservices%2Farrow-down.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/arrow-down.svg\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,iCAAiC;"}

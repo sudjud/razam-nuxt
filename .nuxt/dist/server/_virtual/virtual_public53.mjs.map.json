@@ -1,1 +1,0 @@
-{"file":"virtual_public53.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,+CAA+C;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fhouse-renovation%2Fshield.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/house-renovation/shield.webp\")"],"version":3}

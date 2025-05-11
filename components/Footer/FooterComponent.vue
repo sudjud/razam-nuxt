@@ -189,7 +189,7 @@ footer
         font-size: 1rem
         margin: 0
       h4
-        color: $font-grey
+        color: $font-grey !important
         font-size: 2rem
 .add
   background-color: $bgc-second

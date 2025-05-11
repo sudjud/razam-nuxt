@@ -1,1 +1,0 @@
-{"file":"virtual_public12.mjs","mappings":";AAAsE,gBAAgB,0BAA0B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Fclara.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/clara.webp\")"],"version":3}

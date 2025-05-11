@@ -45,7 +45,7 @@
       </transition>
     </div>
     <CostCalcModal @close-modal="toggleModal" @submit-form="submitModal" v-if="modalOpened" />
-    <p :class="{ submit: modalSubmitted }" class="success-message">
+    <p v-if="modalSubmitted" :class="{ submit: modalSubmitted }" class="success-message">
       {{ $t("calculator.success") }}
     </p>
   </div>
@@ -144,7 +144,10 @@ const leave = (el) => {
   font-size: 1.25rem
   border-radius: 12px
   background-color: transparent
-  margin-left: 10px
+  border: 1.5px solid black
+  color: black
+  margin-left: 2px
+  font-weight: 500
   &:hover
     transform: scale(1.02)
 

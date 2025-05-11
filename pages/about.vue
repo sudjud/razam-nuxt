@@ -2,7 +2,7 @@
 <template>
   <main class="main">
     <h1>
-      <Breadcrumbs />
+      <Breadcrumbs class="mb-15" />
       <span v-reveal class="wow reveal-bb reveal-visible"
         >{{ $t("about.h1P1") }}
       </span>
@@ -230,22 +230,24 @@ main
     padding-top: 6rem
   h1
     color: $font-black
-    transform: translateY(9.8rem)
+    transform: translateY(8rem)
+    font-size: 6rem
     @media (max-width: 1400px)
-      font-size: 7.1rem
-    @media (max-width: 1200px)
-      font-size: 6.7rem
-      transform: translateY(8.8rem)
+      font-size: 5.5rem
+      transform: translateY(7.5rem)
     @media (max-width: 992px)
       padding-left: 20px
-      font-size: 5.5rem
+      font-size: 4.4rem
       transform: translateY(6rem)
     @media (max-width: 768px)
-      font-size: 4.9rem
-      transform: translateY(6.5rem)
+      font-size: 3.7rem
+      transform: translateY(5rem)
     @media (max-width: 576px)
       font-size: 3.25rem
       transform: translateY(3.7rem)
+    @media (max-width: 450px)
+      font-size: 2.7rem
+      transform: translateY(3rem)
     div.devider
       color: $bgc-second
       display: inline
@@ -253,9 +255,13 @@ main
     div.space
       text-align: center
       padding-left: 5%
+    .mb-15
+      margin-bottom: 10px
   h4
     color: $font-black
     transform: translateY(9.8rem)
+    @media (max-width: 768px)
+    transform: translateY(7rem)
     @media (max-width: 576px)
       display: none
   .main-image
@@ -495,12 +501,13 @@ section.rates
     &:hover
       text-decoration: underline
     img
-      width: 4rem
-      margin-left: 3rem
+      width: 0.7em
+      margin-left: 0.5em
       @media (max-width: 992px)
-        width: 3rem
+        width: 0.7em
   &__image
     height: 35vw
     img
       max-height: 35vw
+      object-fit: cover
 </style>

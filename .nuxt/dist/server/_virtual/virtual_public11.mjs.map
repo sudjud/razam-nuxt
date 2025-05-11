@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public11.mjs","sources":["../../../../virtual:public?%2Fimages%2Fabout%2Ftomas.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/tomas.webp\")"],"names":[],"mappings":";AAAsE,gBAAgB,0BAA0B;"}

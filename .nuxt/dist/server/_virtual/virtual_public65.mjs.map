@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public65.mjs","sources":["../../../../virtual:public?%2Fimages%2Fflags%2FItaly.png"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/flags/Italy.png\")"],"names":[],"mappings":";AAAuD,MAAe,QAAA,gBAAgB,yBAAyB;"}

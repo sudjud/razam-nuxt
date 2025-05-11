@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public52.mjs","sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fshield.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/shield.webp\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,8BAA8B;"}

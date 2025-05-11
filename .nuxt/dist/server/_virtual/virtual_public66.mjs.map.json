@@ -1,1 +1,0 @@
-{"file":"virtual_public66.mjs","mappings":";AAAuD,MAAe,QAAA,gBAAgB,kCAAkC;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fflags%2FUnited-Kingdom.png"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/flags/United-Kingdom.png\")"],"version":3}

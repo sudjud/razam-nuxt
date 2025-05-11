@@ -1,1 +1,0 @@
-{"file":"virtual_public13.mjs","mappings":";AAAuD,MAAe,cAAA,gBAAgB,iCAAiC;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Fcontact-arrow.svg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/contact-arrow.svg\")"],"version":3}
