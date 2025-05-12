@@ -1,0 +1,1 @@
+{"file":"virtual_public55.mjs","mappings":";AAAuD,MAAe,SAAA,gBAAgB,+CAA+C;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fprojects%2Fpreviews%2Fchambre-enfant.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/projects/previews/chambre-enfant.webp\")"],"version":3}

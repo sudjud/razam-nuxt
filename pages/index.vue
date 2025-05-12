@@ -256,7 +256,6 @@ useSeo('home');
         position: relative
         color: $font-black
         font-weight: 400
-        font-size: 1.25rem
         transition: color 0.3s ease
         margin-top: auto
         cursor: pointer
@@ -439,7 +438,6 @@ useSeo('home');
       padding-left: 3.125rem
       padding-right: 1rem
     p
-      font-size: 1.25rem
       color: $font-grey
       padding-left: 3.125rem
       padding-right: 1rem

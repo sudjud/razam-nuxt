@@ -82,6 +82,9 @@ const deadlines = useCountAnimation(100);
     p
       margin-top: 0.5rem
       margin-bottom: 0
+    h2
+      @media (max-width: 460px)
+        font-size: 6rem  
   .divider
     width: 99vw
     height: 1px
@@ -105,6 +108,7 @@ const deadlines = useCountAnimation(100);
   color: $font-black
   @media (max-width: 992px)
     transform: translateX(-30px) translateY(-90%)
+    
   span
     display: inline-block
     font-size: 4.25rem

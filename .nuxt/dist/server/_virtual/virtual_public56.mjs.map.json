@@ -1,0 +1,1 @@
+{"file":"virtual_public56.mjs","mappings":";AAAuD,MAAe,SAAA,gBAAgB,kDAAkD;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fprojects%2Fpreviews%2Felemental-harmony.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/projects/previews/elemental-harmony.webp\")"],"version":3}

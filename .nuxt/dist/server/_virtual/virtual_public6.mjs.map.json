@@ -1,0 +1,1 @@
+{"file":"virtual_public6.mjs","mappings":";AAAsE,gBAAgB,2BAA2B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Fjulien.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/julien.webp\")"],"version":3}

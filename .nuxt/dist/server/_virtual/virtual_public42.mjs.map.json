@@ -1,0 +1,1 @@
+{"file":"virtual_public42.mjs","mappings":";AAAuD,MAAe,SAAA,gBAAgB,sBAAsB;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2F4.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/4.webp\")"],"version":3}

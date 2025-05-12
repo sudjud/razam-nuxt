@@ -1,0 +1,1 @@
+{"file":"virtual_public59.mjs","mappings":";AAAuD,MAAe,SAAA,gBAAgB,6CAA6C;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fprojects%2Fpreviews%2Fserene-lines.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/projects/previews/serene-lines.webp\")"],"version":3}

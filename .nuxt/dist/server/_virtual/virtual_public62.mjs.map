@@ -1,0 +1,1 @@
+{"version":3,"file":"virtual_public62.mjs","sources":["../../../../virtual:public?%2Fimages%2Fflags%2FGermany.png"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/flags/Germany.png\")"],"names":[],"mappings":";AAAuD,MAAe,QAAA,gBAAgB,2BAA2B;"}

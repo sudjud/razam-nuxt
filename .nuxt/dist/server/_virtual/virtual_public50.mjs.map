@@ -1,0 +1,1 @@
+{"version":3,"file":"virtual_public50.mjs","sources":["../../../../virtual:public?%2Fimages%2Fblog%2Flights%2F1.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/blog/lights/1.webp\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,4BAA4B;"}

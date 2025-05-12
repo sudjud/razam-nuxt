@@ -1,0 +1,1 @@
+import{a6 as n,a7 as s,a8 as r,a9 as o,aa as i}from"./CDlSiIlL.js";function u(t){var e;const a=t||s();return((e=a==null?void 0:a.ssrContext)==null?void 0:e.head)||(a==null?void 0:a.runWithContext(()=>{if(r())return o(i)}))}function d(t,a={}){const e=u(a.nuxt);if(e)return n(t,{head:e,...a})}export{d as u};

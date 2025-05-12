@@ -29,7 +29,7 @@
           data-not-lazy
         />
         <img class="logo" src="/images/logo.webp" alt="" />
-        <p>{{ $t("services.main.razamText") }}</p>
+        <p class="under-logo-p">{{ $t("services.main.razamText") }}</p>
       </div>
     </div>
   </main>
@@ -161,6 +161,7 @@ const toggleIsOpen = () => {
           max-height: 500px
     .razam
       display: flex
+      position: relative
       flex-direction: column
       align-items: flex-end
       .arrow
@@ -222,7 +223,6 @@ const toggleIsOpen = () => {
       padding-left: 3.125rem
       padding-right: 1rem
     p
-      font-size: 1.25rem
       color: $font-grey
       padding-left: 3.125rem
       padding-right: 1rem
@@ -296,7 +296,6 @@ const toggleIsOpen = () => {
     bottom: 1rem
     left: 60rem
     text-align: right
-    font-size: 1.25rem
     color: $font-grey
     max-width: 17.25rem
     @media (max-width: 992px)

@@ -1,0 +1,1 @@
+{"file":"virtual_public7.mjs","mappings":";AAAsE,gBAAgB,2BAA2B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fabout%2Fcamile.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/about/camile.webp\")"],"version":3}

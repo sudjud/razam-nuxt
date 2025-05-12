@@ -1,0 +1,1 @@
+{"file":"virtual_public61.mjs","mappings":";AAAuD,MAAe,QAAA,gBAAgB,0BAA0B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fflags%2FFrance.png"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/flags/France.png\")"],"version":3}

@@ -1,0 +1,1 @@
+{"file":"virtual_public67.mjs","mappings":";AAAuD,MAAe,QAAA,gBAAgB,2BAA2B;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fflags%2FUkraine.png"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/flags/Ukraine.png\")"],"version":3}

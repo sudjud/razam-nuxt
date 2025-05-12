@@ -36,7 +36,11 @@
             <div class="buttons-idx">{{ padNumber(index + 1) }}</div>
             <div v-if="index === currentIndex" class="arrow-wrapper">
               <div class="arrow">
-                <img data-not-lazy src="/public/images/home/diag-arrow2.webp" alt="arrow" />
+                <img
+                  data-not-lazy
+                  src="/public/images/home/diag-arrow2.webp"
+                  alt="arrow"
+                />
               </div>
             </div>
           </div>
@@ -59,7 +63,9 @@
       <Swiper
         :slides-per-view="1"
         :autoplay="{
-          delay: 10
+          delay: 10,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: true,
         }"
         :speed="3000"
         loop
@@ -69,8 +75,12 @@
       >
         <SwiperSlide v-for="(item, index) in items" :key="index">
           <div class="slide-content">
-            <img :src="item.image" :alt="item.service" />
-            <div class="description"><NuxtLink :to="localePath(`/services/${item.slug}`)">{{ $t(item.service) }} ↗</NuxtLink></div>
+            <NuxtLink :to="localePath(`/services/${item.slug}`)">
+              <img :src="item.image" :alt="item.service" />
+              <div class="description">
+                <u>{{ $t(item.service) }}</u> ↗
+              </div>
+            </NuxtLink>
           </div>
         </SwiperSlide>
       </Swiper>
@@ -87,7 +97,7 @@ import photo1 from "/images/services/interior-design/main.webp";
 // import photo2 from "/public/images/services/interior-design/1gallery.webp";
 // import photo3 from "/public/images/services/interior-design/2gallery.webp";
 import photo4 from "/images/services/house-renovation/main.webp";
-import photo5 from "/images/services/commerce-renovation/main.webp"
+import photo5 from "/images/services/commerce-renovation/main.webp";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -97,30 +107,30 @@ import SwiperCore from "swiper";
 SwiperCore.use([Navigation, Pagination]);
 
 const items = [
-  { 
-    image: photo1, 
-    service: "home.service1", 
-    slug: "interiordesign" 
+  {
+    image: photo1,
+    service: "home.service1",
+    slug: "interiordesign",
   },
-  // { 
-  //   image: photo2, 
-  //   service: "home.service2", 
-  //   slug: "interiordesign" 
+  // {
+  //   image: photo2,
+  //   service: "home.service2",
+  //   slug: "interiordesign"
   // },
-  // { 
-  //   image: photo3, 
-  //   service: "home.service3", 
-  //   slug: "interiordesign" 
+  // {
+  //   image: photo3,
+  //   service: "home.service3",
+  //   slug: "interiordesign"
   // },
-  { 
-    image: photo4, 
-    service: "home.service4", 
-    slug: "houserenovation" 
+  {
+    image: photo4,
+    service: "home.service4",
+    slug: "houserenovation",
   },
-  { 
-    image: photo5, 
-    service: "home.service5", 
-    slug: "commercerenovation" 
+  {
+    image: photo5,
+    service: "home.service5",
+    slug: "commercerenovation",
   },
 ];
 
@@ -176,16 +186,23 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
         height: 350px
         object-fit: cover
         border-radius: 12px
-    .description
-      font-size: 2rem
-      font-weight: 500
-      color: $font-black
-      text-align: center
       a
         color: black
         display: flex
-        img
-          height: 0.6em
+        text-decoration: none
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .description
+          font-size: 2rem
+          font-weight: 500
+          color: $font-black
+          text-align: center
+          padding-top: 10px
+          u
+            margin-right: 0.2em
+          img
+            height: 0.6em
 
 .gallery
   +regpad
