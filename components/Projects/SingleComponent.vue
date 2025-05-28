@@ -82,7 +82,7 @@ p
 h2
   color: $font-black
   span
-    text-decoration: underline
+    text-decoration: none
   @media (max-width: 1450px)
     font-size: 5rem
   @media (max-width: 576px)
@@ -115,9 +115,6 @@ h2
       display: flex
       flex-direction: column
       justify-content: space-between
-      h2
-        @media (max-width: 576px)
-          font-size: 3rem
       p
         padding-right: 15rem
         margin: 0

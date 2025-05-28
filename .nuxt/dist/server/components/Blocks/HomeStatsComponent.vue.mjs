@@ -13,7 +13,7 @@ const _sfc_main = {
     const goal = useCountAnimation();
     const deadlines = useCountAnimation();
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "statistics" }, _attrs))} data-v-b3cc5ef7><div class="container" data-v-b3cc5ef7><div class="statistics-row" data-v-b3cc5ef7><div class="stat-item" data-v-b3cc5ef7><h2 data-v-b3cc5ef7>${ssrInterpolate(unref(projects).count)}+</h2><p data-v-b3cc5ef7>${ssrInterpolate(_ctx.$t("home.stats1"))}</p></div><div class="stat-item" data-v-b3cc5ef7><h2 data-v-b3cc5ef7>${ssrInterpolate(unref(clients).count)}%</h2><p data-v-b3cc5ef7>${ssrInterpolate(_ctx.$t("home.stats2"))}</p></div><div class="stat-item hidden" data-v-b3cc5ef7><h2 data-v-b3cc5ef7></h2><p data-v-b3cc5ef7></p></div></div><div class="divider" data-v-b3cc5ef7></div><div class="statistics-row" data-v-b3cc5ef7><div class="stat-item" data-v-b3cc5ef7><h2 data-v-b3cc5ef7>${ssrInterpolate(unref(interiors).count.value.toLocaleString())}</h2><p data-v-b3cc5ef7>${ssrInterpolate(_ctx.$t("home.stats3"))}</p></div><div class="stat-item" data-v-b3cc5ef7><h2 data-v-b3cc5ef7>${ssrInterpolate(unref(goal).count)} ${ssrInterpolate(_ctx.$t("home.statsGoal"))}</h2><p data-v-b3cc5ef7>${ssrInterpolate(_ctx.$t("home.stats4"))}</p></div><div class="stat-item" data-v-b3cc5ef7><h2 data-v-b3cc5ef7>${ssrInterpolate(unref(deadlines).count)}%</h2><p data-v-b3cc5ef7>${ssrInterpolate(_ctx.$t("home.stats5"))}</p></div></div></div><div class="circle-r" data-v-b3cc5ef7><span data-v-b3cc5ef7>R</span></div></section>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "statistics" }, _attrs))} data-v-56f8bfa2><div class="container" data-v-56f8bfa2><div class="statistics-row" data-v-56f8bfa2><div class="stat-item" data-v-56f8bfa2><h2 data-v-56f8bfa2>${ssrInterpolate(unref(projects).count)}+</h2><p data-v-56f8bfa2>${ssrInterpolate(_ctx.$t("home.stats1"))}</p></div><div class="stat-item" data-v-56f8bfa2><h2 data-v-56f8bfa2>${ssrInterpolate(unref(clients).count)}%</h2><p data-v-56f8bfa2>${ssrInterpolate(_ctx.$t("home.stats2"))}</p></div><div class="stat-item hidden" data-v-56f8bfa2><h2 data-v-56f8bfa2></h2><p data-v-56f8bfa2></p></div></div><div class="divider" data-v-56f8bfa2></div><div class="statistics-row" data-v-56f8bfa2><div class="stat-item" data-v-56f8bfa2><h2 data-v-56f8bfa2>${ssrInterpolate(unref(interiors).count.value.toLocaleString())}</h2><p data-v-56f8bfa2>${ssrInterpolate(_ctx.$t("home.stats3"))}</p></div><div class="stat-item" data-v-56f8bfa2><h2 data-v-56f8bfa2>${ssrInterpolate(unref(goal).count)} ${ssrInterpolate(_ctx.$t("home.statsGoal"))}</h2><p data-v-56f8bfa2>${ssrInterpolate(_ctx.$t("home.stats4"))}</p></div><div class="stat-item" data-v-56f8bfa2><h2 data-v-56f8bfa2>${ssrInterpolate(unref(deadlines).count)}%</h2><p data-v-56f8bfa2>${ssrInterpolate(_ctx.$t("home.stats5"))}</p></div></div></div><div class="circle-r" data-v-56f8bfa2><span data-v-56f8bfa2>R</span></div></section>`);
     };
   }
 };
@@ -23,7 +23,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Blocks/HomeStatsComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const HomeStatsComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-b3cc5ef7"]]);
+const HomeStatsComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-56f8bfa2"]]);
 export {
   HomeStatsComponent as default
 };

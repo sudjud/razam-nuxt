@@ -15,9 +15,12 @@
         </div>
         <!-- Отзыв -->
         <div class="testimonials-content">
-          <!-- <h5>{{ $t(testimonial.title) }}</h5> -->
+          <h5>{{ $t(testimonial.name) }}</h5>
           <p>{{ $t(testimonial.text) }}</p>
-          <div class="testimonial-author">{{ $t(testimonial.name) }}</div>
+          <div class="testimonial-author">
+            <img data-not-lazy src="/images/home/yellow-star.png" alt="" v-for="i of testimonial.stars" :key="i" />
+            <img data-not-lazy src="/images/home/black-star.png" alt="" v-for="i of 5 - testimonial.stars" :key="i" />
+          </div>
         </div>
       </swiper-slide>
     </swiper>
@@ -52,72 +55,84 @@ export default defineComponent({
         title: "",
         text: "home.reviews.1.text",
         name: "home.reviews.1.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.2.text",
         name: "home.reviews.2.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.3.text",
         name: "home.reviews.3.name",
+        stars: 4
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.4.text",
         name: "home.reviews.4.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.5.text",
         name: "home.reviews.5.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.6.text",
         name: "home.reviews.6.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.7.text",
         name: "home.reviews.7.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.8.text",
         name: "home.reviews.8.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.9.text",
         name: "home.reviews.9.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.10.text",
         name: "home.reviews.10.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.11.text",
         name: "home.reviews.11.name",
+        stars: 5
       },
       {
         photo: undefined,
         title: "",
         text: "home.reviews.12.text",
         name: "home.reviews.12.name",
+        stars: 5
       },
     ];
     const swiper = ref<SwiperInstance | null>(null);
@@ -189,14 +204,14 @@ export default defineComponent({
   &-content
     h5
       color: $font-black
+      font-size: 2rem
     p
       color: $font-grey
       font-size: 1.25rem
     .testimonial-author
-      font-size: 1.25rem
-      color: $font-black
-      font-weight: 500
-      margin-top: 3.625rem
+      display: flex
+      img
+        width: 2rem
 
 .slider-buttons
   display: flex

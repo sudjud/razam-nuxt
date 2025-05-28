@@ -451,7 +451,7 @@
         "desc": "Un projet alliant convivialité et style. Des teintes chaudes, des textures douces et des détails harmonieux créent un espace propice à la détente et au bien-être.",
         "componentData": {
           "firstBlock": {
-            "h1": "Salon",
+            "h1": "Salon :",
             "h2": "Une Alliance de Confort, de Style et de Modernité",
             "p": "Le canapé au centre du salon attire l'attention par son design minimaliste et ses lignes douces. L'utilisation de tissus naturels et de tons apaisants crée une ambiance chaleureuse. Sa structure modulaire permet une adaptation facile à tous les besoins."
           },
@@ -566,7 +566,7 @@
         "desc": "Chambre d'enfant est un projet où se rejoignent fonctionnalité, sécurité et joie de l'enfance. Chaque détail est conçu avec soin pour que la chambre évolue avec l'enfant tout en restant confortable et belle pendant de nombreuses années.",
         "componentData": {
           "firstBlock": {
-            "h1": "Espace de jeu",
+            "h1": "Espace de jeu :",
             "h2": "un lieu d'aventures",
             "p": "Cette chambre met l'accent sur la zone active. Un mur d'escalade, une échelle de sport et des éléments souples créent un espace sécurisé pour le jeu et l'activité physique. Les matériaux naturels et les couleurs douces apportent harmonie et confort."
           },

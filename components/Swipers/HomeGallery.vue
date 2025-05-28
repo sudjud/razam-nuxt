@@ -78,7 +78,7 @@
             <NuxtLink :to="localePath(`/services/${item.slug}`)">
               <img :src="item.image" :alt="item.service" />
               <div class="description">
-                <u>{{ $t(item.service) }}</u> ↗
+                <u>{{ $t(item.service) }}</u>
               </div>
             </NuxtLink>
           </div>
@@ -94,8 +94,6 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import photo1 from "/images/services/interior-design/main.webp";
-// import photo2 from "/public/images/services/interior-design/1gallery.webp";
-// import photo3 from "/public/images/services/interior-design/2gallery.webp";
 import photo4 from "/images/services/house-renovation/main.webp";
 import photo5 from "/images/services/commerce-renovation/main.webp";
 import { useRouter } from "vue-router";
@@ -109,27 +107,17 @@ SwiperCore.use([Navigation, Pagination]);
 const items = [
   {
     image: photo1,
-    service: "home.service1",
+    service: "home.service1", // Дизайн интерьера, коммерческих помещений, домов и квартир
     slug: "interiordesign",
   },
-  // {
-  //   image: photo2,
-  //   service: "home.service2",
-  //   slug: "interiordesign"
-  // },
-  // {
-  //   image: photo3,
-  //   service: "home.service3",
-  //   slug: "interiordesign"
-  // },
   {
     image: photo4,
-    service: "home.service4",
+    service: "home.service4", // Ремонт домов и квартир
     slug: "houserenovation",
   },
   {
     image: photo5,
-    service: "home.service5",
+    service: "home.service5", // Ремонт коммерческих помещений
     slug: "commercerenovation",
   },
 ];
@@ -293,8 +281,6 @@ const padNumber = (num) => (num < 10 ? `0${num}` : `${num}`);
       &-idx
         font-size: 1rem
         margin-left: 1rem
-
-// Адаптивные стили
 @media (max-width: 1400px)
   .gallery
     .display

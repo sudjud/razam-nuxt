@@ -5,12 +5,16 @@
       type="text"
       class="search"
       :placeholder="$t('menu.search')"
+      @focus="inputFocused = true"
+      @blur="inputFocused = false"
     />
     <div class="loupe">
-      <img src="/public/images/blog/loupe.svg" alt="" />
+      <div class="loupe__button">
+        <img @click="goToSearch" @keyup.enter="goToSearch" src="/public/images/blog/loupe.svg" alt="" />
+      </div>
     </div>
 
-    <ul v-if="searchQuery.trim() && searchResults.length" class="results">
+    <ul v-if="searchQuery.trim() && searchResults.length && inputFocused" class="results">
       <li v-for="(item, i) in searchResults" :key="i">
         <NuxtLink
           :to="
@@ -29,7 +33,7 @@
             class="result-text"
             v-html="
               highlightMatch(
-                `${item.type === 'project' ? '📁' : '📰'} ${t(item.title)}`
+                `${item.type === 'project' ? '📁' : '📰'} ${t(item.name)}`
               )
             "
           />
@@ -47,13 +51,16 @@ import { searchContent } from "~/utils/search";
 
 const { locale, t } = useI18n();
 const localePath = useLocalePath();
+const router = useRouter();
 
 const searchQuery = ref("");
 const searchResults = ref([]);
 
+const inputFocused = ref(false);
+
+
 const doSearch = debounce((q) => {
   searchResults.value = searchContent(q, locale.value, t);
-  console.log(searchResults.value);
 }, 300);
 
 watch(searchQuery, (newQuery) => {
@@ -75,6 +82,12 @@ function highlightMatch(text) {
   const pattern = new RegExp(`(${escapeRegExp(query)})`, "gi");
   return text.replace(pattern, "<strong>$1</strong>");
 }
+
+const goToSearch = () => {
+  if (searchQuery.value) {
+    router.push(localePath(`/search?q=${searchQuery.value.trim()}`));
+  }
+};
 </script>
 
 <style lang="sass" scoped>
@@ -103,6 +116,8 @@ div.search
     border-left: none
     padding-right: 25px
     border-radius: 0 50px 50px 0
+    .loupe__button:hover
+      transform: scale(1.2)
 
   .results
     position: absolute

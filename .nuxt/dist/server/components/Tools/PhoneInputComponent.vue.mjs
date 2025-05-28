@@ -1,13 +1,13 @@
 import { ref, computed, watch, resolveDirective, mergeProps, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderAttr, ssrRenderStyle, ssrGetDirectiveProps, ssrRenderList } from "vue/server-renderer";
 import _imports_0 from "../../public/images/flags/arrow.png.mjs";
-import frImg from "../../_virtual/virtual_public61.mjs";
-import deImg from "../../_virtual/virtual_public62.mjs";
-import esImg from "../../_virtual/virtual_public63.mjs";
-import itImg from "../../_virtual/virtual_public64.mjs";
-import gbImg from "../../_virtual/virtual_public65.mjs";
-import ruImg from "../../_virtual/virtual_public66.mjs";
-import uaImg from "../../_virtual/virtual_public67.mjs";
+import frImg from "../../_virtual/virtual_public55.mjs";
+import deImg from "../../_virtual/virtual_public56.mjs";
+import esImg from "../../_virtual/virtual_public57.mjs";
+import itImg from "../../_virtual/virtual_public58.mjs";
+import gbImg from "../../_virtual/virtual_public59.mjs";
+import ruImg from "../../_virtual/virtual_public60.mjs";
+import uaImg from "../../_virtual/virtual_public61.mjs";
 import { useHead } from "../../node_modules/nuxt/dist/head/runtime/composables/v3.mjs";
 /* empty css                          */
 import _export_sfc from "../../_virtual/_plugin-vue_export-helper.mjs";
@@ -18,6 +18,10 @@ const _sfc_main = {
     modelValue: {
       type: String,
       default: ""
+    },
+    contactPage: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ["update:modelValue"],
@@ -63,20 +67,28 @@ const _sfc_main = {
     watch(() => props.modelValue, (newVal) => {
       if (newVal !== formattedPhone.value) ;
     });
+    watch(() => props.modelValue, (newVal) => {
+      const prefix = countries[selectedCountry.value].prefix;
+      if (newVal === "" || newVal === prefix || newVal === prefix + " ") {
+        rawPhone.value = "";
+      }
+    });
     return (_ctx, _push, _parent, _attrs) => {
       const _directive_lazy_load = resolveDirective("lazy-load");
       let _temp0, _temp1;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "phone-input" }, _attrs))} data-v-9e286a1b><div class="phone-input__select" data-v-9e286a1b><div class="phone-input__selected" data-v-9e286a1b><img${ssrRenderAttrs(_temp0 = mergeProps({
+      _push(`<div${ssrRenderAttrs(mergeProps({
+        class: __props.contactPage ? "contact-phone" : "phone-input"
+      }, _attrs))} data-v-9a0b2443><div class="phone-input__select" data-v-9a0b2443><div class="phone-input__selected" data-v-9a0b2443><img${ssrRenderAttrs(_temp0 = mergeProps({
         "data-src": countries[selectedCountry.value].flag,
         alt: ""
-      }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-9e286a1b>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<img data-not-lazy class="arrow"${ssrRenderAttr("src", _imports_0)} alt="" data-v-9e286a1b></div><div style="${ssrRenderStyle(dropdownOpen.value ? null : { display: "none" })}" class="phone-input__dropdown" data-v-9e286a1b><!--[-->`);
+      }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-9a0b2443>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<img data-not-lazy class="arrow"${ssrRenderAttr("src", _imports_0)} alt="" data-v-9a0b2443></div><div style="${ssrRenderStyle(dropdownOpen.value ? null : { display: "none" })}" class="phone-input__dropdown" data-v-9a0b2443><!--[-->`);
       ssrRenderList(countries, (country, code) => {
-        _push(`<div class="phone-input__option" data-v-9e286a1b><img${ssrRenderAttrs(_temp1 = mergeProps({
+        _push(`<div class="phone-input__option" data-v-9a0b2443><img${ssrRenderAttrs(_temp1 = mergeProps({
           "data-src": country.flag,
           alt: ""
-        }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-9e286a1b>${"textContent" in _temp1 ? ssrInterpolate(_temp1.textContent) : _temp1.innerHTML ?? ""}</div>`);
+        }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-9a0b2443>${"textContent" in _temp1 ? ssrInterpolate(_temp1.textContent) : _temp1.innerHTML ?? ""}</div>`);
       });
-      _push(`<!--]--></div></div><div class="phone-input__field" data-v-9e286a1b><input type="tel"${ssrRenderAttr("value", formattedPhone.value)}${ssrRenderAttr("maxlength", countries[selectedCountry.value].phoneLength + 5)}${ssrRenderAttr("placeholder", countries[selectedCountry.value].placeholder)} data-v-9e286a1b></div></div>`);
+      _push(`<!--]--></div></div><div class="phone-input__field" data-v-9a0b2443><input type="tel"${ssrRenderAttr("value", formattedPhone.value)}${ssrRenderAttr("maxlength", countries[selectedCountry.value].phoneLength + 5)}${ssrRenderAttr("placeholder", countries[selectedCountry.value].placeholder)} data-v-9a0b2443></div></div>`);
     };
   }
 };
@@ -86,7 +98,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Tools/PhoneInputComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const PhoneInputComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-9e286a1b"]]);
+const PhoneInputComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-9a0b2443"]]);
 export {
   PhoneInputComponent as default
 };

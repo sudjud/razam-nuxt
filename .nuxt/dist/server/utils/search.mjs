@@ -31,9 +31,12 @@ function searchContent(query, locale, t) {
     if (projectMatches) {
       results.push({
         type: "project",
+        category: project.category,
         slug: project.slug,
-        title: project.name,
-        preview: project.preview
+        name: project.name,
+        preview: project.preview,
+        year: project.year,
+        dislocation: project.dislocation
       });
     }
   }
@@ -48,8 +51,11 @@ function searchContent(query, locale, t) {
       results.push({
         type: "article",
         slug: article.slug,
-        title: article.name,
-        previewImg: article.previewImg
+        name: article.name,
+        previewImg: article.previewImg,
+        category: article.category,
+        by: article.by,
+        date: article.date
       });
     }
   }

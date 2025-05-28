@@ -50,7 +50,7 @@ import { useLocalePath } from "#imports";
 const localePath = useLocalePath();
 const route = useRoute();
 const article = ref(null);
-const loading = ref(true); // Добавляем индикатор загрузки
+const loading = ref(true);
 
 watchEffect(async () => {
   loading.value = true;
@@ -144,11 +144,6 @@ main.article
       p
         margin: 0
 
-// article
-//   +regpad
-//   display: grid
-//   grid-template-columns: 4fr 8fr
-//   margin-top: 70px
 .content
   margin-top: 70px
   min-width: 0

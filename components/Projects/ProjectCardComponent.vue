@@ -25,7 +25,7 @@ defineProps({
   category: String,
   name: String,
   dislocation: String,
-  year: String,
+  year: Number,
   slug: String,
 });
 </script>

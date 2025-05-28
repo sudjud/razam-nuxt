@@ -12,7 +12,7 @@ const _sfc_main = {
     category: String,
     name: String,
     dislocation: String,
-    year: String,
+    year: Number,
     slug: String
   },
   setup(__props) {
@@ -26,10 +26,10 @@ const _sfc_main = {
       }, _attrs), {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<section class="card" data-v-09aff950${_scopeId}><div class="wrapper-image" data-v-09aff950${_scopeId}><img${ssrRenderAttrs(_temp0 = mergeProps({
+            _push2(`<section class="card" data-v-1eaee408${_scopeId}><div class="wrapper-image" data-v-1eaee408${_scopeId}><img${ssrRenderAttrs(_temp0 = mergeProps({
               "data-src": __props.preview,
               alt: ""
-            }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-09aff950${_scopeId}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}</div><p class="category" data-v-09aff950${_scopeId}>${ssrInterpolate(_ctx.$t(__props.category))}</p><h4 class="name" data-v-09aff950${_scopeId}>${ssrInterpolate(_ctx.$t(__props.name))}</h4><div class="details" data-v-09aff950${_scopeId}><p class="by" data-v-09aff950${_scopeId}>${ssrInterpolate(_ctx.$t(__props.dislocation))}</p><p class="date" data-v-09aff950${_scopeId}>${ssrInterpolate(__props.year)}</p></div></section>`);
+            }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-1eaee408${_scopeId}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}</div><p class="category" data-v-1eaee408${_scopeId}>${ssrInterpolate(_ctx.$t(__props.category))}</p><h4 class="name" data-v-1eaee408${_scopeId}>${ssrInterpolate(_ctx.$t(__props.name))}</h4><div class="details" data-v-1eaee408${_scopeId}><p class="by" data-v-1eaee408${_scopeId}>${ssrInterpolate(_ctx.$t(__props.dislocation))}</p><p class="date" data-v-1eaee408${_scopeId}>${ssrInterpolate(__props.year)}</p></div></section>`);
           } else {
             return [
               createVNode("section", { class: "card" }, [
@@ -62,7 +62,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Projects/ProjectCardComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const ProjectCardComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-09aff950"]]);
+const ProjectCardComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-1eaee408"]]);
 export {
   ProjectCardComponent as default
 };

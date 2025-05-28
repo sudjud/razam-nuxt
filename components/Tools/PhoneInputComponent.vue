@@ -1,5 +1,5 @@
 <template>
-  <div class="phone-input">
+  <div :class="contactPage ? 'contact-phone' : 'phone-input'">
     <div class="phone-input__select" @click="toggleDropdown">
       <div class="phone-input__selected">
         <img :src="countries[selectedCountry].flag" alt="" /><img data-not-lazy class="arrow" src="/public/images/flags/arrow.png" alt="" />
@@ -45,6 +45,10 @@ const props = defineProps({
   modelValue: {
     type: String,
     default: ''
+  },
+  contactPage: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -125,9 +129,30 @@ watch(() => props.modelValue, (newVal) => {
 
   }
 })
+
+watch(() => props.modelValue, (newVal) => {
+  const prefix = countries[selectedCountry.value].prefix
+  if (newVal === '' || newVal === prefix || newVal === prefix + ' ') {
+    rawPhone.value = ''
+  }
+})
 </script>
 
 <style lang="sass" scoped>
+.contact-phone
+  display: grid
+  grid-template-columns: 0.1fr 0.9fr
+  position: relative
+  .phone-input__selected
+    border: none
+    border-bottom: 1px solid $font-grey
+    border-radius: 0
+  .phone-input__field input
+    border: none
+    border-bottom: 1px solid $font-grey
+    border-radius: 0
+    background-color: transparent
+
 .phone-input
   display: grid
   grid-template-columns: 0.15fr 0.85fr

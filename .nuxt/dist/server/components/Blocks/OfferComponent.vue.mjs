@@ -12,13 +12,13 @@ const _sfc_main = {
     const localePath = useLocalePath();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0;
-      _push(`<section${ssrRenderAttrs(mergeProps({ class: "offer" }, _attrs))} data-v-bf9f173a>`);
+      _push(`<section${ssrRenderAttrs(mergeProps({ class: "offer" }, _attrs))} data-v-38338185>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/contact")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h2 data-v-bf9f173a${_scopeId}>${ssrInterpolate(_ctx.$t("home.offer.h2P1"))}<span class="arrow" data-v-bf9f173a${_scopeId}><img data-not-lazy${ssrRenderAttr("src", _imports_0)} alt="" data-v-bf9f173a${_scopeId}></span><br data-v-bf9f173a${_scopeId}><div class="decor" data-v-bf9f173a${_scopeId}>${ssrInterpolate(_ctx.$t("home.offer.h2P2"))}<br data-v-bf9f173a${_scopeId}> ${ssrInterpolate(_ctx.$t("home.offer.h2P3"))} ? </div></h2>`);
+            _push2(`<h2 data-v-38338185${_scopeId}>${ssrInterpolate(_ctx.$t("home.offer.h2P1"))}<span class="arrow" data-v-38338185${_scopeId}><img data-not-lazy${ssrRenderAttr("src", _imports_0)} alt="" data-v-38338185${_scopeId}></span><br data-v-38338185${_scopeId}><div class="decor" data-v-38338185${_scopeId}>${ssrInterpolate(_ctx.$t("home.offer.h2P2"))}<br data-v-38338185${_scopeId}> ${ssrInterpolate(_ctx.$t("home.offer.h2P3"))} ? </div></h2>`);
           } else {
             return [
               createVNode("h2", null, [
@@ -42,7 +42,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`<p data-v-bf9f173a>${ssrInterpolate(_ctx.$t("home.offer.p"))}</p></section>`);
+      _push(`<p data-v-38338185>${ssrInterpolate(_ctx.$t("home.offer.p"))}</p></section>`);
     };
   }
 };
@@ -52,7 +52,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Blocks/OfferComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const OfferComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-bf9f173a"]]);
+const OfferComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-38338185"]]);
 export {
   OfferComponent as default
 };

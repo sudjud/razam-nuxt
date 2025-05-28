@@ -451,7 +451,7 @@
         "desc": "A project that blends coziness with style. Warm tones, soft textures, and harmonious details create a space where you can relax and enjoy every moment.",
         "componentData": {
           "lounge": {
-            "h1": "Living Room",
+            "h1": "Living Room:",
             "h2": "A Blend of Comfort, Style, and Modernity",
             "p": "The sofa in the center of the living room catches the eye with its minimalist design and soft lines. The use of natural fabrics and muted tones creates a cozy atmosphere. Its modular structure allows for easy adaptation to any needs."
           },
@@ -566,7 +566,7 @@
         "desc": "Chambre d'enfant is a project where functionality, safety, and childhood joy come together. Every detail is designed with care so that the room grows with the child and remains comfortable and beautiful for many years.",
         "componentData": {
           "firstBlock": {
-            "h1": "Play area",
+            "h1": "Play area:",
             "h2": "a place for adventures",
             "p": "This children's room focuses especially on the active zone. A climbing wall, gym ladder, and soft elements create a safe space for play and physical activity. Natural materials and calm colors support harmony and coziness."
           },

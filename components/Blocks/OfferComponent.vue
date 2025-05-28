@@ -27,7 +27,7 @@ const localePath = useLocalePath();
   position: relative
   max-width: calc(100% - 200px)
   margin: 0 auto
-  background-color: $bgc-second
+  background-color: $font-black
   padding: 6.75rem 14.9rem 5.1rem 14.9rem
   @media (max-width: 992px)
     max-width: calc(100% - 100px)
@@ -39,9 +39,9 @@ const localePath = useLocalePath();
   a
     text-decoration: none
     &:hover
-      text-decoration: underline black
+      text-decoration: underline $font-grey
   h2
-    color: $font-black
+    color: $font-white
     line-height: 7.5rem
     @media (max-width: 1500px)
       font-size: 5rem
@@ -61,7 +61,7 @@ const localePath = useLocalePath();
     left: 60rem
     text-align: right
     font-size: 1.25rem
-    color: $font-grey
+    color: $font-white
     max-width: 17.25rem
     @media (max-width: 1500px)
       left: 50rem

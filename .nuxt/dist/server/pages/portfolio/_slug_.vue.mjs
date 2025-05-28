@@ -104,25 +104,25 @@ const _sfc_main = {
       const _directive_reveal = resolveDirective("reveal");
       const _directive_lazy_load = resolveDirective("lazy-load");
       let _temp0, _temp1;
-      _push(`<!--[--><main class="project" data-v-97a3c15c><div class="route" data-v-97a3c15c>`);
+      _push(`<!--[--><main class="project" data-v-7889be31><div class="route" data-v-7889be31>`);
       _push(ssrRenderComponent(Breadcrumbs, {
         reservedLastCrumb: project.value.name
       }, null, _parent));
-      _push(`</div><section class="cover" data-v-97a3c15c><div class="numbers" style="${ssrRenderStyle(`--bg-url: url(${project.value.preview})`)}" data-v-97a3c15c><div class="label" data-v-97a3c15c><div data-v-97a3c15c><p data-v-97a3c15c>${ssrInterpolate(_ctx.$t("portfolio.projects.common.livingArea"))}</p><p data-v-97a3c15c>${ssrInterpolate(project.value.livingArea)} m²</p></div><div data-v-97a3c15c><p data-v-97a3c15c>${ssrInterpolate(_ctx.$t("portfolio.projects.common.workingTime"))}</p><p data-v-97a3c15c>${ssrInterpolate(_ctx.$t(project.value.workingTime))}</p></div></div></div><div class="info" data-v-97a3c15c><h1 class="name" data-v-97a3c15c><span${ssrRenderAttrs(mergeProps({ class: "wow reveal-bb reveal-visible" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-97a3c15c>${ssrInterpolate(project.value.name)}</span></h1><p class="type" data-v-97a3c15c>${ssrInterpolate(_ctx.$t(project.value.type))}</p><div class="customer" data-v-97a3c15c><p data-v-97a3c15c>${ssrInterpolate(_ctx.$t("portfolio.projects.common.client"))}</p><h4 data-v-97a3c15c>${ssrInterpolate(_ctx.$t(project.value.client))}</h4><p data-v-97a3c15c>${ssrInterpolate(_ctx.$t("portfolio.projects.common.location"))}</p><h4 data-v-97a3c15c>${ssrInterpolate(_ctx.$t(project.value.dislocation))}</h4><p data-v-97a3c15c>${ssrInterpolate(_ctx.$t("portfolio.projects.common.year"))}</p><h4 data-v-97a3c15c>${ssrInterpolate(project.value.year)}</h4></div><p class="desc" data-v-97a3c15c>${ssrInterpolate(_ctx.$t(project.value.desc))}</p></div></section></main>`);
+      _push(`</div><section class="cover" data-v-7889be31><div class="numbers" style="${ssrRenderStyle(`--bg-url: url(${project.value.preview})`)}" data-v-7889be31><div class="label" data-v-7889be31><div data-v-7889be31><p data-v-7889be31>${ssrInterpolate(_ctx.$t("portfolio.projects.common.livingArea"))}</p><p data-v-7889be31>${ssrInterpolate(project.value.livingArea)} m²</p></div><div data-v-7889be31><p data-v-7889be31>${ssrInterpolate(_ctx.$t("portfolio.projects.common.workingTime"))}</p><p data-v-7889be31>${ssrInterpolate(_ctx.$t(project.value.workingTime))}</p></div></div></div><div class="info" data-v-7889be31><h1 class="name" data-v-7889be31><span${ssrRenderAttrs(mergeProps({ class: "wow reveal-bb reveal-visible" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-7889be31>${ssrInterpolate(project.value.name)}</span></h1><p class="type" data-v-7889be31>${ssrInterpolate(_ctx.$t(project.value.type))}</p><div class="customer" data-v-7889be31><p data-v-7889be31>${ssrInterpolate(_ctx.$t("portfolio.projects.common.client"))}</p><h4 data-v-7889be31>${ssrInterpolate(_ctx.$t(project.value.client))}</h4><p data-v-7889be31>${ssrInterpolate(_ctx.$t("portfolio.projects.common.location"))}</p><h4 data-v-7889be31>${ssrInterpolate(_ctx.$t(project.value.dislocation))}</h4><p data-v-7889be31>${ssrInterpolate(_ctx.$t("portfolio.projects.common.year"))}</p><h4 data-v-7889be31>${ssrInterpolate(project.value.year)}</h4></div><p class="desc" data-v-7889be31>${ssrInterpolate(_ctx.$t(project.value.desc))}</p></div></section></main>`);
       {
         _push(`<!---->`);
       }
-      _push(`<section class="photos" data-v-97a3c15c><!--[-->`);
+      _push(`<section class="photos" data-v-7889be31><!--[-->`);
       ssrRenderList(smallImages.value, (item, index) => {
-        _push(`<div class="photo" data-v-97a3c15c><img${ssrRenderAttrs(_temp0 = mergeProps({
+        _push(`<div class="photo" data-v-7889be31><img${ssrRenderAttrs(_temp0 = mergeProps({
           "data-src": item.photo,
           alt: ""
-        }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-97a3c15c>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<p data-v-97a3c15c>${ssrInterpolate(_ctx.$t(item.name))}</p></div>`);
+        }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-7889be31>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<p data-v-7889be31>${ssrInterpolate(_ctx.$t(item.name))}</p></div>`);
       });
-      _push(`<!--]--><div class="photo-main" data-v-97a3c15c><img${ssrRenderAttrs(_temp1 = mergeProps({
+      _push(`<!--]--><div class="photo-main" data-v-7889be31><img${ssrRenderAttrs(_temp1 = mergeProps({
         "data-src": mainImage.value.photo,
         alt: ""
-      }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-97a3c15c>${"textContent" in _temp1 ? ssrInterpolate(_temp1.textContent) : _temp1.innerHTML ?? ""}<p class="photo-main-desc" data-v-97a3c15c>${ssrInterpolate(_ctx.$t(mainImage.value.name))}</p></div></section><section class="single" data-v-97a3c15c>`);
+      }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-7889be31>${"textContent" in _temp1 ? ssrInterpolate(_temp1.textContent) : _temp1.innerHTML ?? ""}<p class="photo-main-desc" data-v-7889be31>${ssrInterpolate(_ctx.$t(mainImage.value.name))}</p></div></section><section class="single" data-v-7889be31>`);
       _push(ssrRenderComponent(SingleComponent, {
         nameAcronym: nameAcronym.value,
         nameCamelCase: nameCamelCase.value,
@@ -141,7 +141,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/portfolio/[slug].vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const _slug_ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-97a3c15c"]]);
+const _slug_ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7889be31"]]);
 export {
   _slug_ as default
 };

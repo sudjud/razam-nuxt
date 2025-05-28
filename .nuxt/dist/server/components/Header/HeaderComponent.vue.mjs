@@ -38,13 +38,13 @@ const _sfc_main = {
       const _component_NuxtLink = __nuxt_component_0;
       _push(`<header${ssrRenderAttrs(mergeProps({
         class: ["headerxl", { hidden: isHidden.value }]
-      }, _attrs))} data-v-40923b89><div class="container" data-v-40923b89><div class="logo" data-v-40923b89>`);
+      }, _attrs))} data-v-2cfb8b02><div class="container" data-v-2cfb8b02><div class="logo" data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/")
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img data-not-lazy${ssrRenderAttr("src", _imports_0)} alt="Razam" data-v-40923b89${_scopeId}>`);
+            _push2(`<img data-not-lazy${ssrRenderAttr("src", _imports_0)} alt="Razam" data-v-2cfb8b02${_scopeId}>`);
           } else {
             return [
               createVNode("img", {
@@ -57,7 +57,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</div><nav class="nav-menu" data-v-40923b89><ul data-v-40923b89><li data-v-40923b89>`);
+      _push(`</div><nav class="nav-menu" data-v-2cfb8b02><ul data-v-2cfb8b02><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/"),
         class: { active: isActive("/") }
@@ -73,7 +73,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</li><span class="divider" data-v-40923b89>/</span><li data-v-40923b89>`);
+      _push(`</li><span class="divider" data-v-2cfb8b02>/</span><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/about"),
         class: { active: isActive("/about") }
@@ -89,7 +89,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</li><span class="divider" data-v-40923b89>/</span><li data-v-40923b89>`);
+      _push(`</li><span class="divider" data-v-2cfb8b02>/</span><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/services"),
         class: { active: isActive("/services") }
@@ -105,7 +105,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</li><span class="divider" data-v-40923b89>/</span><li data-v-40923b89>`);
+      _push(`</li><span class="divider" data-v-2cfb8b02>/</span><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/portfolio"),
         class: { active: isActive("/portfolio") }
@@ -121,7 +121,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</li><span class="divider" data-v-40923b89>/</span><li data-v-40923b89>`);
+      _push(`</li><span class="divider" data-v-2cfb8b02>/</span><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/news"),
         class: { active: isActive("/news") }
@@ -137,7 +137,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</li><span class="divider" data-v-40923b89>/</span><li data-v-40923b89>`);
+      _push(`</li><span class="divider" data-v-2cfb8b02>/</span><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: unref(localePath)("/contact"),
         class: { active: isActive("/contact") }
@@ -153,7 +153,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`</li><li class="cost-modal" data-v-40923b89>`);
+      _push(`</li><li class="cost-modal" data-v-2cfb8b02>`);
       if (modalOpened.value) {
         _push(ssrRenderComponent(CostCalcModal, {
           onCloseModal: toggleModal,
@@ -162,7 +162,7 @@ const _sfc_main = {
       } else {
         _push(`<!---->`);
       }
-      _push(`<button class="go-to-calc_btn" data-v-40923b89>${ssrInterpolate(_ctx.$t("calculator.modalButton"))}</button></li><li data-v-40923b89>`);
+      _push(`<button class="go-to-calc_btn" data-v-2cfb8b02>${ssrInterpolate(_ctx.$t("calculator.modalButton"))}</button></li><li data-v-2cfb8b02>`);
       _push(ssrRenderComponent(LangSwitchComponent, null, null, _parent));
       _push(`</li></ul></nav></div></header>`);
     };
@@ -174,7 +174,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Header/HeaderComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const HeaderComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-40923b89"]]);
+const HeaderComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2cfb8b02"]]);
 export {
   HeaderComponent as default
 };

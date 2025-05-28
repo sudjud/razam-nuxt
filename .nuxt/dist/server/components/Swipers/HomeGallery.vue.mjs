@@ -1,5 +1,5 @@
 import __nuxt_component_0 from "../../node_modules/nuxt/dist/app/components/nuxt-link.mjs";
-import { ref, resolveDirective, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, withDirectives, createBlock, openBlock, Fragment, renderList, useSSRContext } from "vue";
+import { ref, resolveDirective, mergeProps, unref, withCtx, withDirectives, createVNode, createTextVNode, toDisplayString, createBlock, openBlock, Fragment, renderList, useSSRContext } from "vue";
 import { ssrInterpolate, ssrRenderList, ssrRenderAttrs, ssrGetDirectiveProps, ssrRenderClass, ssrRenderAttr, ssrRenderComponent } from "vue/server-renderer";
 import _imports_0$3 from "../../public/images/home/diag-arrow2.webp.mjs";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -26,15 +26,15 @@ const _sfc_main = {
         service: "home.service1",
         slug: "interiordesign"
       },
-      // { 
-      //   image: photo2, 
-      //   service: "home.service2", 
-      //   slug: "interiordesign" 
+      // {
+      //   image: photo2,
+      //   service: "home.service2",
+      //   slug: "interiordesign"
       // },
-      // { 
-      //   image: photo3, 
-      //   service: "home.service3", 
-      //   slug: "interiordesign" 
+      // {
+      //   image: photo3,
+      //   service: "home.service3",
+      //   slug: "interiordesign"
       // },
       {
         image: _imports_0$1,
@@ -54,35 +54,37 @@ const _sfc_main = {
       const _directive_reveal = resolveDirective("reveal");
       const _directive_lazy_load = resolveDirective("lazy-load");
       let _temp0;
-      _push(`<!--[--><div class="gallery" data-v-abc4e9b3><div class="top" data-v-abc4e9b3><span data-v-abc4e9b3><span class="top-first" data-v-abc4e9b3>${ssrInterpolate(padNumber(currentIndex.value + 1))}</span><!--[-->`);
+      _push(`<!--[--><div class="gallery" data-v-42c6c1bd><div class="top" data-v-42c6c1bd><span data-v-42c6c1bd><span class="top-first" data-v-42c6c1bd>${ssrInterpolate(padNumber(currentIndex.value + 1))}</span><!--[-->`);
       ssrRenderList(currentIndex.value + 1, (i) => {
-        _push(`<span class="top-first-minus" data-v-abc4e9b3>—</span>`);
+        _push(`<span class="top-first-minus" data-v-42c6c1bd>—</span>`);
       });
       _push(`<!--]--><!--[-->`);
       ssrRenderList(items.length - currentIndex.value - 1, (i) => {
-        _push(`<span class="top-last-minus" data-v-abc4e9b3>—</span>`);
+        _push(`<span class="top-last-minus" data-v-42c6c1bd>—</span>`);
       });
-      _push(`<!--]--><span class="top-last" data-v-abc4e9b3>${ssrInterpolate(padNumber(items.length))}</span></span><h2 data-v-abc4e9b3><span${ssrRenderAttrs(mergeProps({ class: "wow reveal-bb" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-abc4e9b3>${ssrInterpolate(_ctx.$t("home.servicesH2"))}</span></h2></div><div class="display" data-v-abc4e9b3><div class="buttons" data-v-abc4e9b3><!--[-->`);
+      _push(`<!--]--><span class="top-last" data-v-42c6c1bd>${ssrInterpolate(padNumber(items.length))}</span></span><h2 data-v-42c6c1bd><span${ssrRenderAttrs(mergeProps({ class: "wow reveal-bb" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-42c6c1bd>${ssrInterpolate(_ctx.$t("home.servicesH2"))}</span></h2></div><div class="display" data-v-42c6c1bd><div class="buttons" data-v-42c6c1bd><!--[-->`);
       ssrRenderList(items, (item, index) => {
-        _push(`<div class="${ssrRenderClass([{ active: index === currentIndex.value }, "button"])}" data-v-abc4e9b3><div class="button-wrapper" data-v-abc4e9b3><div data-v-abc4e9b3>${ssrInterpolate(_ctx.$t(item.service))}</div><div class="buttons-idx" data-v-abc4e9b3>${ssrInterpolate(padNumber(index + 1))}</div>`);
+        _push(`<div class="${ssrRenderClass([{ active: index === currentIndex.value }, "button"])}" data-v-42c6c1bd><div class="button-wrapper" data-v-42c6c1bd><div data-v-42c6c1bd>${ssrInterpolate(_ctx.$t(item.service))}</div><div class="buttons-idx" data-v-42c6c1bd>${ssrInterpolate(padNumber(index + 1))}</div>`);
         if (index === currentIndex.value) {
-          _push(`<div class="arrow-wrapper" data-v-abc4e9b3><div class="arrow" data-v-abc4e9b3><img data-not-lazy${ssrRenderAttr("src", _imports_0$3)} alt="arrow" data-v-abc4e9b3></div></div>`);
+          _push(`<div class="arrow-wrapper" data-v-42c6c1bd><div class="arrow" data-v-42c6c1bd><img data-not-lazy${ssrRenderAttr("src", _imports_0$3)} alt="arrow" data-v-42c6c1bd></div></div>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`</div><div class="divider" data-v-abc4e9b3></div></div>`);
+        _push(`</div><div class="divider" data-v-42c6c1bd></div></div>`);
       });
       _push(`<!--]--></div>`);
       if (items[currentIndex.value]) {
-        _push(`<img data-not-lazy${ssrRenderAttr("src", items[currentIndex.value].image)}${ssrRenderAttr("alt", items[currentIndex.value].service)} data-v-abc4e9b3>`);
+        _push(`<img data-not-lazy${ssrRenderAttr("src", items[currentIndex.value].image)}${ssrRenderAttr("alt", items[currentIndex.value].service)} data-v-42c6c1bd>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`</div></div><div class="gallery-sm" data-v-abc4e9b3><h2 data-v-abc4e9b3><span${ssrRenderAttrs(mergeProps({ class: "wow reveal-bb" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-abc4e9b3>${ssrInterpolate(_ctx.$t("home.servicesH2"))}</span></h2><div class="slider-gallery" data-v-abc4e9b3>`);
+      _push(`</div></div><div class="gallery-sm" data-v-42c6c1bd><h2 data-v-42c6c1bd><span${ssrRenderAttrs(mergeProps({ class: "wow reveal-bb" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-42c6c1bd>${ssrInterpolate(_ctx.$t("home.servicesH2"))}</span></h2><div class="slider-gallery" data-v-42c6c1bd>`);
       _push(ssrRenderComponent(unref(Swiper), {
         "slides-per-view": 1,
         autoplay: {
-          delay: 10
+          delay: 10,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: true
         },
         speed: 3e3,
         loop: "",
@@ -97,44 +99,54 @@ const _sfc_main = {
               _push2(ssrRenderComponent(unref(SwiperSlide), { key: index }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(`<div class="slide-content" data-v-abc4e9b3${_scopeId2}><img${ssrRenderAttrs(_temp0 = mergeProps({
-                      "data-src": item.image,
-                      alt: item.service
-                    }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-abc4e9b3${_scopeId2}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<div class="description" data-v-abc4e9b3${_scopeId2}>`);
+                    _push3(`<div class="slide-content" data-v-42c6c1bd${_scopeId2}>`);
                     _push3(ssrRenderComponent(_component_NuxtLink, {
                       to: unref(localePath)(`/services/${item.slug}`)
                     }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(`${ssrInterpolate(_ctx.$t(item.service))} ↗`);
+                          _push4(`<img${ssrRenderAttrs(_temp0 = mergeProps({
+                            "data-src": item.image,
+                            alt: item.service
+                          }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-42c6c1bd${_scopeId3}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<div class="description" data-v-42c6c1bd${_scopeId3}><u data-v-42c6c1bd${_scopeId3}>${ssrInterpolate(_ctx.$t(item.service))}</u> ↗ </div>`);
                         } else {
                           return [
-                            createTextVNode(toDisplayString(_ctx.$t(item.service)) + " ↗", 1)
+                            withDirectives(createVNode("img", {
+                              "data-src": item.image,
+                              alt: item.service
+                            }, null, 8, ["data-src", "alt"]), [
+                              [_directive_lazy_load]
+                            ]),
+                            createVNode("div", { class: "description" }, [
+                              createVNode("u", null, toDisplayString(_ctx.$t(item.service)), 1),
+                              createTextVNode(" ↗ ")
+                            ])
                           ];
                         }
                       }),
                       _: 2
                     }, _parent3, _scopeId2));
-                    _push3(`</div></div>`);
+                    _push3(`</div>`);
                   } else {
                     return [
                       createVNode("div", { class: "slide-content" }, [
-                        withDirectives(createVNode("img", {
-                          "data-src": item.image,
-                          alt: item.service
-                        }, null, 8, ["data-src", "alt"]), [
-                          [_directive_lazy_load]
-                        ]),
-                        createVNode("div", { class: "description" }, [
-                          createVNode(_component_NuxtLink, {
-                            to: unref(localePath)(`/services/${item.slug}`)
-                          }, {
-                            default: withCtx(() => [
-                              createTextVNode(toDisplayString(_ctx.$t(item.service)) + " ↗", 1)
+                        createVNode(_component_NuxtLink, {
+                          to: unref(localePath)(`/services/${item.slug}`)
+                        }, {
+                          default: withCtx(() => [
+                            withDirectives(createVNode("img", {
+                              "data-src": item.image,
+                              alt: item.service
+                            }, null, 8, ["data-src", "alt"]), [
+                              [_directive_lazy_load]
                             ]),
-                            _: 2
-                          }, 1032, ["to"])
-                        ])
+                            createVNode("div", { class: "description" }, [
+                              createVNode("u", null, toDisplayString(_ctx.$t(item.service)), 1),
+                              createTextVNode(" ↗ ")
+                            ])
+                          ]),
+                          _: 2
+                        }, 1032, ["to"])
                       ])
                     ];
                   }
@@ -149,22 +161,23 @@ const _sfc_main = {
                 return createVNode(unref(SwiperSlide), { key: index }, {
                   default: withCtx(() => [
                     createVNode("div", { class: "slide-content" }, [
-                      withDirectives(createVNode("img", {
-                        "data-src": item.image,
-                        alt: item.service
-                      }, null, 8, ["data-src", "alt"]), [
-                        [_directive_lazy_load]
-                      ]),
-                      createVNode("div", { class: "description" }, [
-                        createVNode(_component_NuxtLink, {
-                          to: unref(localePath)(`/services/${item.slug}`)
-                        }, {
-                          default: withCtx(() => [
-                            createTextVNode(toDisplayString(_ctx.$t(item.service)) + " ↗", 1)
+                      createVNode(_component_NuxtLink, {
+                        to: unref(localePath)(`/services/${item.slug}`)
+                      }, {
+                        default: withCtx(() => [
+                          withDirectives(createVNode("img", {
+                            "data-src": item.image,
+                            alt: item.service
+                          }, null, 8, ["data-src", "alt"]), [
+                            [_directive_lazy_load]
                           ]),
-                          _: 2
-                        }, 1032, ["to"])
-                      ])
+                          createVNode("div", { class: "description" }, [
+                            createVNode("u", null, toDisplayString(_ctx.$t(item.service)), 1),
+                            createTextVNode(" ↗ ")
+                          ])
+                        ]),
+                        _: 2
+                      }, 1032, ["to"])
                     ])
                   ]),
                   _: 2
@@ -185,7 +198,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Swipers/HomeGallery.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const HomeGallery = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-abc4e9b3"]]);
+const HomeGallery = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-42c6c1bd"]]);
 export {
   HomeGallery as default
 };

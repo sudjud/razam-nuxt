@@ -49,15 +49,19 @@ const deadlines = useCountAnimation(100);
 
 <style lang="sass" scoped>
 .statistics
+  background-color: $font-black
   +center-x-y
   flex-direction: column
   text-align: center
   position: relative
-  padding: 22rem 0
+  padding: 22rem 0 15rem 0
+  margin-bottom: 7rem
   .container
     flex-direction: column
     justify-content: center
     padding-left: 0
+    @media (max-width: 992px)
+      padding-right: 0
   .statistics-row
     display: flex
     justify-content: space-between
@@ -67,6 +71,7 @@ const deadlines = useCountAnimation(100);
     @media (max-width: 992px)
       flex-direction: column
       align-items: center
+      padding-left: 0
       gap: 1rem
       margin-bottom: 0
     .hidden
@@ -79,10 +84,13 @@ const deadlines = useCountAnimation(100);
     padding-right: 10px
     @media (max-width: 992px)
       align-items: center
+      padding-right: 0
     p
       margin-top: 0.5rem
       margin-bottom: 0
+      color: $font-white
     h2
+      color: $font-white
       @media (max-width: 460px)
         font-size: 6rem  
   .divider
@@ -108,10 +116,14 @@ const deadlines = useCountAnimation(100);
   color: $font-black
   @media (max-width: 992px)
     transform: translateX(-30px) translateY(-90%)
+  @media (max-width: 400px)
+    width: 10rem
+    height: 10rem
+    transform: translate(-10px, -95%)
     
   span
     display: inline-block
     font-size: 4.25rem
-    color: $font-white
+    color: $font-black
     font-weight: 500
 </style>

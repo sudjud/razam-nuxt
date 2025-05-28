@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ submit: submitted }" class="overlay">
+  <div @click.stop :class="{ submit: submitted }" class="overlay">
     <div class="calculator-wrapper">
       <div @click.stop="handleClose" class="close">✕</div>
       <form class="calculator" @submit.prevent="submitForm">
@@ -288,6 +288,7 @@ const handleClick = () => {
   max-width: 34rem
   padding: 2rem
   background-color: #fff
+  min-width: 35rem
   border-radius: 12px
   @media (max-width: 1500px)
     height: 610px

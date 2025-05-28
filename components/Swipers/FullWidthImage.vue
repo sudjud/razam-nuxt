@@ -55,7 +55,6 @@ const loaded = ref(false)
 const handleClose = () => emit('close-event')
 
 const onImgLoad = () => {
-  // Можно использовать loaded = true, если хочешь скрыть loader по загрузке
   loaded.value = true
 }
 

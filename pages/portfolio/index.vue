@@ -339,7 +339,7 @@ useSeo('portfolio');
   position: relative
   max-width: calc(100% - 200px)
   margin: 0 auto
-  background-color: $bgc-second
+  border: 1px solid $bgc-main
   padding: 6.75rem 14.9rem 5.1rem 14.9rem
   margin-top: 15rem
   margin-bottom: -10rem
@@ -352,7 +352,6 @@ useSeo('portfolio');
     max-width: calc(100% - 40px)
     margin-top: $mob-col-gap
   h2
-    color: $font-black
     line-height: 7.5rem
     @media (max-width: 1500px)
       font-size: 5rem
@@ -372,7 +371,6 @@ useSeo('portfolio');
     left: 60rem
     text-align: right
     font-size: 1.25rem
-    color: $font-grey
     max-width: 17.25rem
     @media (max-width: 1500px)
       left: 50rem

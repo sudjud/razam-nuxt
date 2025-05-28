@@ -57,44 +57,64 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import news2 from "/images/news/illumination.webp";
-import news4 from "/images/news/ideas.webp";
+import news1 from "/images/blog/previews/lights.webp";
+import news2 from "/images/blog/previews/ideas.webp";
+import news3 from "/images/blog/previews/trends.webp";
+import news4 from "/images/blog/previews/materials.webp";
+import news5 from "/images/blog/previews/bedroom.webp";
+import news6 from "/images/blog/previews/minimalism.webp";
 import { ref } from "vue";
 
 const localePath = useLocalePath();
 
 const news = ref([
   {
-    photo: news4,
+    photo: news1,
     category: "home.news.category1",
-    title: "home.news.title1",
+    title: "blog.articles.lights.name",
     by: "home.news.by1",
     date: "home.news.date1",
-    slug: "materials"
+    slug: "lights"
   },
   {
     photo: news2,
     category: "home.news.category2",
-    title: "home.news.title2",
+    title: "blog.articles.ideas.name",
     by: "home.news.by2",
     date: "home.news.date2",
-    slug: "lights"
-  },
-  {
-    photo: news4,
-    category: "home.news.category3",
-    title: "home.news.title3",
-    by: "home.news.by3",
-    date: "home.news.date3",
     slug: "ideas"
   },
   {
-    photo: news2,
+    photo: news3,
+    category: "home.news.category3",
+    title: "blog.articles.trends.name",
+    by: "home.news.by3",
+    date: "home.news.date3",
+    slug: "trends"
+  },
+  {
+    photo: news4,
     category: "home.news.category4",
-    title: "home.news.title4",
+    title: "blog.articles.materials.name",
     by: "home.news.by4",
     date: "home.news.date4",
-    slug: "trends"
+    slug: "materials"
+  },
+  {
+    photo: news5,
+    category: "home.news.category4",
+    title: "blog.articles.bedroom.name",
+    by: "home.news.by4",
+    date: "home.news.date4",
+    slug: "bedroom"
+  },
+  {
+    photo: news6,
+    category: "home.news.category4",
+    title: "blog.articles.minimalism.name",
+    by: "home.news.by4",
+    date: "home.news.date4",
+    slug: "minimalism"
   },
 ]);
 
@@ -183,6 +203,11 @@ a
     .image
       img
         width: 100%
+        max-height: 30rem
+        @media (max-width: 1200px)
+          max-height: 45rem
+        @media (max-width: 480px)
+          max-height: 35rem
 
 .slider-buttons
   display: flex

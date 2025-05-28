@@ -1905,10 +1905,10 @@ const projects$2 = [
     preview: "/images/projects/previews/elemental-harmony.webp",
     totalArea: "276.50",
     livingArea: "74",
-    workingTime: "portfolio.projects.chambreEnfant.workingTime",
-    client: "portfolio.projects.chambreEnfant.client",
+    workingTime: "portfolio.projects.elementalHarmony.workingTime",
+    client: "portfolio.projects.elementalHarmony.client",
     dislocation: "portfolio.projects.elementalHarmony.dislocation",
-    desc: "portfolio.projects.chambreEnfant.desc",
+    desc: "portfolio.projects.elementalHarmony.desc",
     cost: "12.590",
     images: [
       {

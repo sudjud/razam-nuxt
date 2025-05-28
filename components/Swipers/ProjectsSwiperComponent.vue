@@ -66,7 +66,7 @@ export default defineComponent({
       },
       {
         title: "Elemental harmony",
-        description: "portfolio.projects.chambreEnfant.desc",
+        description: "portfolio.projects.elementalHarmony.desc",
         image: slide2,
         slug: "elemental-harmony",
       },
@@ -100,12 +100,10 @@ export default defineComponent({
     const swiper = ref<SwiperInstance | null>(null);
     const localePath = useLocalePath();
 
-    // Привязка экземпляра Swiper
     const bindSwiperInstance = (instance: SwiperInstance) => {
       swiper.value = instance;
     };
 
-    // Навигация
     const nextSlide = () => {
       swiper.value?.slideNext();
     };

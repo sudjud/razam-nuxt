@@ -144,17 +144,19 @@ onUnmounted(() => {
   padding: 0.3rem 1rem
   font-weight: 500
   color: $font-grey
-  border: 2px solid $font-grey
+  border: 1px solid $font-grey
   font-size: 1.25rem
   border-radius: 12px
   background-color: transparent
   margin-left: 10px
+  cursor: pointer
   @media (max-width: 1200px)
     border: 1px solid $font-grey
   @media (max-width: 850px)
     font-size: 1rem
   &:hover
     transform: scale(1.02)
+    background-color: $bgc-second
   &:active
     transform: scale(1)
 .headerxl

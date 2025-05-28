@@ -209,7 +209,7 @@ useHead({
         border-radius: 0 12px 12px 0
         margin-bottom: 60px
         @media (max-width: 576px)
-          width: 18rem
+          width: 20rem
         p
           margin: 0
           margin-top: 12px
@@ -221,8 +221,6 @@ useHead({
               color: $font-black
               padding-top: 10px
   .info
-    // display: grid
-    // grid-template-columns: 3fr 3fr
     display: flex
     flex-direction: column
     h1
@@ -233,7 +231,6 @@ useHead({
       align-self: flex-end
     .customer
       margin-top: 10rem
-      // float: left
       @media (max-width: 576px)
         margin-top: 1rem
       p
@@ -251,13 +248,6 @@ useHead({
         width: 100%
       @media (max-width: 576px)
         text-align: left
-    // .info-right
-    //   .type
-    //       text-align: right
-    //       margin-top: 15rem
-    //   .desc
-    //       text-align: right
-    //       margin-top: 30rem
 
 // ----------------------- photos ---------------------
 
@@ -300,8 +290,8 @@ useHead({
 .offer
   position: relative
   max-width: calc(100% - 200px)
+  border: 1px solid $bgc-main
   margin: 0 auto
-  background-color: $bgc-second
   padding: 6.75rem 14.9rem 5.1rem 14.9rem
   margin-top: 15rem
   margin-bottom: -10rem
@@ -314,7 +304,6 @@ useHead({
     max-width: calc(100% - 40px)
     margin-top: $mob-col-gap
   h2
-    color: $font-black
     line-height: 7.5rem
     @media (max-width: 1500px)
       font-size: 5rem
@@ -334,7 +323,6 @@ useHead({
     left: 60rem
     text-align: right
     font-size: 1.25rem
-    color: $font-grey
     max-width: 17.25rem
     @media (max-width: 1500px)
       left: 50rem

@@ -7,7 +7,9 @@
       </div>
       <div class="content">
         <h1>
-          <span v-reveal class="wow reveal-sw reveal-visible">{{ $t("home.headline") }}</span>
+          <span v-reveal class="wow reveal-sw reveal-visible">{{
+            $t("home.headline")
+          }}</span>
         </h1>
       </div>
     </div>
@@ -15,10 +17,7 @@
   <section class="expert-design">
     <div class="container">
       <div class="image-wrapper">
-        <img
-          src="/images/home/2.webp" 
-          alt="Interior"
-        />
+        <img src="/images/home/2.webp" alt="Interior" />
       </div>
       <div class="filler"></div>
       <div class="text-content">
@@ -47,7 +46,11 @@
       <div class="main">
         <div class="title-block">
           <h2>
-            <span v-reveal class="wow reveal-bb" v-html="$t('home.valuesH2')"></span>
+            <span
+              v-reveal
+              class="wow reveal-bb"
+              v-html="$t('home.valuesH2')"
+            ></span>
           </h2>
           <div class="arrow-down">
             <span>↓</span>
@@ -153,23 +156,457 @@ import OfferComponent from "../components/Blocks/OfferComponent.vue";
 import { useSeo } from "../composables/useSeo";
 
 const isOpen = ref(false);
+const { t, locale } = useI18n();
 
 const toggleIsOpen = () => {
   isOpen.value = !isOpen.value;
 };
 
-useSeo('home');
+const testimonials = [
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.1.text",
+    name: "home.reviews.1.name",
+    stars: 5,
+    datePublishied: "2022-05-04"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.2.text",
+    name: "home.reviews.2.name",
+    stars: 5,
+    datePublishied: "2024-11-01"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.3.text",
+    name: "home.reviews.3.name",
+    stars: 4,
+    datePublishied: "2023-07-07"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.4.text",
+    name: "home.reviews.4.name",
+    stars: 5,
+    datePublishied: "2024-01-05"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.5.text",
+    name: "home.reviews.5.name",
+    stars: 5,
+    datePublishied: "2023-03-12"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.6.text",
+    name: "home.reviews.6.name",
+    stars: 5,
+    datePublishied: "2023-12-03"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.7.text",
+    name: "home.reviews.7.name",
+    stars: 5,
+    datePublishied: "2024-12-11"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.8.text",
+    name: "home.reviews.8.name",
+    stars: 5,
+    datePublishied: "2022-02-03"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.9.text",
+    name: "home.reviews.9.name",
+    stars: 5,
+    datePublishied: "2023-09-10"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.10.text",
+    name: "home.reviews.10.name",
+    stars: 5,
+    datePublishied: "2024-11-11"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.11.text",
+    name: "home.reviews.11.name",
+    stars: 5,
+    datePublishied: "2024-05-04"
+  },
+  {
+    photo: undefined,
+    title: "",
+    text: "home.reviews.12.text",
+    name: "home.reviews.12.name",
+    stars: 5,
+    datePublishied: "2024-02-08"
+  },
+];
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Razam",
+  url: `https://razam.fr/${locale.value}/`,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: testimonials.length,
+  },
+  review: testimonials.map((review) => ({
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.stars,
+      bestRating: 5,
+    },
+    author: {
+      "@type": "Person",
+      name: t(review.name),
+    },
+    reviewBody: t(review.text),
+    datePublishied: review.datePublishied
+  })),
+};
+
+const faqData = Array.from({ length: 6 }, (_, i) => {
+  const index = i + 1;
+  return {
+    "@type": "Question",
+    name: t(`home.FAQ.q${index}`),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: t(`home.FAQ.a${index}`),
+    },
+  };
+});
+
+const projectsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      name: "Chambre d'enfant",
+      description: t("portfolio.projects.chambreEnfant.desc"),
+      image: "https://razam.fr/images/projects/previews/chambre-enfant.webp",
+      url: `https://razam.fr/${locale.value}/portfolio/chambre-enfant`,
+      creator: {
+        "@type": "Organization",
+        name: "Razam",
+      },
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Elemental harmony",
+      description: t("portfolio.projects.elementalHarmony.desc"),
+      image: "https://razam.fr/images/projects/previews/elemental-harmony.webp",
+      url: `https://razam.fr/${locale.value}/portfolio/elemental-harmony`,
+      creator: {
+        "@type": "Organization",
+        name: "Razam",
+      },
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Modern vista",
+      description: t("portfolio.projects.modernVista.desc"),
+      image: "https://razam.fr/images/projects/previews/modern-vista.webp",
+      url: `https://razam.fr/${locale.value}/portfolio/modern-vista`,
+      creator: {
+        "@type": "Organization",
+        name: "Razam",
+      },
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Natural essence",
+      description: t("portfolio.projects.naturalEssence.desc"),
+      image: "https://razam.fr/images/projects/previews/natural-essence.webp",
+      url: `https://razam.fr/${locale.value}/portfolio/natural-essence`,
+      creator: {
+        "@type": "Organization",
+        name: "Razam",
+      },
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Serene lines",
+      description: t("portfolio.projects.sereneLines.desc"),
+      image: "https://razam.fr/images/projects/previews/serene-lines.webp",
+      url: `https://razam.fr/${locale.value}/portfolio/serene-lines`,
+      creator: {
+        "@type": "Organization",
+        name: "Razam",
+      },
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Urban grace",
+      description: t("portfolio.projects.urbanGrace.desc"),
+      image: "https://razam.fr/images/projects/previews/urban-grace.webp",
+      url: `https://razam.fr/${locale.value}/portfolio/urban-grace`,
+      creator: {
+        "@type": "Organization",
+        name: "Razam",
+      },
+    },
+  ],
+};
+
+const newsSchema = [
+  {
+    category: "home.news.category1",
+    title: "blog.articles.lights.name",
+    by: "home.news.by1",
+    date: "home.news.date1",
+    slug: "lights"
+  },
+  {
+    category: "home.news.category2",
+    title: "blog.articles.ideas.name",
+    by: "home.news.by2",
+    date: "home.news.date2",
+    slug: "ideas"
+  },
+  {
+    category: "home.news.category3",
+    title: "blog.articles.trends.name",
+    by: "home.news.by3",
+    date: "home.news.date3",
+    slug: "trends"
+  },
+  {
+    category: "home.news.category4",
+    title: "blog.articles.materials.name",
+    by: "home.news.by4",
+    date: "home.news.date4",
+    slug: "materials"
+  },
+  {
+    category: "home.news.category4",
+    title: "blog.articles.bedroom.name",
+    by: "home.news.by4",
+    date: "home.news.date4",
+    slug: "bedroom"
+  },
+  {
+    category: "home.news.category4",
+    title: "blog.articles.minimalism.name",
+    by: "home.news.by4",
+    date: "home.news.date4",
+    slug: "minimalism"
+  },
+];
+
+const blogSchema = newsSchema.map(post => ({
+  "@type": "BlogPosting",
+  "headline": t(post.title),
+  "author": {
+    "@type": "Person",
+    "name": t(post.by)
+  },
+  "datePublished": '2024-11-02',
+  "articleSection": t(post.category),
+  "url": `https://razam.fr/${locale.value}/news/${post.slug}`
+}))
+
+useSeo("home");
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: t("meta.common.title"),
+        url: `https://razam.fr/${locale.value}/`,
+        description: t("meta.common.description"),
+        inLanguage: locale.value,
+        "mainEntity": [
+          {
+            "@type": "QuantitativeValue",
+            "name": t("home.stats1"),
+            "value": 83,
+            "unitText": "project"
+          },
+          {
+            "@type": "QuantitativeValue",
+            "name": t("home.stats2"),
+            "value": 95,
+            "unitText": "percent"
+          },
+          {
+            "@type": "QuantitativeValue",
+            "name": t("home.stats3"),
+            "value": 12500,
+            "unitText": "squareMeter"
+          },
+          {
+            "@type": "QuantitativeValue",
+            "name": t("home.statsGoal"),
+            "value": 1,
+            "unitText": "goal"
+          },
+          {
+            "@type": "QuantitativeValue",
+            "name": t("home.stats5"),
+            "value": 100,
+            "unitText": "percent"
+          }
+        ],
+        publisher: {
+          "@type": "Organization",
+          name: "Razam",
+          url: `https://razam.fr/${locale.value}/`,
+          logo: {
+            "@type": "ImageObject",
+            url: "https://razam.fr/images/logo.webp",
+          },
+        },
+      }),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Razam",
+        url: `https://razam.fr/${locale.value}/`,
+        logo: {
+          "@type": "ImageObject",
+          url: "https://razam.fr/images/logo.webp",
+        },
+        sameAs: [
+          "https://www.instagram.com/razam.design/",
+          "https://www.threads.com/@razam.design?igshid=NTc4MTIwNjQ2YQ%3D%3D",
+          "https://www.houzz.ru/pro/webuser-913531865",
+        ],
+      }),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqData,
+      }),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify(reviewSchema),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            name: t("home.service1"),
+            serviceType: "Interior and commercial space design",
+            provider: {
+              "@type": "Organization",
+              name: "Razam",
+            },
+            areaServed: {
+              "@type": "Place",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "FR",
+                addressRegion: "Côte d'Azur",
+              },
+            },
+            url: `https://razam.fr/${locale.value}/interiordesign`,
+          },
+          {
+            "@type": "Service",
+            name: t("home.service4"),
+            serviceType: "House and apartment renovation",
+            provider: {
+              "@type": "Organization",
+              name: "Razam",
+            },
+            areaServed: {
+              "@type": "Place",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "FR",
+                addressRegion: "Côte d'Azur",
+              },
+            },
+            url: `https://razam.fr/${locale.value}/houserenovation`,
+          },
+          {
+            "@type": "Service",
+            name: t("home.service5"),
+            serviceType: "Commercial space renovation",
+            provider: {
+              "@type": "Organization",
+              name: "Razam",
+            },
+            areaServed: {
+              "@type": "Place",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "FR",
+                addressRegion: "Côte d'Azur",
+              },
+            },
+            url: `https://razam.fr/${locale.value}/commercerenovation`,
+          },
+        ],
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify(projectsSchema)
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "mainEntity": blogSchema
+      })
+    }
+  ],
+});
 </script>
 
 <style lang="sass" scoped>
 .home
   position: relative
   height: 100vh
-  background: url('/images/home/main.webp') no-repeat center
+  background-image: url('/images/home/placeholder2.webp')
+  background-repeat: no-repeat
+  background-position-x: 0%
+  background-position-y: 0%
   background-size: cover
   display: flex
   align-items: center
   justify-content: center
+  @media (max-width: 1500px)
+    background-position-x: center
+  @media (max-width: 560px)
+    background-position-x: 38%
   .container
     position: relative
     flex-direction: column
@@ -279,7 +716,7 @@ useSeo('home');
         padding-top: 9%
         transform: translateX(40px)
       img
-        max-width: 100% 
+        max-width: 100%
         border-radius: 0 0 0 12px
         @media (max-width: 576px)
           display: none

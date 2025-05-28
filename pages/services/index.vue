@@ -182,6 +182,8 @@ const toggleIsOpen = () => {
 // ----------------- process -------------------------
 
 .process
+  background-color: $font-black
+  padding: 7rem 0
   .container
     flex-direction: column
     @media (max-width: 992px)
@@ -190,9 +192,11 @@ const toggleIsOpen = () => {
       padding: 0 30px
 
   h2
-    color: black
+    color: $font-white
     width: 100%
     margin-bottom: 4.5rem
+    span
+      color: $font-white
 
   .process-grid
     display: grid
@@ -209,7 +213,7 @@ const toggleIsOpen = () => {
       grid-column: 2
     &-count
       font-size: 4rem
-      color: $bgc-second
+      color: $font-grey
       font-weight: 500
       width: 100%
       border: 1px solid $font-grey
@@ -219,11 +223,11 @@ const toggleIsOpen = () => {
     &-title
       font-size: 2rem
       font-weight: 600
-      color: $font-black
+      color: $font-grey
       padding-left: 3.125rem
       padding-right: 1rem
     p
-      color: $font-grey
+      color: $font-white
       padding-left: 3.125rem
       padding-right: 1rem
   @media (max-width: 1500px)
@@ -253,7 +257,6 @@ const toggleIsOpen = () => {
   position: relative
   max-width: calc(100% - 200px)
   margin: 0 auto
-  background-color: $bgc-second
   padding: 6.75rem 14.9rem 5.1rem 14.9rem
   margin-top: 15rem
   margin-bottom: 15rem
@@ -269,35 +272,4 @@ const toggleIsOpen = () => {
     padding: 6.75rem 2rem 5.1rem 2rem
     margin-top: $mob-col-gap
     margin-bottom: $mob-col-gap
-  h2
-    color: $font-black
-    line-height: 7.5rem
-    @media (max-width: 1640px)
-      font-size: 5rem
-      line-height: 6rem
-    @media (max-width: 660px)
-      font-size: 4rem
-      line-height: 5rem
-    .decor
-      margin-left: 12rem
-      @media (max-width: 992px)
-        margin-left: 5rem
-    .arrow
-      margin-left: 40px
-      margin-top: 20px
-      @media (max-width: 660px)
-        margin-left: 10px
-      img
-        width: 4rem
-        @media (max-width: 660px)
-          width: 3rem
-  p
-    position: absolute
-    bottom: 1rem
-    left: 60rem
-    text-align: right
-    color: $font-grey
-    max-width: 17.25rem
-    @media (max-width: 992px)
-      display: none
 </style>

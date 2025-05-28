@@ -1,6 +1,6 @@
 import { publicAssetsURL } from "#internal/nuxt/paths";
-const slide2 = publicAssetsURL("/images/projects/previews/elemental-harmony.webp");
+const deImg = publicAssetsURL("/images/flags/Germany.png");
 export {
-  slide2 as default
+  deImg as default
 };
 //# sourceMappingURL=virtual_public56.mjs.map

@@ -27,42 +27,102 @@ const _sfc_main = {
     const config = useRuntimeConfig();
     const baseURL = config.public.siteUrl || "https://razam.fr";
     useHead({
+      script: [
+        {
+          type: "application/ld+json",
+          children: () => JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Razam",
+            url: baseURL,
+            logo: `${baseURL}/images/logo.webp`,
+            sameAs: [
+              "https://www.instagram.com/razam.design/?igsh=MWx5ZTd0amUwZnMxbA%3D%3D",
+              "https://www.threads.com/@razam.design?igshid=NTc4MTIwNjQ2YQ%3D%3D",
+              "https://www.houzz.ru/pro/webuser-913531865"
+            ]
+          })
+        },
+        {
+          type: "application/ld+json",
+          children: () => JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            url: baseURL,
+            name: "Razam",
+            inLanguage: locale.value || "fr",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${baseURL}/search?q={search_term_string}`,
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }
+      ],
       title: () => t("meta.common.title"),
       htmlAttrs: {
         lang: () => locale.value || "fr"
       },
       meta: [
-        { name: "description", content: () => t("meta.common.description").slice(0, 160) },
+        {
+          name: "description",
+          content: () => t("meta.common.description").slice(0, 160)
+        },
         { name: "keywords", content: () => t("meta.common.keywords") },
         // Open Graph
         { property: "og:title", content: () => t("meta.common.title") },
-        { property: "og:description", content: () => t("meta.common.description").slice(0, 160) },
+        {
+          property: "og:description",
+          content: () => t("meta.common.description").slice(0, 160)
+        },
         { property: "og:url", content: () => `${baseURL}${route.fullPath}` },
-        { property: "og:locale", content: () => {
-          switch (locale.value) {
-            case "en":
-              return "en_US";
-            case "ru":
-              return "ru_RU";
-            default:
-              return "fr_FR";
+        {
+          property: "og:locale",
+          content: () => {
+            switch (locale.value) {
+              case "en":
+                return "en_US";
+              case "ru":
+                return "ru_RU";
+              default:
+                return "fr_FR";
+            }
           }
-        } },
+        },
         { property: "og:image", content: `${baseURL}/images/logo.webp` },
         { property: "og:image:alt", content: () => t("meta.common.title") },
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: () => t("meta.common.title") },
-        { name: "twitter:description", content: () => t("meta.common.description").slice(0, 160) },
+        {
+          name: "twitter:description",
+          content: () => t("meta.common.description").slice(0, 160)
+        },
         { name: "twitter:image", content: `${baseURL}/images/logo.webp` },
         { name: "twitter:image:alt", content: () => t("meta.common.title") }
       ],
       link: [
         { rel: "canonical", href: `${baseURL}${route.fullPath}` },
-        { rel: "alternate", hreflang: "fr", href: `${baseURL}${localePath("index", "fr")}` },
-        { rel: "alternate", hreflang: "en", href: `${baseURL}${localePath("index", "en")}` },
-        { rel: "alternate", hreflang: "ru", href: `${baseURL}${localePath("index", "ru")}` },
-        { rel: "alternate", hreflang: "x-default", href: `${baseURL}${localePath("index", "fr")}` }
+        {
+          rel: "alternate",
+          hreflang: "fr",
+          href: `${baseURL}${localePath("index", "fr")}`
+        },
+        {
+          rel: "alternate",
+          hreflang: "en",
+          href: `${baseURL}${localePath("index", "en")}`
+        },
+        {
+          rel: "alternate",
+          hreflang: "ru",
+          href: `${baseURL}${localePath("index", "ru")}`
+        },
+        {
+          rel: "alternate",
+          hreflang: "x-default",
+          href: `${baseURL}${localePath("index", "fr")}`
+        }
       ]
     });
     return (_ctx, _push, _parent, _attrs) => {

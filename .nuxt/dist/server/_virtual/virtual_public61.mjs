@@ -1,6 +1,6 @@
 import { publicAssetsURL } from "#internal/nuxt/paths";
-const frImg = publicAssetsURL("/images/flags/France.png");
+const uaImg = publicAssetsURL("/images/flags/Ukraine.png");
 export {
-  frImg as default
+  uaImg as default
 };
 //# sourceMappingURL=virtual_public61.mjs.map

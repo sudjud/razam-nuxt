@@ -127,7 +127,7 @@ const enter = (el) => {
 const leave = (el) => {
   el.style.height = `${el.scrollHeight}px`;
   el.style.opacity = "1";
-  void el.offsetHeight; // Trigger reflow
+  void el.offsetHeight;
   el.style.transition = "height 0.3s ease, opacity 0.3s ease";
   el.style.height = "0";
   el.style.opacity = "0";

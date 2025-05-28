@@ -5,7 +5,9 @@
       <span v-reveal class="wow reveal-bb reveal-visible">{{
         $t("contact.contactUs")
       }}</span
-      ><span><img data-not-lazy src="/images/contact-us/arrow.svg" alt="" /></span>
+      ><span
+        ><img data-not-lazy src="/images/contact-us/devider 2.png" alt=""
+      /></span>
     </h1>
     <div class="image-wrapper">
       <img src="/images/contact-us/main.webp" alt="" />
@@ -36,7 +38,8 @@
         {{ $t("contact.form.phoneLabel")
         }}<span>{{ $t("contact.form.required") }}</span>
       </label>
-      <input type="tel" v-model="form.phone" required />
+      <!-- <input type="tel" v-model="form.phone" required /> -->
+      <PhoneInputComponent :contactPage="true" v-model="form.phone" ref="phoneInput"/>
 
       <label>
         {{ $t("contact.form.messageLabel")
@@ -45,8 +48,10 @@
       <input v-model="form.message" required />
 
       <button type="submit">
-        {{ $t("contact.form.submitButton")
-        }}<span><img data-not-lazy src="/images/contact-us/submit-arrow.svg" alt="" /></span>
+        {{loading ? $t("search.loading") : $t("contact.form.submitButton")
+        }}<span v-if="!loading"
+          > <img data-not-lazy src="/images/contact-us/submit-arrow.svg" alt=""
+        /></span>
       </button>
     </form>
   </section>
@@ -59,7 +64,9 @@
         <span v-reveal class="wow reveal-bb">{{
           $t("contact.info.titleFirst")
         }}</span>
-        <span><img data-not-lazy src="/images/contact-us/arrow.svg" alt="" /></span><br />
+        <span
+          ><img data-not-lazy src="/images/contact-us/devider 2.png" alt="" /></span
+        ><br />
         <span v-reveal class="wow reveal-bb">{{
           $t("contact.info.titleSecond")
         }}</span>
@@ -121,13 +128,34 @@
       </div>
     </div>
   </section>
+  <p :class="{ submit: submitted }" class="success-message">
+    {{ $t("calculator.success") }}
+  </p>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { useSeo } from "../composables/useSeo";
+import PhoneInputComponent from "../components/Tools/PhoneInputComponent.vue";
 
 useSeo("contact");
+
+const submitted = ref(false);
+const loading = ref(false);
+const phoneInput = ref(null);
+
+const handleSubmit = () => {
+  submitted.value = true;
+  form.value = {
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
+  setTimeout(() => {
+    submitted.value = false;
+  }, 3000);
+};
 
 const form = ref({
   name: "",
@@ -136,8 +164,39 @@ const form = ref({
   message: "",
 });
 
-const submitForm = () => {
-  console.log("Форма отправлена", form.value);
+const submitForm = async () => {
+  const endpoint = "https://formspree.io/f/xqaqwkyp";
+
+  const payload = {
+    name: form.value.name,
+    phone: form.value.phone,
+    email: form.value.email,
+    message: form.value.message,
+  };
+  loading.value = true;
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      handleSubmit();
+      loading.value = false;
+    } else {
+      console.error("Ошибка при отправке формы: ", result);
+      loading.value = false;
+    }
+  } catch (error) {
+    console.error("Ошибка запроса: ", error);
+    loading.value = false;
+  }
 };
 </script>
 
@@ -156,7 +215,7 @@ main
     span
       img
         width: 0.5em
-        margin-left: 2rem
+        position: absolute
   div img
     max-width: 100%
 
@@ -176,8 +235,6 @@ section.form
         font-size: 3.5rem
       @media (max-width: 500px)
         font-size: 2.5rem
-    button
-      background-color: transparent 
       img
         margin-left: 5px
 
@@ -212,7 +269,8 @@ section.info
         font-size: 4rem
       img
         margin-left: 0.2em
-        width: 0.6em
+        width: 0.5em
+        position: absolute
     .info-wrapper
       .field
         border-bottom: 1px solid $font-grey
@@ -285,8 +343,29 @@ form
     padding: 1rem 0
     border-radius: 30px
     border: 1px solid $font-grey
+    background-color: $bgc-main
     &:hover
-      background: $bgc-second
+      background-color: $bgc-second
+      transform: scale(1.04)
     img
       width: 1em
+
+.success-message
+  opacity: 0
+  position: fixed
+  z-index: 10000000
+  top: 10%
+  left: 50%
+  transform: translateX(-50%)
+  font-size: 1.5rem
+  font-weight: 600
+  padding: 2rem
+  background-color: $bgc-second
+  border-radius: 30px
+  transition-duration: 0.6s
+  color: green
+  text-align: center
+  &.submit
+    transition-duration: 0.6s
+    opacity: 1
 </style>
