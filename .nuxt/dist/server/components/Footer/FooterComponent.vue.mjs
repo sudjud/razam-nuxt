@@ -1,7 +1,7 @@
 import __nuxt_component_0 from "../../node_modules/nuxt/dist/app/components/nuxt-link.mjs";
 import { resolveDirective, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, createBlock, openBlock, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrInterpolate, ssrGetDirectiveProps, ssrRenderComponent } from "vue/server-renderer";
-import _imports_0 from "../../_virtual/virtual_public69.mjs";
+import _imports_0 from "../../_virtual/virtual_public75.mjs";
 import SocialMedias from "../Tools/SocialMedias.vue.mjs";
 import { useRoute } from "vue-router";
 import { useLocalePath } from "../../node_modules/_nuxtjs/i18n/dist/runtime/composables/index.mjs";

@@ -120,7 +120,7 @@
       </div>
     </div>
   </section>
-  <section v-if="false" class="team">
+  <!-- <section v-if="false" class="team">
     <div class="team-top">
       <div class="team-item">
         <div class="item-img">
@@ -178,7 +178,7 @@
         <p>{{ $t("about.team.member6_role") }}</p>
       </div>
     </div>
-  </section>
+  </section> -->
   <div class="contact">
     <div class="text">
       <NuxtLink :to="localePath('/contact')">

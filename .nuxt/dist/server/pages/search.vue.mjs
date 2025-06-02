@@ -57,23 +57,23 @@ const _sfc_main = {
     }, { immediate: true });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_BlogCardComponent = BlogCardComponent;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "search-page" }, _attrs))} data-v-895a9f05>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "search-page" }, _attrs))} data-v-7cdef83f>`);
       _push(ssrRenderComponent(Breadcrumbs, null, null, _parent));
-      _push(`<div data-v-895a9f05>`);
+      _push(`<div data-v-7cdef83f>`);
       if (categoryName.value) {
-        _push(`<h3 data-v-895a9f05>${ssrInterpolate(_ctx.$t("search.category"))}: ${ssrInterpolate(categoryName.value)}</h3>`);
+        _push(`<h3 data-v-7cdef83f>${ssrInterpolate(_ctx.$t("search.category"))}: ${ssrInterpolate(categoryName.value)}</h3>`);
       } else {
-        _push(`<h3 data-v-895a9f05>${ssrInterpolate(_ctx.$t("menu.search"))}: &#39;${ssrInterpolate(searchQuery.value)}&#39;</h3>`);
+        _push(`<h3 data-v-7cdef83f>${ssrInterpolate(_ctx.$t("menu.search"))}: &#39;${ssrInterpolate(searchQuery.value)}&#39;</h3>`);
       }
       _push(ssrRenderComponent(SearchComponent, null, null, _parent));
-      _push(`</div><h4 data-v-895a9f05>${ssrInterpolate(_ctx.$t("search.projects"))}</h4>`);
+      _push(`</div><h4 data-v-7cdef83f>${ssrInterpolate(_ctx.$t("search.projects"))}</h4>`);
       if (!filteredProjects.value.length && !findedProjects.value.length) {
-        _push(`<p class="nothing" data-v-895a9f05>${ssrInterpolate(_ctx.$t("search.nothing"))}</p>`);
+        _push(`<p class="nothing" data-v-7cdef83f>${ssrInterpolate(_ctx.$t("search.nothing"))}</p>`);
       } else {
         _push(`<!---->`);
       }
       if (filteredProjects.value.length || findedProjects.value.length) {
-        _push(`<div class="projects" data-v-895a9f05><!--[-->`);
+        _push(`<div class="projects" data-v-7cdef83f><!--[-->`);
         ssrRenderList(searchQuery.value ? findedProjects.value : filteredProjects.value, (project) => {
           _push(ssrRenderComponent(ProjectCardComponent, mergeProps({
             key: project.slug,
@@ -84,14 +84,14 @@ const _sfc_main = {
       } else {
         _push(`<!---->`);
       }
-      _push(`<div class="devider" data-v-895a9f05></div><h4 data-v-895a9f05>${ssrInterpolate(_ctx.$t("search.articles"))}</h4>`);
+      _push(`<div class="devider" data-v-7cdef83f></div><h4 data-v-7cdef83f>${ssrInterpolate(_ctx.$t("search.articles"))}</h4>`);
       if (!filteredArticles.value.length && !findedArticles.value.length) {
-        _push(`<p class="nothing" data-v-895a9f05>${ssrInterpolate(_ctx.$t("search.nothing"))}</p>`);
+        _push(`<p class="nothing" data-v-7cdef83f>${ssrInterpolate(_ctx.$t("search.nothing"))}</p>`);
       } else {
         _push(`<!---->`);
       }
       if (filteredArticles.value.length || findedArticles.value.length) {
-        _push(`<div class="articles" data-v-895a9f05><!--[-->`);
+        _push(`<div class="articles" data-v-7cdef83f><!--[-->`);
         ssrRenderList(searchQuery.value ? findedArticles.value : filteredArticles.value, (article) => {
           _push(ssrRenderComponent(_component_BlogCardComponent, mergeProps({
             key: article.slug,
@@ -112,7 +112,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/search.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const search = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-895a9f05"]]);
+const search = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7cdef83f"]]);
 export {
   search as default
 };

@@ -1,8 +1,8 @@
 import __nuxt_component_0 from "../../node_modules/nuxt/dist/app/components/nuxt-link.mjs";
 import { ref, mergeProps, unref, withCtx, createVNode, createTextVNode, toDisplayString, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderAttr, ssrInterpolate } from "vue/server-renderer";
-import _imports_0 from "../../_virtual/virtual_public68.mjs";
-import _imports_0$1 from "../../_virtual/virtual_public69.mjs";
+import _imports_0 from "../../_virtual/virtual_public74.mjs";
+import _imports_0$1 from "../../_virtual/virtual_public75.mjs";
 import { useRoute } from "vue-router";
 import LangSwitchComponent from "../Tools/LangSwitchComponent.vue.mjs";
 import SocialMedias from "../Tools/SocialMedias.vue.mjs";

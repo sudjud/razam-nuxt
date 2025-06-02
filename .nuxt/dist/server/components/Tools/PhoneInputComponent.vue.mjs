@@ -1,13 +1,13 @@
 import { ref, computed, watch, resolveDirective, mergeProps, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderAttr, ssrRenderStyle, ssrGetDirectiveProps, ssrRenderList } from "vue/server-renderer";
 import _imports_0 from "../../public/images/flags/arrow.png.mjs";
-import frImg from "../../_virtual/virtual_public55.mjs";
-import deImg from "../../_virtual/virtual_public56.mjs";
-import esImg from "../../_virtual/virtual_public57.mjs";
-import itImg from "../../_virtual/virtual_public58.mjs";
-import gbImg from "../../_virtual/virtual_public59.mjs";
-import ruImg from "../../_virtual/virtual_public60.mjs";
-import uaImg from "../../_virtual/virtual_public61.mjs";
+import frImg from "../../_virtual/virtual_public61.mjs";
+import deImg from "../../_virtual/virtual_public62.mjs";
+import esImg from "../../_virtual/virtual_public63.mjs";
+import itImg from "../../_virtual/virtual_public64.mjs";
+import gbImg from "../../_virtual/virtual_public65.mjs";
+import ruImg from "../../_virtual/virtual_public66.mjs";
+import uaImg from "../../_virtual/virtual_public67.mjs";
 import { useHead } from "../../node_modules/nuxt/dist/head/runtime/composables/v3.mjs";
 /* empty css                          */
 import _export_sfc from "../../_virtual/_plugin-vue_export-helper.mjs";

@@ -1,0 +1,1 @@
+{"file":"virtual_public75.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,kBAAkB;","names":[],"sources":["../../../../virtual:public?%2Flogo-white.webp"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/logo-white.webp\")"],"version":3}

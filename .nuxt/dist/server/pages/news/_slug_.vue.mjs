@@ -39,24 +39,24 @@ const _sfc_main = {
       const _directive_reveal = resolveDirective("reveal");
       _push(`<!--[-->`);
       if (!loading.value && article.value) {
-        _push(`<main class="article" data-v-9fb0ff9d><div class="left" data-v-9fb0ff9d>`);
+        _push(`<main class="article" data-v-89de8759><div class="left" data-v-89de8759>`);
         _push(ssrRenderComponent(Breadcrumbs, {
           reservedLastCrumb: _ctx.$t(article.value.name)
         }, null, _parent));
-        _push(`<h4 data-v-9fb0ff9d>${ssrInterpolate(_ctx.$t(((_a = article.value) == null ? void 0 : _a.category) || "blog.articles.unknownCategory"))}</h4>`);
+        _push(`<h4 data-v-89de8759>${ssrInterpolate(_ctx.$t(((_a = article.value) == null ? void 0 : _a.category) || "blog.articles.unknownCategory"))}</h4>`);
         _push(ssrRenderComponent(SearchComponent, null, null, _parent));
-        _push(`</div><div class="right" data-v-9fb0ff9d><h1 data-v-9fb0ff9d><span${ssrRenderAttrs(mergeProps({ class: "reveal-bb reveal-visible" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-9fb0ff9d>${ssrInterpolate(_ctx.$t(((_b = article.value) == null ? void 0 : _b.name) || "blog.articles.unknown"))}</span><div class="divider" data-v-9fb0ff9d></div><div class="details" data-v-9fb0ff9d>`);
+        _push(`</div><div class="right" data-v-89de8759><h1 data-v-89de8759><span${ssrRenderAttrs(mergeProps({ class: "reveal-bb reveal-visible" }, ssrGetDirectiveProps(_ctx, _directive_reveal)))} data-v-89de8759>${ssrInterpolate(_ctx.$t(((_b = article.value) == null ? void 0 : _b.name) || "blog.articles.unknown"))}</span><div class="divider" data-v-89de8759></div><div class="details" data-v-89de8759>`);
         if ((_c = article.value) == null ? void 0 : _c.by) {
-          _push(`<p data-v-9fb0ff9d>By ${ssrInterpolate(article.value.by)}</p>`);
+          _push(`<p data-v-89de8759>By ${ssrInterpolate(article.value.by)}</p>`);
         } else {
           _push(`<!---->`);
         }
         if ((_d = article.value) == null ? void 0 : _d.date) {
-          _push(`<p data-v-9fb0ff9d>${ssrInterpolate(article.value.date)}</p>`);
+          _push(`<p data-v-89de8759>${ssrInterpolate(article.value.date)}</p>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`</div></h1></div><aside data-v-9fb0ff9d><div class="categories" data-v-9fb0ff9d><h4 data-v-9fb0ff9d>${ssrInterpolate(_ctx.$t("search.category"))}</h4><ul data-v-9fb0ff9d><li data-v-9fb0ff9d>`);
+        _push(`</div></h1></div><aside data-v-89de8759><div class="categories" data-v-89de8759><h4 data-v-89de8759>${ssrInterpolate(_ctx.$t("search.category"))}</h4><ul data-v-89de8759><li data-v-89de8759>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: unref(localePath)(`/search?cat=${_ctx.$t("blog.articles.categories.architecture")}`)
         }, {
@@ -71,7 +71,7 @@ const _sfc_main = {
           }),
           _: 1
         }, _parent));
-        _push(`</li><li data-v-9fb0ff9d>`);
+        _push(`</li><li data-v-89de8759>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: unref(localePath)(`/search?cat=${_ctx.$t("blog.articles.categories.interiorDesign")}`)
         }, {
@@ -86,7 +86,7 @@ const _sfc_main = {
           }),
           _: 1
         }, _parent));
-        _push(`</li><li data-v-9fb0ff9d>`);
+        _push(`</li><li data-v-89de8759>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: unref(localePath)(`/search?cat=${_ctx.$t("blog.articles.categories.construction")}`)
         }, {
@@ -101,7 +101,7 @@ const _sfc_main = {
           }),
           _: 1
         }, _parent));
-        _push(`</li><li data-v-9fb0ff9d>`);
+        _push(`</li><li data-v-89de8759>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: unref(localePath)(`/search?cat=${_ctx.$t("blog.articles.categories.renovation")}`)
         }, {
@@ -116,7 +116,7 @@ const _sfc_main = {
           }),
           _: 1
         }, _parent));
-        _push(`</li><li data-v-9fb0ff9d>`);
+        _push(`</li><li data-v-89de8759>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: unref(localePath)(`/search?cat=${_ctx.$t("blog.articles.categories.landscapeDesign")}`)
         }, {
@@ -131,14 +131,14 @@ const _sfc_main = {
           }),
           _: 1
         }, _parent));
-        _push(`</li></ul></div></aside><section class="content" data-v-9fb0ff9d>`);
+        _push(`</li></ul></div></aside><section class="content" data-v-89de8759>`);
         ssrRenderVNode(_push, createVNode(resolveDynamicComponent(currentArticleComponent.value), null, null), _parent);
         _push(`</section></main>`);
       } else {
         _push(`<!---->`);
       }
       if (loading.value) {
-        _push(`<div class="loading" data-v-9fb0ff9d><p data-v-9fb0ff9d>${ssrInterpolate(_ctx.$t("search.loading"))}...</p></div>`);
+        _push(`<div class="loading" data-v-89de8759><p data-v-89de8759>${ssrInterpolate(_ctx.$t("search.loading"))}...</p></div>`);
       } else {
         _push(`<!---->`);
       }
@@ -152,7 +152,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/news/[slug].vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const _slug_ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-9fb0ff9d"]]);
+const _slug_ = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-89de8759"]]);
 export {
   _slug_ as default
 };

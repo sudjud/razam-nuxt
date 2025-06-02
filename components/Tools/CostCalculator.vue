@@ -166,7 +166,7 @@ const objectTypes = {
 };
 
 const submitForm = async () => {
-  const endpoint = "https://formspree.io/f/mnndzqeq";
+  const endpoint = "https://formspree.io/f/mwpbklqq";
 
   const payload = {
     name: form.value.name,

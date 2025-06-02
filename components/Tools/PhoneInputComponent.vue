@@ -12,7 +12,7 @@
           class="phone-input__option"
           @click.stop="selectCountry(code)"
         >
-          <img :src="country.flag" alt="" />
+          <img data-not-lazy :src="country.flag" alt="" />
         </div>
       </div>
     </div>

@@ -165,7 +165,7 @@ const form = ref({
 });
 
 const submitForm = async () => {
-  const endpoint = "https://formspree.io/f/xqaqwkyp";
+  const endpoint = "https://formspree.io/f/mrbkgpla";
 
   const payload = {
     name: form.value.name,

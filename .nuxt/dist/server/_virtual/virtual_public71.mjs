@@ -1,6 +1,6 @@
 import { publicAssetsURL } from "#internal/nuxt/paths";
-const _imports_1 = publicAssetsURL("/images/loader/devider.webp");
+const slide4 = publicAssetsURL("/images/projects/previews/natural-essence.webp");
 export {
-  _imports_1 as default
+  slide4 as default
 };
 //# sourceMappingURL=virtual_public71.mjs.map

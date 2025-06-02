@@ -158,6 +158,10 @@ import { useSeo } from "../composables/useSeo";
 const isOpen = ref(false);
 const { t, locale } = useI18n();
 
+const baseUrl = computed(() =>
+  locale.value === 'fr' ? 'https://razam.fr/' : `https://razam.fr/${locale.value}/`
+)
+
 const toggleIsOpen = () => {
   isOpen.value = !isOpen.value;
 };
@@ -265,7 +269,7 @@ const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Razam",
-  url: `https://razam.fr/${locale.value}/`,
+  url: baseUrl.value,
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
@@ -283,7 +287,7 @@ const reviewSchema = {
       name: t(review.name),
     },
     reviewBody: t(review.text),
-    datePublishied: review.datePublishied
+    datePublished: review.datePublishied
   })),
 };
 
@@ -307,7 +311,7 @@ const projectsSchema = {
       name: "Chambre d'enfant",
       description: t("portfolio.projects.chambreEnfant.desc"),
       image: "https://razam.fr/images/projects/previews/chambre-enfant.webp",
-      url: `https://razam.fr/${locale.value}/portfolio/chambre-enfant`,
+      url: `${baseUrl.value}portfolio/chambre-enfant`,
       creator: {
         "@type": "Organization",
         name: "Razam",
@@ -318,7 +322,7 @@ const projectsSchema = {
       name: "Elemental harmony",
       description: t("portfolio.projects.elementalHarmony.desc"),
       image: "https://razam.fr/images/projects/previews/elemental-harmony.webp",
-      url: `https://razam.fr/${locale.value}/portfolio/elemental-harmony`,
+      url: `${baseUrl.value}portfolio/elemental-harmony`,
       creator: {
         "@type": "Organization",
         name: "Razam",
@@ -329,7 +333,7 @@ const projectsSchema = {
       name: "Modern vista",
       description: t("portfolio.projects.modernVista.desc"),
       image: "https://razam.fr/images/projects/previews/modern-vista.webp",
-      url: `https://razam.fr/${locale.value}/portfolio/modern-vista`,
+      url: `${baseUrl.value}portfolio/modern-vista`,
       creator: {
         "@type": "Organization",
         name: "Razam",
@@ -340,7 +344,7 @@ const projectsSchema = {
       name: "Natural essence",
       description: t("portfolio.projects.naturalEssence.desc"),
       image: "https://razam.fr/images/projects/previews/natural-essence.webp",
-      url: `https://razam.fr/${locale.value}/portfolio/natural-essence`,
+      url: `${baseUrl.value}portfolio/natural-essence`,
       creator: {
         "@type": "Organization",
         name: "Razam",
@@ -351,7 +355,7 @@ const projectsSchema = {
       name: "Serene lines",
       description: t("portfolio.projects.sereneLines.desc"),
       image: "https://razam.fr/images/projects/previews/serene-lines.webp",
-      url: `https://razam.fr/${locale.value}/portfolio/serene-lines`,
+      url: `${baseUrl.value}portfolio/serene-lines`,
       creator: {
         "@type": "Organization",
         name: "Razam",
@@ -362,7 +366,7 @@ const projectsSchema = {
       name: "Urban grace",
       description: t("portfolio.projects.urbanGrace.desc"),
       image: "https://razam.fr/images/projects/previews/urban-grace.webp",
-      url: `https://razam.fr/${locale.value}/portfolio/urban-grace`,
+      url: `${baseUrl.value}portfolio/urban-grace`,
       creator: {
         "@type": "Organization",
         name: "Razam",
@@ -425,7 +429,7 @@ const blogSchema = newsSchema.map(post => ({
   },
   "datePublished": '2024-11-02',
   "articleSection": t(post.category),
-  "url": `https://razam.fr/${locale.value}/news/${post.slug}`
+  "url": `${baseUrl.value}news/${post.slug}`
 }))
 
 useSeo("home");
@@ -437,7 +441,7 @@ useHead({
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: t("meta.common.title"),
-        url: `https://razam.fr/${locale.value}/`,
+        url: baseUrl.value,
         description: t("meta.common.description"),
         inLanguage: locale.value,
         "mainEntity": [
@@ -475,7 +479,7 @@ useHead({
         publisher: {
           "@type": "Organization",
           name: "Razam",
-          url: `https://razam.fr/${locale.value}/`,
+          url: baseUrl.value,
           logo: {
             "@type": "ImageObject",
             url: "https://razam.fr/images/logo.webp",
@@ -489,7 +493,7 @@ useHead({
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "Razam",
-        url: `https://razam.fr/${locale.value}/`,
+        url: baseUrl.value,
         logo: {
           "@type": "ImageObject",
           url: "https://razam.fr/images/logo.webp",
@@ -521,7 +525,7 @@ useHead({
           {
             "@type": "Service",
             name: t("home.service1"),
-            serviceType: "Interior and commercial space design",
+            serviceType: t("home.service1"),
             provider: {
               "@type": "Organization",
               name: "Razam",
@@ -534,12 +538,12 @@ useHead({
                 addressRegion: "Côte d'Azur",
               },
             },
-            url: `https://razam.fr/${locale.value}/interiordesign`,
+            url: `${baseUrl.value}services/interiordesign`,
           },
           {
             "@type": "Service",
             name: t("home.service4"),
-            serviceType: "House and apartment renovation",
+            serviceType: t("home.service4"),
             provider: {
               "@type": "Organization",
               name: "Razam",
@@ -552,12 +556,12 @@ useHead({
                 addressRegion: "Côte d'Azur",
               },
             },
-            url: `https://razam.fr/${locale.value}/houserenovation`,
+            url: `${baseUrl.value}services/houserenovation`,
           },
           {
             "@type": "Service",
             name: t("home.service5"),
-            serviceType: "Commercial space renovation",
+            serviceType: t("home.service5"),
             provider: {
               "@type": "Organization",
               name: "Razam",
@@ -570,7 +574,7 @@ useHead({
                 addressRegion: "Côte d'Azur",
               },
             },
-            url: `https://razam.fr/${locale.value}/commercerenovation`,
+            url: `${baseUrl.value}services/commercerenovation`,
           },
         ],
       }),

@@ -13,73 +13,85 @@ const _sfc_main = defineComponent({
         photo: void 0,
         title: "",
         text: "home.reviews.1.text",
-        name: "home.reviews.1.name"
+        name: "home.reviews.1.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.2.text",
-        name: "home.reviews.2.name"
+        name: "home.reviews.2.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.3.text",
-        name: "home.reviews.3.name"
+        name: "home.reviews.3.name",
+        stars: 4
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.4.text",
-        name: "home.reviews.4.name"
+        name: "home.reviews.4.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.5.text",
-        name: "home.reviews.5.name"
+        name: "home.reviews.5.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.6.text",
-        name: "home.reviews.6.name"
+        name: "home.reviews.6.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.7.text",
-        name: "home.reviews.7.name"
+        name: "home.reviews.7.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.8.text",
-        name: "home.reviews.8.name"
+        name: "home.reviews.8.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.9.text",
-        name: "home.reviews.9.name"
+        name: "home.reviews.9.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.10.text",
-        name: "home.reviews.10.name"
+        name: "home.reviews.10.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.11.text",
-        name: "home.reviews.11.name"
+        name: "home.reviews.11.name",
+        stars: 5
       },
       {
         photo: void 0,
         title: "",
         text: "home.reviews.12.text",
-        name: "home.reviews.12.name"
+        name: "home.reviews.12.name",
+        stars: 5
       }
     ];
     const swiper = ref(null);

@@ -1,7 +1,7 @@
 import __nuxt_component_0 from "../../node_modules/nuxt/dist/app/components/nuxt-link.mjs";
 import { withAsyncContext, computed, ref, resolveDirective, mergeProps, unref, withCtx, createTextVNode, toDisplayString, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderClass, ssrInterpolate, ssrRenderList, ssrGetDirectiveProps, ssrRenderComponent, ssrRenderAttr } from "vue/server-renderer";
-import _imports_0 from "../../_virtual/virtual_public51.mjs";
+import _imports_0 from "../../_virtual/virtual_public57.mjs";
 import { useRouter } from "vue-router";
 import { useAsyncData } from "../../node_modules/nuxt/dist/app/composables/asyncData.mjs";
 import { useLocalePath } from "../../node_modules/_nuxtjs/i18n/dist/runtime/composables/index.mjs";

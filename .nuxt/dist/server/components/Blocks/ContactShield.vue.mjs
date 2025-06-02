@@ -1,8 +1,8 @@
 import __nuxt_component_0 from "../../node_modules/nuxt/dist/app/components/nuxt-link.mjs";
 import { resolveDirective, mergeProps, unref, withCtx, createVNode, toDisplayString, createTextVNode, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrGetDirectiveProps } from "vue/server-renderer";
-import _imports_0 from "../../_virtual/virtual_public49.mjs";
-import _imports_1 from "../../_virtual/virtual_public52.mjs";
+import _imports_0 from "../../_virtual/virtual_public55.mjs";
+import _imports_1 from "../../_virtual/virtual_public58.mjs";
 import { useLocalePath } from "../../node_modules/_nuxtjs/i18n/dist/runtime/composables/index.mjs";
 /* empty css                    */
 import _export_sfc from "../../_virtual/_plugin-vue_export-helper.mjs";

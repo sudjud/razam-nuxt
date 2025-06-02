@@ -10,7 +10,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_NuxtLink = __nuxt_component_0;
   const _directive_lazy_load = resolveDirective("lazy-load");
   let _temp0;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "slider" }, _attrs))} data-v-d2e71302><div class="container" data-v-d2e71302><div class="slider-buttons" data-v-d2e71302><button class="nav-button left" data-v-d2e71302><span class="arrow" data-v-d2e71302>←</span></button><button class="nav-button right" data-v-d2e71302><span class="arrow" data-v-d2e71302>→</span></button></div><div class="slider-container" data-v-d2e71302>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "slider" }, _attrs))} data-v-c279de09><div class="container" data-v-c279de09><div class="slider-buttons" data-v-c279de09><button class="nav-button left" data-v-c279de09><span class="arrow" data-v-c279de09>←</span></button><button class="nav-button right" data-v-c279de09><span class="arrow" data-v-c279de09>→</span></button></div><div class="slider-container" data-v-c279de09>`);
   _push(ssrRenderComponent(_component_swiper, {
     ref: "swiper",
     breakpoints: _ctx.breakpoints,
@@ -30,7 +30,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
           _push2(ssrRenderComponent(_component_swiper_slide, { key: index }, {
             default: withCtx((_2, _push3, _parent3, _scopeId2) => {
               if (_push3) {
-                _push3(`<div class="slide-content" data-v-d2e71302${_scopeId2}>`);
+                _push3(`<div class="slide-content" data-v-c279de09${_scopeId2}>`);
                 _push3(ssrRenderComponent(_component_NuxtLink, {
                   to: _ctx.localePath(`/portfolio/${slide.slug}`)
                 }, {
@@ -39,7 +39,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
                       _push4(`<img${ssrRenderAttrs(_temp0 = mergeProps({
                         "data-src": slide.image,
                         alt: slide.title
-                      }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-d2e71302${_scopeId3}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<h3 data-v-d2e71302${_scopeId3}>${ssrInterpolate(slide.title)}</h3><p data-v-d2e71302${_scopeId3}>${ssrInterpolate(_ctx.descFormatter(_ctx.$t(slide.description)))}</p>`);
+                      }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-c279de09${_scopeId3}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}<h3 data-v-c279de09${_scopeId3}>${ssrInterpolate(slide.title)}</h3><p data-v-c279de09${_scopeId3}>${ssrInterpolate(_ctx.descFormatter(_ctx.$t(slide.description)))}</p>`);
                     } else {
                       return [
                         withDirectives(createVNode("img", {
@@ -121,7 +121,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Swipers/ProjectsSwiperComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const ProjectsSwiperComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-d2e71302"]]);
+const ProjectsSwiperComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-c279de09"]]);
 export {
   ProjectsSwiperComponent as default
 };

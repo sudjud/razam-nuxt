@@ -36,9 +36,42 @@ const _sfc_main = {
             name: "Razam",
             url: baseURL,
             logo: `${baseURL}/images/logo.webp`,
+            description: t("meta.common.description"),
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "305 Av. Georges Pompidou",
+              "addressLocality": "Vallauris",
+              "postalCode": "06220",
+              "addressCountry": "FR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 43.57321603486977,
+              "longitude": 7.080337514280342
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+33-6-64-36-12-20",
+              "contactType": "customer support",
+              "availableLanguage": ["French", "Russian", "English"]
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "09:00",
+              "closes": "19:00"
+            },
             sameAs: [
-              "https://www.instagram.com/razam.design/?igsh=MWx5ZTd0amUwZnMxbA%3D%3D",
-              "https://www.threads.com/@razam.design?igshid=NTc4MTIwNjQ2YQ%3D%3D",
+              "https://www.instagram.com/razam.design/",
+              "https://www.threads.com/@razam.design/",
               "https://www.houzz.ru/pro/webuser-913531865"
             ]
           })

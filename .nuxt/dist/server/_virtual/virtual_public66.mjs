@@ -1,6 +1,6 @@
 import { publicAssetsURL } from "#internal/nuxt/paths";
-const slide5 = publicAssetsURL("/images/projects/previews/serene-lines.webp");
+const ruImg = publicAssetsURL("/images/flags/Russia.png");
 export {
-  slide5 as default
+  ruImg as default
 };
 //# sourceMappingURL=virtual_public66.mjs.map

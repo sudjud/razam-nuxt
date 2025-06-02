@@ -1,6 +1,6 @@
 import { publicAssetsURL } from "#internal/nuxt/paths";
-const _imports_1 = publicAssetsURL("/images/services/house-renovation/shield.webp");
+const news5 = publicAssetsURL("/images/blog/previews/bedroom.webp");
 export {
-  _imports_1 as default
+  news5 as default
 };
 //# sourceMappingURL=virtual_public53.mjs.map

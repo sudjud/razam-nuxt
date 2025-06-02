@@ -1,6 +1,6 @@
 import { publicAssetsURL } from "#internal/nuxt/paths";
-const esImg = publicAssetsURL("/images/flags/Spain.png");
+const _imports_0 = publicAssetsURL("/images/about/diag-arrow.svg");
 export {
-  esImg as default
+  _imports_0 as default
 };
 //# sourceMappingURL=virtual_public57.mjs.map

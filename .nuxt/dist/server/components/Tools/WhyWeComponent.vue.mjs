@@ -39,12 +39,12 @@ const _sfc_main = {
     return (_ctx, _push, _parent, _attrs) => {
       const _directive_lazy_load = resolveDirective("lazy-load");
       let _temp0;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "question-block" }, _attrs))} data-v-56c487c4><!--[-->`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "question-block" }, _attrs))} data-v-4480b4a3><!--[-->`);
       ssrRenderList(questions, (item, index) => {
-        _push(`<div class="${ssrRenderClass([{ open: item.open }, "question-item"])}" data-v-56c487c4><div class="question-number-wrapper" data-v-56c487c4><div class="number" data-v-56c487c4>0${ssrInterpolate(index)}</div><div class="question" data-v-56c487c4><h4 data-v-56c487c4>${ssrInterpolate(_ctx.$t(item.question))}</h4></div><div class="filler" data-v-56c487c4></div></div><div class="answer-wrapper" style="${ssrRenderStyle(item.open ? null : { display: "none" })}" data-v-56c487c4><p class="answer" data-v-56c487c4>${ssrInterpolate(_ctx.$t(item.answer))}</p><div class="filler" data-v-56c487c4></div><div class="answer-image" data-v-56c487c4><img${ssrRenderAttrs(_temp0 = mergeProps({
+        _push(`<div class="${ssrRenderClass([{ open: item.open }, "question-item"])}" data-v-4480b4a3><div class="question-number-wrapper" data-v-4480b4a3><div class="number" data-v-4480b4a3>0${ssrInterpolate(index)}</div><div class="question" data-v-4480b4a3><h4 data-v-4480b4a3>${ssrInterpolate(_ctx.$t(item.question))}</h4></div><div class="filler" data-v-4480b4a3></div></div><div class="answer-wrapper" style="${ssrRenderStyle(item.open ? null : { display: "none" })}" data-v-4480b4a3><p class="answer" data-v-4480b4a3>${ssrInterpolate(_ctx.$t(item.answer))}</p><div class="filler" data-v-4480b4a3></div><div class="answer-image" data-v-4480b4a3><img${ssrRenderAttrs(_temp0 = mergeProps({
           "data-src": item.image,
           alt: ""
-        }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-56c487c4>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}</div></div></div>`);
+        }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-4480b4a3>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}</div></div></div>`);
       });
       _push(`<!--]--></div>`);
     };
@@ -56,7 +56,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Tools/WhyWeComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const WhyWeComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-56c487c4"]]);
+const WhyWeComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-4480b4a3"]]);
 export {
   WhyWeComponent as default
 };

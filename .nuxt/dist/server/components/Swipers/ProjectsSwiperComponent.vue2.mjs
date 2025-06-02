@@ -3,12 +3,12 @@ import { SwiperSlide, Swiper } from "swiper/vue";
 import SwiperCore from "swiper";
 /* empty css                                           */
 import { Navigation, Autoplay } from "swiper/modules";
-import slide1 from "../../_virtual/virtual_public62.mjs";
-import slide2 from "../../_virtual/virtual_public63.mjs";
-import slide3 from "../../_virtual/virtual_public64.mjs";
-import slide4 from "../../_virtual/virtual_public65.mjs";
-import slide5 from "../../_virtual/virtual_public66.mjs";
-import slide6 from "../../_virtual/virtual_public67.mjs";
+import slide1 from "../../_virtual/virtual_public68.mjs";
+import slide2 from "../../_virtual/virtual_public69.mjs";
+import slide3 from "../../_virtual/virtual_public70.mjs";
+import slide4 from "../../_virtual/virtual_public71.mjs";
+import slide5 from "../../_virtual/virtual_public72.mjs";
+import slide6 from "../../_virtual/virtual_public73.mjs";
 import { useLocalePath } from "../../node_modules/_nuxtjs/i18n/dist/runtime/composables/index.mjs";
 SwiperCore.use([Navigation, Autoplay]);
 const _sfc_main = defineComponent({
@@ -24,7 +24,7 @@ const _sfc_main = defineComponent({
       },
       {
         title: "Elemental harmony",
-        description: "portfolio.projects.chambreEnfant.desc",
+        description: "portfolio.projects.elementalHarmony.desc",
         image: slide2,
         slug: "elemental-harmony"
       },

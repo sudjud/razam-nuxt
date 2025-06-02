@@ -4,8 +4,12 @@ import { ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttrs, ssrG
 /* empty css                                    */
 /* empty css                                                */
 import { Swiper, SwiperSlide } from "swiper/vue";
-import news2 from "../../_virtual/virtual_public47.mjs";
-import news4 from "../../_virtual/virtual_public48.mjs";
+import news1 from "../../_virtual/virtual_public49.mjs";
+import news2 from "../../_virtual/virtual_public50.mjs";
+import news3 from "../../_virtual/virtual_public51.mjs";
+import news4 from "../../_virtual/virtual_public52.mjs";
+import news5 from "../../_virtual/virtual_public53.mjs";
+import news6 from "../../_virtual/virtual_public54.mjs";
 import { useLocalePath } from "../../node_modules/_nuxtjs/i18n/dist/runtime/composables/index.mjs";
 /* empty css                          */
 import _export_sfc from "../../_virtual/_plugin-vue_export-helper.mjs";
@@ -16,36 +20,52 @@ const _sfc_main = {
     const localePath = useLocalePath();
     const news = ref([
       {
-        photo: news4,
+        photo: news1,
         category: "home.news.category1",
-        title: "home.news.title1",
+        title: "blog.articles.lights.name",
         by: "home.news.by1",
         date: "home.news.date1",
-        slug: "materials"
+        slug: "lights"
       },
       {
         photo: news2,
         category: "home.news.category2",
-        title: "home.news.title2",
+        title: "blog.articles.ideas.name",
         by: "home.news.by2",
         date: "home.news.date2",
-        slug: "lights"
-      },
-      {
-        photo: news4,
-        category: "home.news.category3",
-        title: "home.news.title3",
-        by: "home.news.by3",
-        date: "home.news.date3",
         slug: "ideas"
       },
       {
-        photo: news2,
+        photo: news3,
+        category: "home.news.category3",
+        title: "blog.articles.trends.name",
+        by: "home.news.by3",
+        date: "home.news.date3",
+        slug: "trends"
+      },
+      {
+        photo: news4,
         category: "home.news.category4",
-        title: "home.news.title4",
+        title: "blog.articles.materials.name",
         by: "home.news.by4",
         date: "home.news.date4",
-        slug: "trends"
+        slug: "materials"
+      },
+      {
+        photo: news5,
+        category: "home.news.category4",
+        title: "blog.articles.bedroom.name",
+        by: "home.news.by4",
+        date: "home.news.date4",
+        slug: "bedroom"
+      },
+      {
+        photo: news6,
+        category: "home.news.category4",
+        title: "blog.articles.minimalism.name",
+        by: "home.news.by4",
+        date: "home.news.date4",
+        slug: "minimalism"
       }
     ]);
     const breakpoints = ref({
@@ -118,10 +138,10 @@ const _sfc_main = {
                     }, {
                       default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                         if (_push4) {
-                          _push4(`<article data-v-5e27555d${_scopeId3}><h5 data-v-5e27555d${_scopeId3}>${ssrInterpolate(_ctx.$t(item.category))}</h5><h4 data-v-5e27555d${_scopeId3}>${ssrInterpolate(_ctx.$t(item.title))}</h4><div class="meta" data-v-5e27555d${_scopeId3}><span data-v-5e27555d${_scopeId3}>by ${ssrInterpolate(_ctx.$t(item.by))}</span><span data-v-5e27555d${_scopeId3}>${ssrInterpolate(_ctx.$t(item.date))}</span></div><div class="image" data-v-5e27555d${_scopeId3}><img${ssrRenderAttrs(_temp0 = mergeProps({
+                          _push4(`<article data-v-1e1cfa23${_scopeId3}><h5 data-v-1e1cfa23${_scopeId3}>${ssrInterpolate(_ctx.$t(item.category))}</h5><h4 data-v-1e1cfa23${_scopeId3}>${ssrInterpolate(_ctx.$t(item.title))}</h4><div class="meta" data-v-1e1cfa23${_scopeId3}><span data-v-1e1cfa23${_scopeId3}>by ${ssrInterpolate(_ctx.$t(item.by))}</span><span data-v-1e1cfa23${_scopeId3}>${ssrInterpolate(_ctx.$t(item.date))}</span></div><div class="image" data-v-1e1cfa23${_scopeId3}><img${ssrRenderAttrs(_temp0 = mergeProps({
                             "data-src": item.photo,
                             alt: ""
-                          }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-5e27555d${_scopeId3}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}</div></article>`);
+                          }, ssrGetDirectiveProps(_ctx, _directive_lazy_load)))} data-v-1e1cfa23${_scopeId3}>${"textContent" in _temp0 ? ssrInterpolate(_temp0.textContent) : _temp0.innerHTML ?? ""}</div></article>`);
                         } else {
                           return [
                             createVNode("article", null, [
@@ -176,7 +196,7 @@ const _sfc_main = {
                 _: 2
               }, _parent2, _scopeId));
             });
-            _push2(`<!--]--><div class="slider-buttons" data-v-5e27555d${_scopeId}><button class="nav-button left" data-v-5e27555d${_scopeId}><div class="arrow" data-v-5e27555d${_scopeId}><svg data-name="1-Arrow Up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" data-not-lazy data-v-5e27555d${_scopeId}><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" data-v-5e27555d${_scopeId}></path></svg></div></button><button class="nav-button right" data-v-5e27555d${_scopeId}><div class="arrow" data-v-5e27555d${_scopeId}><svg data-name="1-Arrow Up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" data-not-lazy data-v-5e27555d${_scopeId}><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" data-v-5e27555d${_scopeId}></path></svg></div></button></div>`);
+            _push2(`<!--]--><div class="slider-buttons" data-v-1e1cfa23${_scopeId}><button class="nav-button left" data-v-1e1cfa23${_scopeId}><div class="arrow" data-v-1e1cfa23${_scopeId}><svg data-name="1-Arrow Up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" data-not-lazy data-v-1e1cfa23${_scopeId}><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" data-v-1e1cfa23${_scopeId}></path></svg></div></button><button class="nav-button right" data-v-1e1cfa23${_scopeId}><div class="arrow" data-v-1e1cfa23${_scopeId}><svg data-name="1-Arrow Up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" data-not-lazy data-v-1e1cfa23${_scopeId}><path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" data-v-1e1cfa23${_scopeId}></path></svg></div></button></div>`);
           } else {
             return [
               (openBlock(true), createBlock(Fragment, null, renderList(news.value, (item, index) => {
@@ -255,7 +275,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Swipers/NewsSwiperComponent.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const NewsSwiperComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-5e27555d"]]);
+const NewsSwiperComponent = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-1e1cfa23"]]);
 export {
   NewsSwiperComponent as default
 };
